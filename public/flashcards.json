@@ -1,0 +1,1243 @@
+{
+  "economics": {
+    "0": {
+      "0": [
+        { "question": "What is economics?", "answer": "The social science that studies the production, distribution, and consumption of goods and services." },
+        { "question": "What is opportunity cost?", "answer": "The value of the next best alternative that must be given up when making a choice." },
+        { "question": "What are the three basic economic questions?", "answer": "What to produce? How to produce? For whom to produce?" },
+        { "question": "What is scarcity?", "answer": "The fundamental economic problem of having unlimited wants but limited resources." },
+        { "question": "What are factors of production?", "answer": "Land, labor, capital, and entrepreneurship - the basic inputs used to produce goods and services." },
+        { "question": "What is the Production Possibility Curve (PPC)?", "answer": "A curve showing the maximum combinations of two goods that can be produced with available resources and technology." },
+        { "question": "What is a market economy?", "answer": "An economic system where resource allocation is determined by supply and demand in free markets." },
+        { "question": "What is a command economy?", "answer": "An economic system where the government makes all decisions about resource allocation and production." },
+        { "question": "What is a mixed economy?", "answer": "An economic system that combines elements of market and command economies, with both private and public sectors." },
+        { "question": "What is ceteris paribus?", "answer": "A Latin phrase meaning 'all other things being equal' - used to isolate the effect of one variable." },
+        { "question": "What is positive economics?", "answer": "Objective analysis that describes and explains economic phenomena without making value judgments." },
+        { "question": "What is normative economics?", "answer": "Subjective analysis that includes value judgments and opinions about what economic policies should be." },
+        { "question": "What are free goods?", "answer": "Goods that are abundant and have no opportunity cost, such as air or sunlight." },
+        { "question": "What are economic goods?", "answer": "Goods that are scarce relative to demand and therefore have an opportunity cost." },
+        { "question": "What is sustainable development?", "answer": "Development that meets present needs without compromising the ability of future generations to meet their own needs." },
+        { "question": "What is the difference between consumer and producer goods?", "answer": "Consumer goods satisfy wants directly, while producer goods are used to produce other goods and services." },
+        { "question": "What does economic efficiency mean?", "answer": "Achieving the maximum possible output from available resources, or achieving a given output with minimum resources." },
+        { "question": "What is the central economic problem?", "answer": "How to allocate scarce resources efficiently to satisfy unlimited human wants and needs." }
+      ]
+    },
+    "1": {
+      "0": [
+        { "question": "What is demand?", "answer": "The quantity of a good or service that consumers are willing and able to purchase at various prices." },
+        { "question": "What is supply?", "answer": "The quantity of a good or service that producers are willing and able to offer at various prices." },
+        { "question": "What causes a shift in demand?", "answer": "Changes in income, preferences, price of related goods, expectations, or number of buyers." },
+        { "question": "What is market equilibrium?", "answer": "The point where quantity demanded equals quantity supplied." },
+        { "question": "What happens when price is above equilibrium?", "answer": "There is a surplus - quantity supplied exceeds quantity demanded." },
+        { "question": "What is the law of demand?", "answer": "As the price of a good increases, the quantity demanded decreases, ceteris paribus." },
+        { "question": "What is the law of supply?", "answer": "As the price of a good increases, the quantity supplied increases, ceteris paribus." },
+        { "question": "What are the determinants of demand (PYNTE)?", "answer": "Population, income (Y), Normal/inferior goods, Tastes/preferences, Expectations, price of substitutes/complements." },
+        { "question": "What are the determinants of supply (PINTWS)?", "answer": "Productivity, Input costs, Number of sellers, Technology, Weather/natural conditions, Subsidies and taxes." },
+        { "question": "What is the difference between a movement along and a shift of the demand curve?", "answer": "Movement along: price change only. Shift: change in non-price determinants (PYNTE factors)." },
+        { "question": "What is consumer surplus?", "answer": "The difference between what consumers are willing to pay and what they actually pay." },
+        { "question": "What is producer surplus?", "answer": "The difference between the price producers receive and the minimum price they're willing to accept." },
+        { "question": "What is allocative efficiency?", "answer": "When resources are allocated to produce the combination of goods and services most wanted by society." },
+        { "question": "What happens when price is below equilibrium?", "answer": "There is a shortage - quantity demanded exceeds quantity supplied." },
+        { "question": "What are substitute goods?", "answer": "Goods that can be used in place of each other - when price of one rises, demand for the other increases." },
+        { "question": "What are complementary goods?", "answer": "Goods used together - when price of one rises, demand for both falls." },
+        { "question": "What are normal goods?", "answer": "Goods for which demand increases as income increases." },
+        { "question": "What are inferior goods?", "answer": "Goods for which demand decreases as income increases." },
+        { "question": "What is market clearing?", "answer": "The process by which markets reach equilibrium through price adjustments." }
+      ],
+      "1": [
+        { "question": "What is price elasticity of demand?", "answer": "A measure of how responsive quantity demanded is to changes in price." },
+        { "question": "What makes demand elastic?", "answer": "Availability of substitutes, luxury goods, large portion of income, and longer time periods." },
+        { "question": "What is income elasticity of demand?", "answer": "The responsiveness of demand to changes in consumer income." },
+        { "question": "What does cross-price elasticity measure?", "answer": "How responsive demand for one good is to changes in the price of another good." },
+        { "question": "What is the formula for price elasticity of demand?", "answer": "PED = (% change in quantity demanded) / (% change in price)" },
+        { "question": "What is price elasticity of supply?", "answer": "A measure of how responsive quantity supplied is to changes in price." },
+        { "question": "What values indicate elastic demand?", "answer": "PED > 1 (ignoring the negative sign) means demand is elastic or relatively responsive to price changes." },
+        { "question": "What values indicate inelastic demand?", "answer": "PED < 1 (ignoring the negative sign) means demand is inelastic or relatively unresponsive to price changes." },
+        { "question": "What makes supply elastic?", "answer": "Spare capacity, availability of inputs, time period, ability to store goods, and number of producers." },
+        { "question": "How does elasticity affect total revenue?", "answer": "Elastic demand: price increase decreases revenue. Inelastic demand: price increase increases revenue." },
+        { "question": "What is perfectly elastic demand?", "answer": "PED = infinity; demand curve is horizontal; any price increase causes demand to fall to zero." },
+        { "question": "What is perfectly inelastic demand?", "answer": "PED = 0; demand curve is vertical; quantity demanded doesn't change regardless of price." },
+        { "question": "What is unitary elastic demand?", "answer": "PED = 1; the percentage change in price equals the percentage change in quantity demanded." },
+        { "question": "How do you interpret income elasticity values?", "answer": "YED > 0: normal good. YED < 0: inferior good. YED > 1: luxury good. 0 < YED < 1: necessity." },
+        { "question": "How do you interpret cross-price elasticity values?", "answer": "XED > 0: substitute goods. XED < 0: complementary goods. XED = 0: unrelated goods." },
+        { "question": "What factors make demand inelastic?", "answer": "No substitutes, necessities, small proportion of income, short time period, and addiction." },
+        { "question": "What is the significance of elasticity for businesses?", "answer": "Helps determine pricing strategies, predict revenue changes, and understand consumer behavior." },
+        { "question": "What is the significance of elasticity for governments?", "answer": "Helps predict tax revenue, assess impact of subsidies, and understand market responses to policy changes." }
+      ],
+      "2": [
+        { "question": "What is a price ceiling?", "answer": "A legal maximum price set below the equilibrium price." },
+        { "question": "What is a price floor?", "answer": "A legal minimum price set above the equilibrium price." },
+        { "question": "What are indirect taxes?", "answer": "Taxes on spending, such as sales tax or VAT, that increase the cost of production." },
+        { "question": "What is a subsidy?", "answer": "Government financial assistance to producers to lower their costs and increase supply." },
+        { "question": "What are the effects of a price ceiling?", "answer": "Creates shortage, reduces producer surplus, may create black markets, and causes deadweight loss." },
+        { "question": "What are the effects of a price floor?", "answer": "Creates surplus, reduces consumer surplus, may require government purchases, and causes deadweight loss." },
+        { "question": "What is the difference between specific and ad valorem taxes?", "answer": "Specific tax: fixed amount per unit. Ad valorem tax: percentage of the price." },
+        { "question": "What is tax incidence?", "answer": "Who actually bears the burden of a tax, which depends on the relative elasticities of demand and supply." },
+        { "question": "What is deadweight loss?", "answer": "The loss of economic efficiency when market equilibrium is not achieved due to government intervention." },
+        { "question": "Why do governments impose price ceilings?", "answer": "To make essential goods affordable, protect consumers from high prices, and promote equity." },
+        { "question": "Why do governments impose price floors?", "answer": "To protect producer income, ensure fair wages (minimum wage), and support key industries." },
+        { "question": "What are examples of price ceilings?", "answer": "Rent control, maximum prices for essential goods during shortages, maximum interest rates." },
+        { "question": "What are examples of price floors?", "answer": "Minimum wage, agricultural price supports, minimum prices for certain services." },
+        { "question": "What is a black market?", "answer": "Illegal market where goods are sold above the legal maximum price when price ceilings are imposed." },
+        { "question": "What are the welfare effects of indirect taxes?", "answer": "Reduce consumer and producer surplus, create deadweight loss, but generate government revenue." },
+        { "question": "What are the welfare effects of subsidies?", "answer": "Increase consumer and producer surplus in the market, but cost taxpayers and may cause overconsumption." },
+        { "question": "What is a buffer stock scheme?", "answer": "Government intervention to stabilize prices by buying excess supply when prices are low and selling when prices are high." },
+        { "question": "When is tax burden greater on consumers?", "answer": "When demand is inelastic relative to supply - consumers can't easily reduce quantity demanded." },
+        { "question": "When is tax burden greater on producers?", "answer": "When supply is inelastic relative to demand - producers can't easily reduce quantity supplied." }
+      ],
+      "3": [
+        { "question": "What is market failure?", "answer": "When the free market fails to allocate resources efficiently." },
+        { "question": "What are negative externalities?", "answer": "Costs imposed on third parties who are not involved in the production or consumption of a good." },
+        { "question": "What is a common pool resource?", "answer": "A resource that is non-excludable but rival in consumption, leading to overuse." },
+        { "question": "What is the tragedy of the commons?", "answer": "The overuse and depletion of common pool resources due to individual rational behavior." },
+        { "question": "What are negative externalities of production?", "answer": "External costs created during production, such as pollution from factories affecting nearby communities." },
+        { "question": "What are negative externalities of consumption?", "answer": "External costs created during consumption, such as smoking affecting others' health or loud music disturbing neighbors." },
+        { "question": "What is marginal social cost (MSC)?", "answer": "MSC = Marginal Private Cost + Marginal External Cost - the full cost to society of producing one more unit." },
+        { "question": "What is marginal social benefit (MSB)?", "answer": "MSB = Marginal Private Benefit + Marginal External Benefit - the full benefit to society of consuming one more unit." },
+        { "question": "What is allocative efficiency?", "answer": "When MSB = MSC, meaning resources are allocated to their most valued uses." },
+        { "question": "How do negative externalities cause market failure?", "answer": "Markets overproduce because they ignore external costs, leading to MSC > MSB at market equilibrium." },
+        { "question": "What are examples of common pool resources?", "answer": "Fish in the ocean, groundwater, forests, grazing land, and the atmosphere." },
+        { "question": "What are solutions to negative externalities?", "answer": "Carbon taxes, regulation, tradable permits, Coase theorem negotiations, and government provision." },
+        { "question": "What is the Coase theorem?", "answer": "Private parties can negotiate solutions to externalities if property rights are clearly defined and transaction costs are low." },
+        { "question": "What are carbon taxes?", "answer": "Taxes on carbon emissions designed to internalize the external costs of pollution." },
+        { "question": "What are cap-and-trade systems?", "answer": "Government sets pollution limits and allows companies to trade emission permits, using market forces to reduce pollution." },
+        { "question": "What are command and control regulations?", "answer": "Direct government regulations that set specific limits on pollution or require certain technologies." },
+        { "question": "What is sustainable yield?", "answer": "The maximum amount of a renewable resource that can be harvested without compromising future availability." },
+        { "question": "What is overexploitation?", "answer": "Using a resource faster than it can be naturally replenished, leading to depletion." }
+      ],
+      "4": [
+        { "question": "What are positive externalities?", "answer": "Benefits received by third parties who are not involved in the production or consumption of a good." },
+        { "question": "What is a public good?", "answer": "A good that is both non-excludable and non-rival in consumption." },
+        { "question": "What is asymmetric information?", "answer": "A situation where one party has more or better information than the other party." },
+        { "question": "What is moral hazard?", "answer": "When one party takes risks because they don't bear the full consequences of their actions." },
+        { "question": "What are positive externalities of production?", "answer": "External benefits created during production, such as beekeeping improving nearby crop yields." },
+        { "question": "What are positive externalities of consumption?", "answer": "External benefits from consumption, such as education benefiting society or vaccination creating herd immunity." },
+        { "question": "How do positive externalities cause market failure?", "answer": "Markets underproduce because they ignore external benefits, leading to MSB > MSC at market equilibrium." },
+        { "question": "What are solutions to positive externalities?", "answer": "Subsidies, government provision, tax breaks, regulations requiring consumption, and public campaigns." },
+        { "question": "What is non-excludability?", "answer": "It's impossible or too costly to prevent people from accessing a good once it's provided." },
+        { "question": "What is non-rivalry?", "answer": "One person's consumption of a good doesn't reduce the amount available for others." },
+        { "question": "What is the free rider problem?", "answer": "People consume public goods without paying because they can't be excluded, leading to underprovision." },
+        { "question": "What are examples of public goods?", "answer": "National defense, street lighting, public parks, basic research, and lighthouse services." },
+        { "question": "What is a quasi-public good?", "answer": "A good that has some characteristics of public goods but may be excludable or rival in consumption." },
+        { "question": "What is adverse selection?", "answer": "When asymmetric information leads to markets being dominated by poor-quality products or high-risk consumers." },
+        { "question": "What is the market for lemons?", "answer": "Akerlof's model showing how asymmetric information can cause markets to collapse due to adverse selection." },
+        { "question": "What are examples of moral hazard?", "answer": "Insurance leading to riskier behavior, bank bailouts encouraging excessive risk-taking." },
+        { "question": "What are solutions to asymmetric information?", "answer": "Signaling, screening, warranties, licenses, regulations, and government inspection." },
+        { "question": "What is signaling?", "answer": "When informed parties reveal their private information to reduce information asymmetry." },
+        { "question": "What is screening?", "answer": "When uninformed parties try to distinguish between different types of informed parties." },
+        { "question": "What is equity in economics?", "answer": "Fair distribution of resources and opportunities, considering both equality and need." }
+      ],
+      "5": [
+        { "question": "What is a monopoly?", "answer": "A market structure with a single seller and no close substitutes." },
+        { "question": "What creates barriers to entry?", "answer": "Factors that prevent new firms from entering a market, such as patents, economies of scale, or government regulations." },
+        { "question": "What is price discrimination?", "answer": "Charging different prices to different customers for the same product." },
+        { "question": "What is an oligopoly?", "answer": "A market structure with few sellers who are interdependent in their decision-making." },
+        { "question": "What are natural barriers to entry?", "answer": "Economies of scale, high start-up costs, control of resources, network effects, and brand loyalty." },
+        { "question": "What are artificial barriers to entry?", "answer": "Patents, licenses, government regulations, predatory pricing, and exclusive dealing arrangements." },
+        { "question": "How does a monopolist maximize profit?", "answer": "By producing where marginal revenue equals marginal cost (MR = MC), then charging the maximum price consumers will pay." },
+        { "question": "Why is monopoly allocatively inefficient?", "answer": "Price > MC, meaning consumers value additional units more than the cost to produce them." },
+        { "question": "What is deadweight loss in monopoly?", "answer": "The loss of consumer and producer surplus due to reduced output compared to perfect competition." },
+        { "question": "What are the three types of price discrimination?", "answer": "1st degree (perfect), 2nd degree (quantity-based), 3rd degree (market segmentation)." },
+        { "question": "What conditions are needed for price discrimination?", "answer": "Market power, ability to separate markets, prevent resale, and different price elasticities." },
+        { "question": "What is a cartel?", "answer": "A group of firms that collude to coordinate prices and output to maximize joint profits." },
+        { "question": "What makes cartels unstable?", "answer": "Incentive to cheat, difficulty monitoring, legal restrictions, and new entrants." },
+        { "question": "What is game theory?", "answer": "Mathematical framework for analyzing strategic decision-making between interdependent players." },
+        { "question": "What is the prisoner's dilemma?", "answer": "A game where individual rational behavior leads to outcomes that are worse for all players." },
+        { "question": "What is Nash equilibrium?", "answer": "A situation where no player can improve their payoff by unilaterally changing their strategy." },
+        { "question": "What are characteristics of oligopoly?", "answer": "Few large firms, high barriers to entry, interdependence, potential for collusion, and differentiated products." },
+        { "question": "What is concentration ratio?", "answer": "The percentage of total market sales controlled by the largest firms (e.g., 4-firm concentration ratio)." },
+        { "question": "What is the Herfindahl-Hirschman Index?", "answer": "A measure of market concentration calculated by summing the squares of all firms' market shares." },
+        { "question": "What are antitrust policies?", "answer": "Government policies designed to prevent monopolies, promote competition, and protect consumers." }
+      ]
+    },
+    "2": {
+      "0": [
+        { "question": "What is GDP?", "answer": "Gross Domestic Product - the total value of all final goods and services produced in a country in a year." },
+        { "question": "What are the components of aggregate demand?", "answer": "Consumption (C), Investment (I), Government spending (G), and Net exports (X-M)." },
+        { "question": "What is the difference between nominal and real GDP?", "answer": "Nominal GDP is measured at current prices; real GDP is adjusted for inflation." },
+        { "question": "What is the business cycle?", "answer": "The cyclical pattern of economic expansion and contraction over time." },
+        { "question": "What are the three approaches to measuring GDP?", "answer": "Output approach (value of production), expenditure approach (total spending), income approach (total incomes)." },
+        { "question": "What is GDP per capita?", "answer": "GDP divided by population - a measure of average income and living standards." },
+        { "question": "What is GNI (Gross National Income)?", "answer": "GDP plus net income from abroad - measures income earned by a country's residents." },
+        { "question": "What is the GDP deflator?", "answer": "A price index that measures the average price level of all goods and services in GDP." },
+        { "question": "What are the phases of the business cycle?", "answer": "Peak, recession/contraction, trough, recovery/expansion - repeating cyclical pattern." },
+        { "question": "What is a recession?", "answer": "Two consecutive quarters of negative economic growth (declining real GDP)." },
+        { "question": "What is economic growth?", "answer": "An increase in real GDP over time, indicating expansion of the economy's productive capacity." },
+        { "question": "What are leading economic indicators?", "answer": "Statistics that tend to change before the economy changes, such as stock prices and business investment." },
+        { "question": "What are lagging economic indicators?", "answer": "Statistics that change after the economy has changed, such as unemployment and inflation rates." },
+        { "question": "What is potential GDP?", "answer": "The maximum output an economy can produce when operating at full employment." },
+        { "question": "What is the output gap?", "answer": "The difference between actual GDP and potential GDP." },
+        { "question": "What are final goods?", "answer": "Products sold to end users, not used as inputs for further production." },
+        { "question": "What are intermediate goods?", "answer": "Products used as inputs in the production of other goods - excluded from GDP to avoid double counting." },
+        { "question": "What is the circular flow of income?", "answer": "Model showing how money flows between households, firms, and government in the economy." }
+      ],
+      "1": [
+        { "question": "What is aggregate demand?", "answer": "The total demand for all goods and services in an economy at different price levels." },
+        { "question": "What is aggregate supply?", "answer": "The total supply of all goods and services in an economy at different price levels." },
+        { "question": "What shifts aggregate demand?", "answer": "Changes in consumption, investment, government spending, or net exports." },
+        { "question": "What is short-run aggregate supply?", "answer": "The relationship between price level and quantity supplied when some costs are fixed." },
+        { "question": "Why does the AD curve slope downward?", "answer": "Real balance effect, interest rate effect, and international trade effect make spending fall when prices rise." },
+        { "question": "What is the real balance effect?", "answer": "When prices rise, purchasing power of money falls, reducing consumption spending." },
+        { "question": "What is the interest rate effect?", "answer": "When prices rise, people need more money, increasing interest rates and reducing investment and consumption." },
+        { "question": "What is the international trade effect?", "answer": "When domestic prices rise, exports become less competitive and imports more attractive, reducing net exports." },
+        { "question": "What factors shift aggregate demand right (increase)?", "answer": "Increased consumer confidence, business optimism, government spending, lower taxes, lower interest rates, weaker currency." },
+        { "question": "What is long-run aggregate supply (LRAS)?", "answer": "The relationship between price level and output when all input prices are flexible - vertical line at potential GDP." },
+        { "question": "Why is LRAS vertical?", "answer": "In the long run, output depends only on productive capacity, not price level." },
+        { "question": "What shifts LRAS right (increase)?", "answer": "Increased labor force, capital stock, technology, natural resources, or institutional quality." },
+        { "question": "Why does SRAS slope upward?", "answer": "In the short run, some input prices are sticky, so higher output prices increase profitability and production." },
+        { "question": "What shifts SRAS left (decrease)?", "answer": "Higher input costs, wages, raw material prices, or indirect taxes reduce profitability." },
+        { "question": "What is macroeconomic equilibrium?", "answer": "Where aggregate demand intersects aggregate supply, determining equilibrium price level and output." },
+        { "question": "What is demand-pull inflation?", "answer": "Inflation caused by excessive aggregate demand relative to aggregate supply." },
+        { "question": "What is cost-push inflation?", "answer": "Inflation caused by increases in production costs that shift SRAS left." },
+        { "question": "What is stagflation?", "answer": "Simultaneous occurrence of stagnant growth and inflation, often caused by supply shocks." }
+      ],
+      "2": [
+        { "question": "What is unemployment?", "answer": "The percentage of the labor force that is actively seeking work but unable to find jobs." },
+        { "question": "What are the types of unemployment?", "answer": "Frictional, structural, cyclical, and seasonal unemployment." },
+        { "question": "What is inflation?", "answer": "A sustained increase in the general price level of goods and services." },
+        { "question": "What is the Phillips Curve?", "answer": "The inverse relationship between unemployment and inflation rates." },
+        { "question": "What is frictional unemployment?", "answer": "Temporary unemployment arising from people moving between jobs or entering the job market." },
+        { "question": "What is structural unemployment?", "answer": "Long-term unemployment caused by changes in the economy that eliminate certain types of jobs." },
+        { "question": "What is cyclical unemployment?", "answer": "Unemployment arising from economic downturns and reduced aggregate demand." },
+        { "question": "What is the natural rate of unemployment?", "answer": "The unemployment rate when the economy is at full employment (frictional + structural unemployment)." },
+        { "question": "What is full employment?", "answer": "When unemployment equals the natural rate - cyclical unemployment is zero." },
+        { "question": "What causes deflation?", "answer": "Sustained decrease in general price level due to falling aggregate demand or increasing supply." },
+        { "question": "What is disinflation?", "answer": "A reduction in the rate of inflation - prices still rising but at a slower rate." },
+        { "question": "What is hyperinflation?", "answer": "Extremely high and accelerating inflation, typically exceeding 50% per month." },
+        { "question": "What is the Consumer Price Index (CPI)?", "answer": "A measure of inflation based on the cost of a basket of goods and services for typical consumers." },
+        { "question": "What are the costs of unemployment?", "answer": "Lost output, social costs, personal costs, government budget effects, and loss of human capital." },
+        { "question": "What are the costs of inflation?", "answer": "Reduced purchasing power, menu costs, shoe-leather costs, uncertainty, and redistribution effects." },
+        { "question": "What is the short-run Phillips Curve?", "answer": "Shows inverse relationship between unemployment and inflation when expectations are fixed." },
+        { "question": "What is the long-run Phillips Curve?", "answer": "Vertical line at natural rate of unemployment - no long-run trade-off between inflation and unemployment." },
+        { "question": "What shifts the Phillips Curve?", "answer": "Changes in expectations, supply shocks, natural rate of unemployment, or productivity." }
+      ],
+      "3": [
+        { "question": "What is economic growth?", "answer": "An increase in the total output of goods and services in an economy over time." },
+        { "question": "What causes economic growth?", "answer": "Increases in factors of production (land, labor, capital) and improvements in technology." },
+        { "question": "What is sustainable debt?", "answer": "Government debt levels that can be maintained without compromising future economic stability." },
+        { "question": "What is the debt-to-GDP ratio?", "answer": "Government debt expressed as a percentage of the country's GDP." },
+        { "question": "What is the difference between economic growth and development?", "answer": "Growth is quantitative (increased GDP); development is qualitative (improved living standards, health, education)." },
+        { "question": "What are the sources of economic growth?", "answer": "Increased quantity and quality of factors of production: labor, capital, land, and entrepreneurship." },
+        { "question": "What is capital deepening?", "answer": "Increasing the amount of capital per worker, leading to higher productivity and growth." },
+        { "question": "What is total factor productivity?", "answer": "The portion of growth not explained by increases in capital and labor - usually attributed to technology." },
+        { "question": "What are the benefits of economic growth?", "answer": "Higher living standards, reduced poverty, increased employment, better public services, and tax revenue." },
+        { "question": "What are the costs of economic growth?", "answer": "Environmental degradation, resource depletion, income inequality, and opportunity costs." },
+        { "question": "What is sustainable economic growth?", "answer": "Growth that meets present needs without compromising future generations' ability to meet their needs." },
+        { "question": "What is the national debt?", "answer": "The total amount of money that a government owes to creditors." },
+        { "question": "What is a budget deficit?", "answer": "When government spending exceeds government revenue in a given year." },
+        { "question": "What is a budget surplus?", "answer": "When government revenue exceeds government spending in a given year." },
+        { "question": "What are the consequences of high national debt?", "answer": "Higher interest payments, crowding out of private investment, burden on future generations, and reduced fiscal flexibility." },
+        { "question": "What is crowding out?", "answer": "When government borrowing leads to higher interest rates, reducing private investment." },
+        { "question": "What factors determine debt sustainability?", "answer": "Debt-to-GDP ratio, interest rates, economic growth rate, and government's ability to service debt." },
+        { "question": "What is fiscal sustainability?", "answer": "Government's ability to maintain current spending and tax policies without jeopardizing financial stability." }
+      ],
+      "4": [
+        { "question": "What is income inequality?", "answer": "The uneven distribution of income across different segments of the population." },
+        { "question": "What is the Gini coefficient?", "answer": "A measure of income inequality ranging from 0 (perfect equality) to 1 (perfect inequality)." },
+        { "question": "What is absolute poverty?", "answer": "Living below the minimum income necessary to meet basic needs." },
+        { "question": "What is relative poverty?", "answer": "Having income significantly below the average income in society." },
+        { "question": "What is the Lorenz curve?", "answer": "A graphical representation of income distribution showing cumulative income against cumulative population." },
+        { "question": "What causes income inequality?", "answer": "Differences in education, skills, inheritance, discrimination, technological change, and globalization." },
+        { "question": "What is wealth inequality?", "answer": "Uneven distribution of assets (property, investments, savings) among individuals or households." },
+        { "question": "What are the consequences of high inequality?", "answer": "Social unrest, reduced economic growth, health problems, crime, and political instability." },
+        { "question": "What is the poverty line?", "answer": "The minimum income level needed to secure necessities of life." },
+        { "question": "What is multidimensional poverty?", "answer": "Poverty measured not just by income but also by access to education, healthcare, and living standards." },
+        { "question": "What are poverty traps?", "answer": "Self-reinforcing mechanisms that keep people in poverty across generations." },
+        { "question": "What is social mobility?", "answer": "The ability of individuals to move up or down the income distribution over time." },
+        { "question": "What policies reduce inequality?", "answer": "Progressive taxation, education investment, minimum wages, social transfers, and land redistribution." },
+        { "question": "What is a progressive tax system?", "answer": "Tax system where tax rate increases as income increases." },
+        { "question": "What is a regressive tax system?", "answer": "Tax system where tax rate decreases as income increases (affects poor more than rich)." },
+        { "question": "What are transfer payments?", "answer": "Government payments to individuals without requiring goods or services in return." },
+        { "question": "What is universal basic income?", "answer": "Unconditional cash payments to all citizens, regardless of employment status." },
+        { "question": "What is the minimum wage?", "answer": "Legal minimum hourly wage that employers must pay workers." }
+      ],
+      "5": [
+        { "question": "What are demand-side policies?", "answer": "Government policies designed to influence aggregate demand, such as fiscal and monetary policy." },
+        { "question": "What is fiscal policy?", "answer": "Government use of spending and taxation to influence economic activity." },
+        { "question": "What is monetary policy?", "answer": "Central bank actions to control money supply and interest rates." },
+        { "question": "What are supply-side policies?", "answer": "Policies aimed at increasing the economy's productive capacity and efficiency." },
+        { "question": "What is expansionary fiscal policy?", "answer": "Increasing government spending or cutting taxes to stimulate economic growth." },
+        { "question": "What is contractionary fiscal policy?", "answer": "Decreasing government spending or raising taxes to slow economic growth and reduce inflation." },
+        { "question": "What are automatic stabilizers?", "answer": "Government policies that automatically adjust spending or taxes based on economic conditions." },
+        { "question": "What is expansionary monetary policy?", "answer": "Central bank policies to increase money supply and lower interest rates to stimulate growth." },
+        { "question": "What is contractionary monetary policy?", "answer": "Central bank policies to decrease money supply and raise interest rates to fight inflation." },
+        { "question": "What are the tools of monetary policy?", "answer": "Interest rates, open market operations, reserve requirements, and quantitative easing." },
+        { "question": "What is quantitative easing?", "answer": "Central bank purchases of government securities to inject money into the economy when interest rates are near zero." },
+        { "question": "What are the limitations of fiscal policy?", "answer": "Time lags, crowding out, political constraints, and impact on government debt." },
+        { "question": "What are the limitations of monetary policy?", "answer": "Zero lower bound, liquidity trap, transmission mechanisms, and asset bubbles." },
+        { "question": "What is the liquidity trap?", "answer": "Situation where monetary policy becomes ineffective because interest rates are near zero." },
+        { "question": "What are market-based supply-side policies?", "answer": "Reducing regulations, privatization, trade liberalization, and labor market flexibility." },
+        { "question": "What are interventionist supply-side policies?", "answer": "Government investment in education, infrastructure, healthcare, and research and development." },
+        { "question": "What is the multiplier effect?", "answer": "The amplified impact of initial spending changes on total economic output." },
+        { "question": "What is the acceleration principle?", "answer": "Changes in consumer demand lead to larger changes in investment demand." }
+      ]
+    },
+    "3": {
+      "0": [
+        { "question": "What is comparative advantage?", "answer": "The ability to produce a good at a lower opportunity cost than other countries." },
+        { "question": "What are the gains from trade?", "answer": "Increased consumption possibilities, specialization, and economic efficiency." },
+        { "question": "What is free trade?", "answer": "Trade between countries without restrictions such as tariffs or quotas." },
+        { "question": "What is a tariff?", "answer": "A tax on imported goods designed to protect domestic industries." },
+        { "question": "What is absolute advantage?", "answer": "The ability to produce more of a good than other countries using the same resources." },
+        { "question": "What is the theory of comparative advantage?", "answer": "Countries should specialize in producing goods where they have the lowest opportunity cost." },
+        { "question": "What are the assumptions of trade theory?", "answer": "Two countries, two goods, constant opportunity costs, full employment, and perfect factor mobility." },
+        { "question": "What are the sources of comparative advantage?", "answer": "Factor endowments, technology, climate, natural resources, and human capital." },
+        { "question": "What is inter-industry trade?", "answer": "Trade in different types of goods between countries (e.g., cars for agricultural products)." },
+        { "question": "What is intra-industry trade?", "answer": "Trade in similar goods between countries (e.g., different brands of cars)." },
+        { "question": "What are the dynamic gains from trade?", "answer": "Long-term benefits including technology transfer, economies of scale, and increased competition." },
+        { "question": "What are the static gains from trade?", "answer": "One-time benefits from specialization and exchange, shown by movement to the production possibility frontier." },
+        { "question": "What is the terms of trade?", "answer": "The ratio of export prices to import prices, indicating how much imports a country can buy per unit of exports." },
+        { "question": "What improves a country's terms of trade?", "answer": "Rising export prices or falling import prices (ToT = export price index / import price index × 100)." },
+        { "question": "What are the limitations of trade theory?", "answer": "Ignores transport costs, assumes perfect competition, neglects income distribution effects." }
+      ],
+      "1": [
+        { "question": "What is a quota?", "answer": "A physical limit on the quantity of a good that can be imported." },
+        { "question": "What are trade creation and trade diversion?", "answer": "Trade creation increases efficiency; trade diversion shifts trade from efficient to less efficient sources." },
+        { "question": "What is dumping?", "answer": "Selling exports at prices below the cost of production or below domestic prices." },
+        { "question": "What is the WTO?", "answer": "World Trade Organization - promotes free trade and settles trade disputes between countries." },
+        { "question": "What are the effects of tariffs?", "answer": "Higher domestic prices, reduced imports, government revenue, deadweight loss, and protection of domestic industry." },
+        { "question": "What are the effects of quotas?", "answer": "Higher domestic prices, limited imports, quota rents, deadweight loss, and certainty of import limits." },
+        { "question": "What are arguments for protectionism?", "answer": "Infant industry, national security, employment protection, unfair competition, and balance of payments." },
+        { "question": "What are arguments against protectionism?", "answer": "Higher consumer prices, reduced efficiency, retaliation, deadweight loss, and reduced competition." },
+        { "question": "What is the infant industry argument?", "answer": "New industries need temporary protection to develop and become internationally competitive." },
+        { "question": "What are export subsidies?", "answer": "Government payments to domestic producers to encourage exports, making them artificially competitive." },
+        { "question": "What are voluntary export restraints (VERs)?", "answer": "Self-imposed export quotas by exporting countries to avoid imposed trade barriers." },
+        { "question": "What is a customs union?", "answer": "Countries eliminate trade barriers among members but maintain common external tariffs." },
+        { "question": "What is a free trade area?", "answer": "Countries eliminate trade barriers among members but keep individual external tariffs." },
+        { "question": "What are regional trading agreements?", "answer": "Trade arrangements between countries in specific regions, like NAFTA or EU." },
+        { "question": "What are the WTO principles?", "answer": "Non-discrimination, reciprocity, transparency, and multilateral trade liberalization." },
+        { "question": "What is the most favored nation principle?", "answer": "WTO rule requiring countries to treat all trading partners equally in trade policy." }
+      ],
+      "2": [
+        { "question": "What is an exchange rate?", "answer": "The price of one currency expressed in terms of another currency." },
+        { "question": "What is the balance of payments?", "answer": "A record of all economic transactions between a country and the rest of the world." },
+        { "question": "What affects exchange rates?", "answer": "Interest rates, inflation, political stability, current account balance, and speculation." },
+        { "question": "What is currency appreciation?", "answer": "An increase in the value of a currency relative to other currencies." },
+        { "question": "What is currency depreciation?", "answer": "A decrease in the value of a currency relative to other currencies." },
+        { "question": "What are the components of the balance of payments?", "answer": "Current account, capital account, and financial account." },
+        { "question": "What is included in the current account?", "answer": "Trade in goods, trade in services, income flows, and current transfers." },
+        { "question": "What is a current account deficit?", "answer": "When a country's imports of goods and services exceed its exports." },
+        { "question": "What is a current account surplus?", "answer": "When a country's exports of goods and services exceed its imports." },
+        { "question": "What are the effects of currency appreciation?", "answer": "Imports become cheaper, exports become more expensive, reduces inflation, worsens current account." },
+        { "question": "What are the effects of currency depreciation?", "answer": "Imports become more expensive, exports become cheaper, increases inflation, improves current account." },
+        { "question": "What is the Marshall-Lerner condition?", "answer": "Currency depreciation improves current account only if sum of import and export price elasticities exceeds 1." },
+        { "question": "What is the J-curve effect?", "answer": "Current account initially worsens after depreciation before improving due to time lags in quantity responses." },
+        { "question": "What are floating exchange rates?", "answer": "Exchange rates determined by market forces of supply and demand for currencies." },
+        { "question": "What are fixed exchange rates?", "answer": "Exchange rates set and maintained by government intervention in foreign exchange markets." },
+        { "question": "What are managed exchange rates?", "answer": "Exchange rates that float within government-determined bands with occasional intervention." },
+        { "question": "What is foreign exchange intervention?", "answer": "Central bank buying or selling foreign currency to influence the exchange rate." }
+      ],
+      "3": [
+        { "question": "What is purchasing power parity?", "answer": "The theory that exchange rates should adjust to equalize the price of identical goods in different countries." },
+        { "question": "What is a currency union?", "answer": "A group of countries that share a common currency, like the European Union's euro." },
+        { "question": "What are capital controls?", "answer": "Government restrictions on the flow of capital in and out of a country." },
+        { "question": "What is speculation?", "answer": "Buying or selling currencies based on expectations of future price movements." },
+        { "question": "What is the Big Mac Index?", "answer": "Informal measure of PPP using McDonald's Big Mac prices across countries." },
+        { "question": "What are the advantages of floating exchange rates?", "answer": "Automatic adjustment, monetary policy independence, no need for foreign reserves." },
+        { "question": "What are the disadvantages of floating exchange rates?", "answer": "Exchange rate volatility, uncertainty for trade and investment, potential for speculation." },
+        { "question": "What are the advantages of fixed exchange rates?", "answer": "Stability for trade, reduced speculation, commitment to low inflation." },
+        { "question": "What are the disadvantages of fixed exchange rates?", "answer": "Loss of monetary policy, need for large reserves, vulnerability to speculative attacks." },
+        { "question": "What is devaluation?", "answer": "Government action to reduce the value of its currency under a fixed exchange rate system." },
+        { "question": "What is revaluation?", "answer": "Government action to increase the value of its currency under a fixed exchange rate system." },
+        { "question": "What are the costs of currency union?", "answer": "Loss of monetary policy independence, asymmetric shocks, one-size-fits-all policy." },
+        { "question": "What are the benefits of currency union?", "answer": "Reduced transaction costs, price transparency, increased trade and investment." },
+        { "question": "What is the impossible trinity?", "answer": "Cannot simultaneously have fixed exchange rates, independent monetary policy, and free capital flows." }
+      ],
+      "4": [
+        { "question": "What is economic development?", "answer": "Improvements in living standards, including GDP growth, education, health, and quality of life." },
+        { "question": "What is the HDI?", "answer": "Human Development Index - measures development using life expectancy, education, and income." },
+        { "question": "What are the Millennium Development Goals?", "answer": "Eight goals set by the UN to reduce poverty and improve development by 2015." },
+        { "question": "What is sustainable development?", "answer": "Development that meets present needs without compromising future generations' ability to meet their needs." },
+        { "question": "What are the Sustainable Development Goals (SDGs)?", "answer": "17 goals adopted by UN in 2015 to end poverty, protect the planet, and ensure prosperity by 2030." },
+        { "question": "What is the difference between growth and development?", "answer": "Growth is quantitative (GDP increase); development is qualitative (improved well-being, health, education)." },
+        { "question": "What are common characteristics of developing countries?", "answer": "Low per capita income, high poverty, poor infrastructure, limited education, high population growth." },
+        { "question": "What is the poverty headcount ratio?", "answer": "Percentage of population living below the international poverty line (currently $2.15 per day)." },
+        { "question": "What is the Gross National Happiness Index?", "answer": "Bhutan's alternative to GDP that measures collective happiness and well-being." },
+        { "question": "What are other development indicators?", "answer": "Literacy rate, infant mortality, access to clean water, gender equality, environmental sustainability." },
+        { "question": "What is the Gender Development Index?", "answer": "HDI adjusted for gender disparities in health, education, and income." },
+        { "question": "What is purchasing power parity in development?", "answer": "Adjusting income figures to account for price differences between countries." },
+        { "question": "What are the limitations of HDI?", "answer": "Ignores inequality, environment, political freedom, and cultural factors." },
+        { "question": "What is the Multidimensional Poverty Index?", "answer": "Measures poverty considering health, education, and living standards dimensions." },
+        { "question": "What is human capital?", "answer": "The knowledge, skills, and health that people accumulate throughout their lives." }
+      ],
+      "5": [
+        { "question": "What are poverty traps?", "answer": "Situations where poor countries remain poor due to low savings, investment, and productivity." },
+        { "question": "What is capital flight?", "answer": "The rapid movement of financial assets out of a country due to economic or political instability." },
+        { "question": "What are institutional barriers?", "answer": "Poor governance, corruption, weak property rights, and inadequate legal systems." },
+        { "question": "What is the resource curse?", "answer": "The paradox where countries rich in natural resources have lower economic growth and development." },
+        { "question": "What is the vicious cycle of poverty?", "answer": "Low income → low savings → low investment → low productivity → low income." },
+        { "question": "What are geographic barriers to development?", "answer": "Landlocked location, tropical climate, natural disasters, and poor natural resource endowment." },
+        { "question": "What is the demographic transition?", "answer": "Change from high birth/death rates to low birth/death rates as countries develop." },
+        { "question": "What is the dependency ratio?", "answer": "Ratio of non-working age population to working age population." },
+        { "question": "What is brain drain?", "answer": "Migration of skilled workers from developing to developed countries." },
+        { "question": "What are debt problems in developing countries?", "answer": "Unsustainable debt levels limiting government spending on development." },
+        { "question": "What is the debt trap?", "answer": "Cycle where countries borrow to service existing debt, leading to ever-increasing debt burdens." },
+        { "question": "What is Dutch disease?", "answer": "Resource boom leads to currency appreciation, making other exports uncompetitive." },
+        { "question": "What are social barriers to development?", "answer": "Gender inequality, ethnic divisions, inadequate healthcare, and poor education systems." },
+        { "question": "What is the role of corruption in underdevelopment?", "answer": "Misallocates resources, reduces investment, undermines institutions, and increases inequality." },
+        { "question": "What are environmental barriers?", "answer": "Climate change, deforestation, soil degradation, and pollution limiting development." }
+      ],
+      "6": [
+        { "question": "What is foreign direct investment?", "answer": "Investment by foreign companies in productive assets in another country." },
+        { "question": "What is microfinance?", "answer": "Financial services provided to low-income individuals who lack access to traditional banking." },
+        { "question": "What is fair trade?", "answer": "Trade that ensures producers in developing countries receive fair prices and working conditions." },
+        { "question": "What is import substitution?", "answer": "A policy of replacing imports with domestic production to promote industrialization." },
+        { "question": "What is export promotion?", "answer": "Strategy focusing on developing export industries to earn foreign currency and drive growth." },
+        { "question": "What is official development assistance (ODA)?", "answer": "Government aid given to developing countries to promote economic development and welfare." },
+        { "question": "What are the problems with foreign aid?", "answer": "Dependency, corruption, tied aid, conditionality, and limited effectiveness." },
+        { "question": "What is tied aid?", "answer": "Aid that must be used to purchase goods or services from the donor country." },
+        { "question": "What is multilateral aid?", "answer": "Aid provided through international organizations like World Bank or UN agencies." },
+        { "question": "What is bilateral aid?", "answer": "Aid given directly from one government to another government." },
+        { "question": "What are the benefits of FDI?", "answer": "Capital inflow, technology transfer, job creation, skill development, and export growth." },
+        { "question": "What are the problems with FDI?", "answer": "Profit repatriation, environmental damage, exploitation of workers, and cultural impact." },
+        { "question": "What is the role of multinational corporations?", "answer": "Transfer technology and capital but may exploit resources and create dependency." },
+        { "question": "What are export processing zones?", "answer": "Special areas with relaxed regulations to attract foreign investment and promote exports." },
+        { "question": "What is market-led development strategy?", "answer": "Relying on free markets, privatization, and minimal government intervention." },
+        { "question": "What is interventionist development strategy?", "answer": "Active government role in directing investment, education, and industrial policy." },
+        { "question": "What is good governance?", "answer": "Transparent, accountable, effective, and participatory government institutions." },
+        { "question": "What is the role of education in development?", "answer": "Builds human capital, increases productivity, promotes innovation, and reduces inequality." },
+        { "question": "What is conditional cash transfer?", "answer": "Government payments to families conditional on children attending school or health visits." },
+        { "question": "What is debt relief?", "answer": "Reduction or cancellation of debt owed by developing countries to promote development." }
+      ]
+    }
+  },
+  "physics": {
+    "0": {
+      "0": [
+        { "question": "What is velocity?", "answer": "The rate of change of displacement with respect to time. It has both magnitude and direction." },
+        { "question": "What is acceleration?", "answer": "The rate of change of velocity with respect to time." },
+        { "question": "What is the equation for displacement?", "answer": "s = ut + ½at² where s=displacement, u=initial velocity, t=time, a=acceleration" },
+        { "question": "What is the difference between speed and velocity?", "answer": "Speed is scalar (magnitude only), velocity is vector (magnitude and direction)." },
+        { "question": "What is projectile motion?", "answer": "The motion of an object under the influence of gravity alone." },
+        { "question": "What is displacement?", "answer": "Vector quantity measuring change in position from starting point to final point." },
+        { "question": "What are the kinematic equations?", "answer": "v = u + at, s = ut + ½at², v² = u² + 2as, s = ½(u + v)t" },
+        { "question": "What is free fall?", "answer": "Motion under gravity alone with acceleration g = 9.8 m/s² downward." },
+        { "question": "What is instantaneous velocity?", "answer": "Velocity at a specific instant, found from gradient of displacement-time graph." },
+        { "question": "What is average velocity?", "answer": "Total displacement divided by total time taken." },
+        { "question": "What is uniform acceleration?", "answer": "Constant acceleration where velocity changes by equal amounts in equal time intervals." },
+        { "question": "What is the difference between distance and displacement?", "answer": "Distance is scalar (total path length), displacement is vector (straight-line change in position)." },
+        { "question": "How do you find acceleration from v-t graph?", "answer": "Acceleration equals the gradient (slope) of the velocity-time graph." },
+        { "question": "How do you find displacement from v-t graph?", "answer": "Displacement equals the area under the velocity-time graph." },
+        { "question": "What is terminal velocity?", "answer": "Maximum constant velocity reached when drag force equals gravitational force." }
+      ],
+      "5": [
+        { "question": "A car accelerates from rest at 2.0 m/s² for 5.0 s. What is its final velocity?", "answer": "v = u + at = 0 + (2.0)(5.0) = 10 m/s" },
+        { "question": "A ball is thrown horizontally from a 20 m cliff. How long does it take to hit the ground?", "answer": "Using s = ut + ½at²: 20 = 0 + ½(9.8)t², so t = 2.0 s" },
+        { "question": "What is the momentum of a 1500 kg car traveling at 25 m/s?", "answer": "p = mv = 1500 × 25 = 37,500 kg⋅m/s" },
+        { "question": "Calculate the kinetic energy of a 2.0 kg object moving at 10 m/s.", "answer": "KE = ½mv² = ½(2.0)(10)² = 100 J" },
+        { "question": "At what speed must light travel for time dilation factor γ = 2?", "answer": "γ = 1/√(1-v²/c²) = 2, solving gives v = (√3/2)c ≈ 0.87c" }
+      ],
+      "1": [
+        { "question": "What is Newton's First Law?", "answer": "An object at rest stays at rest, and an object in motion stays in motion, unless acted upon by an external force." },
+        { "question": "What is momentum?", "answer": "The product of an object's mass and velocity (p = mv)." },
+        { "question": "What is Newton's Second Law?", "answer": "The acceleration of an object is directly proportional to the net force and inversely proportional to its mass (F = ma)." },
+        { "question": "What is impulse?", "answer": "The change in momentum of an object, equal to force multiplied by time (J = FΔt = Δp)." }
+      ],
+      "2": [
+        { "question": "What is work?", "answer": "The product of force and displacement in the direction of the force (W = Fd cos θ)." },
+        { "question": "What is kinetic energy?", "answer": "The energy of motion, equal to ½mv²." },
+        { "question": "What is potential energy?", "answer": "Stored energy due to position or configuration." },
+        { "question": "What is the work-energy theorem?", "answer": "The work done on an object equals its change in kinetic energy." }
+      ],
+      "3": [
+        { "question": "What is torque?", "answer": "The rotational equivalent of force, equal to force times perpendicular distance (τ = rF sin θ)." },
+        { "question": "What is angular velocity?", "answer": "The rate of change of angular displacement (ω = Δθ/Δt)." },
+        { "question": "What is moment of inertia?", "answer": "A measure of an object's resistance to rotational motion." },
+        { "question": "What is conservation of angular momentum?", "answer": "In the absence of external torques, total angular momentum remains constant." }
+      ],
+      "4": [
+        { "question": "What is the principle of relativity?", "answer": "The laws of physics are the same in all inertial reference frames." },
+        { "question": "What is time dilation?", "answer": "Time passes more slowly in a moving reference frame as observed from a stationary frame." },
+        { "question": "What is length contraction?", "answer": "Objects appear shorter in the direction of motion when observed from a stationary frame." },
+        { "question": "What is the speed of light in vacuum?", "answer": "Approximately 3.0 × 10⁸ m/s, and it's constant for all observers." }
+      ]
+    },
+    "1": {
+      "0": [
+        { "question": "What is thermal equilibrium?", "answer": "When two objects in contact have the same temperature and no net heat transfer occurs." },
+        { "question": "What is specific heat capacity?", "answer": "The energy required to raise the temperature of 1 kg of a substance by 1 K." },
+        { "question": "What are the three methods of heat transfer?", "answer": "Conduction, convection, and radiation." },
+        { "question": "What is the first law of thermodynamics?", "answer": "Energy cannot be created or destroyed, only transferred or converted from one form to another." }
+      ],
+      "1": [
+        { "question": "What is the greenhouse effect?", "answer": "The warming of Earth's surface due to atmospheric gases trapping infrared radiation." },
+        { "question": "What are greenhouse gases?", "answer": "Gases that absorb and emit infrared radiation, such as CO₂, CH₄, and H₂O." },
+        { "question": "What is albedo?", "answer": "The fraction of solar radiation reflected by a surface." },
+        { "question": "What is global warming potential?", "answer": "A measure of how much a greenhouse gas contributes to warming relative to CO₂." }
+      ],
+      "2": [
+        { "question": "What is an ideal gas?", "answer": "A theoretical gas that perfectly obeys the gas laws: PV = nRT." },
+        { "question": "What is Boyle's law?", "answer": "At constant temperature, pressure is inversely proportional to volume: P₁V₁ = P₂V₂." },
+        { "question": "What is Charles' law?", "answer": "At constant pressure, volume is directly proportional to temperature: V₁/T₁ = V₂/T₂." },
+        { "question": "What is Gay-Lussac's law?", "answer": "At constant volume, pressure is directly proportional to temperature: P₁/T₁ = P₂/T₂." }
+      ],
+      "3": [
+        { "question": "What is the first law of thermodynamics?", "answer": "ΔU = Q - W, where ΔU is change in internal energy, Q is heat added, W is work done by system." },
+        { "question": "What is an isothermal process?", "answer": "A process at constant temperature where ΔU = 0, so Q = W." },
+        { "question": "What is an adiabatic process?", "answer": "A process with no heat transfer (Q = 0), so ΔU = -W." },
+        { "question": "What is entropy?", "answer": "A measure of disorder in a system, which increases in spontaneous processes." }
+      ],
+      "4": [
+        { "question": "What is electric current?", "answer": "The rate of flow of electric charge: I = Q/t, measured in amperes." },
+        { "question": "What is Ohm's law?", "answer": "V = IR, voltage equals current times resistance." },
+        { "question": "What is electrical power?", "answer": "P = VI = I²R = V²/R, the rate of energy transfer." },
+        { "question": "What is the difference between series and parallel circuits?", "answer": "Series: same current, voltages add. Parallel: same voltage, currents add." }
+      ],
+      "5": [
+        { "question": "A gas at 300 K and 1.0 atm is heated to 600 K. What is the new pressure?", "answer": "Using P₁/T₁ = P₂/T₂: P₂ = P₁T₂/T₁ = 1.0 × 600/300 = 2.0 atm" },
+        { "question": "How much heat is needed to raise 2.0 kg of water by 50°C?", "answer": "Q = mcΔT = 2.0 × 4180 × 50 = 418,000 J = 418 kJ" },
+        { "question": "What is the resistance of two 10Ω resistors in parallel?", "answer": "1/R = 1/10 + 1/10 = 2/10, so R = 5.0 Ω" },
+        { "question": "A 12V battery powers a 3Ω resistor. What is the current and power?", "answer": "I = V/R = 12/3 = 4 A; P = VI = 12 × 4 = 48 W" }
+      ]
+    },
+    "2": {
+      "0": [
+        { "question": "What is simple harmonic motion?", "answer": "Oscillatory motion where the restoring force is proportional to displacement." },
+        { "question": "What is the period of oscillation?", "answer": "The time taken to complete one full cycle of oscillation." },
+        { "question": "What is amplitude?", "answer": "The maximum displacement from the equilibrium position." },
+        { "question": "What is the equation for SHM?", "answer": "a = -ω²x, where a is acceleration, ω is angular frequency, and x is displacement." }
+      ],
+      "1": [
+        { "question": "What is a wave?", "answer": "A disturbance that transfers energy without transferring matter." },
+        { "question": "What is wavelength?", "answer": "The distance between two consecutive points in phase on a wave." },
+        { "question": "What is frequency?", "answer": "The number of wave cycles that pass a point per unit time." },
+        { "question": "What is the wave equation?", "answer": "v = fλ, where v is wave speed, f is frequency, and λ is wavelength." }
+      ],
+      "2": [
+        { "question": "What is wave interference?", "answer": "The superposition of waves when they meet, causing constructive or destructive patterns." },
+        { "question": "What is diffraction?", "answer": "The bending of waves around obstacles or through apertures." },
+        { "question": "What is refraction?", "answer": "The change in wave direction when passing from one medium to another." },
+        { "question": "What is Snell's law?", "answer": "n₁sin θ₁ = n₂sin θ₂, relating angles and refractive indices." }
+      ],
+      "3": [
+        { "question": "What are standing waves?", "answer": "Waves formed by interference of waves traveling in opposite directions, with nodes and antinodes." },
+        { "question": "What is resonance?", "answer": "Large amplitude oscillations when driving frequency matches natural frequency." },
+        { "question": "What is the fundamental frequency?", "answer": "The lowest resonant frequency, with wavelength λ = 2L for strings fixed at both ends." },
+        { "question": "What are harmonics?", "answer": "Resonant frequencies that are integer multiples of the fundamental frequency." }
+      ],
+      "4": [
+        { "question": "What is the Doppler effect?", "answer": "The change in observed frequency when source and/or observer are in relative motion." },
+        { "question": "What is the Doppler equation for sound?", "answer": "f' = f(v ± vₒ)/(v ± vₛ), where + means towards, - means away." },
+        { "question": "What is redshift?", "answer": "The increase in wavelength of light from objects moving away from observer." },
+        { "question": "What is the relativistic Doppler effect?", "answer": "f' = f√[(1-β)/(1+β)] for β = v/c, accounting for time dilation." }
+      ],
+      "5": [
+        { "question": "A pendulum has period 2.0 s. What is its length?", "answer": "T = 2π√(L/g), so L = gT²/(4π²) = 9.8 × 4/(4π²) ≈ 1.0 m" },
+        { "question": "Light travels from air (n=1.0) to glass (n=1.5) at 30°. What is the refraction angle?", "answer": "sin θ₂ = n₁sin θ₁/n₂ = 1.0 × sin(30°)/1.5 = 0.5/1.5 = 1/3, so θ₂ ≈ 19.5°" },
+        { "question": "A string 1.0 m long has fundamental frequency 440 Hz. What is the wave speed?", "answer": "For fundamental: λ = 2L = 2.0 m, so v = fλ = 440 × 2.0 = 880 m/s" },
+        { "question": "A car horn (500 Hz) approaches at 30 m/s. What frequency do you hear?", "answer": "f' = f(v)/(v-vₛ) = 500 × 343/(343-30) = 500 × 343/313 ≈ 548 Hz" }
+      ]
+    },
+    "3": {
+      "0": [
+        { "question": "What is gravitational field strength?", "answer": "The gravitational force per unit mass (g = F/m), measured in N/kg or m/s²." },
+        { "question": "What is Newton's law of universal gravitation?", "answer": "F = Gm₁m₂/r², where F is force, G is gravitational constant, m₁ and m₂ are masses, r is distance." },
+        { "question": "What is gravitational potential energy?", "answer": "U = -GMm/r, where negative sign indicates that work must be done to separate masses to infinity." },
+        { "question": "What is escape velocity?", "answer": "The minimum velocity needed for an object to escape a gravitational field: v = √(2GM/r)." },
+        { "question": "What are Kepler's laws?", "answer": "1) Planets orbit in ellipses with sun at focus, 2) Areas swept in equal times are equal, 3) T² ∝ r³." }
+      ],
+      "1": [
+        { "question": "What is electric field strength?", "answer": "The electric force per unit positive charge (E = F/q), measured in N/C or V/m." },
+        { "question": "What is Coulomb's law?", "answer": "F = kq₁q₂/r², where k = 9.0 × 10⁹ N⋅m²/C², q₁ and q₂ are charges, r is distance." },
+        { "question": "What is electric potential?", "answer": "The electric potential energy per unit charge (V = U/q), measured in volts." },
+        { "question": "What is the relationship between electric field and potential?", "answer": "E = -dV/dr, electric field is the negative gradient of potential." },
+        { "question": "What is magnetic flux density?", "answer": "The strength of a magnetic field, measured in Tesla (T), where F = BIL for current in field." }
+      ],
+      "2": [
+        { "question": "What is the Lorentz force?", "answer": "F = q(E + v × B), the total force on a charged particle in electric and magnetic fields." },
+        { "question": "What happens to charged particles in uniform magnetic fields?", "answer": "They follow circular paths with radius r = mv/(qB), where centripetal force equals magnetic force." },
+        { "question": "What is the Hall effect?", "answer": "The production of a voltage across a conductor when current flows through it in a magnetic field." },
+        { "question": "What is a cyclotron?", "answer": "A device that accelerates charged particles in a spiral path using magnetic fields." },
+        { "question": "How do mass spectrometers work?", "answer": "They separate ions by mass using electric and magnetic fields to measure mass-to-charge ratios." }
+      ],
+      "3": [
+        { "question": "What is electromagnetic induction?", "answer": "The production of an EMF when magnetic flux through a conductor changes." },
+        { "question": "What is Faraday's law?", "answer": "ε = -dΦ/dt, where ε is induced EMF and Φ is magnetic flux." },
+        { "question": "What is Lenz's law?", "answer": "The direction of induced current opposes the change that produced it." },
+        { "question": "What is motional EMF?", "answer": "ε = BLv, EMF induced in a conductor moving through a magnetic field." },
+        { "question": "What is self-inductance?", "answer": "The property of a circuit that opposes changes in current, ε = -L(dI/dt)." }
+      ],
+      "4": [
+        { "question": "What is orbital velocity?", "answer": "v = √(GM/r) for circular orbits, derived from centripetal force = gravitational force." },
+        { "question": "Calculate the electric field 2.0 m from a +5.0 μC charge.", "answer": "E = kq/r² = (9.0×10⁹)(5.0×10⁻⁶)/(2.0)² = 1.1×10⁴ N/C" },
+        { "question": "An electron enters a 0.50 T magnetic field at 2.0×10⁶ m/s. What is its circular path radius?", "answer": "r = mv/(qB) = (9.1×10⁻³¹)(2.0×10⁶)/((1.6×10⁻¹⁹)(0.50)) = 2.3×10⁻⁵ m" },
+        { "question": "A 10-turn coil has area 0.02 m². If B changes from 0 to 0.8 T in 0.1 s, what is the induced EMF?", "answer": "ε = -NdΦ/dt = -N(ΔB)A/Δt = -10(0.8)(0.02)/0.1 = -1.6 V" }
+      ]
+    },
+    "4": {
+      "0": [
+        { "question": "What is the structure of an atom?", "answer": "Nucleus (protons and neutrons) surrounded by electrons in energy levels or orbitals." },
+        { "question": "What is the atomic number?", "answer": "The number of protons in the nucleus, which determines the element's identity." },
+        { "question": "What is the mass number?", "answer": "The total number of protons and neutrons in the nucleus." },
+        { "question": "What are isotopes?", "answer": "Atoms of the same element with different numbers of neutrons." },
+        { "question": "What is the nuclear radius?", "answer": "Approximately 10⁻¹⁵ m, much smaller than the atomic radius (~10⁻¹⁰ m)." }
+      ],
+      "1": [
+        { "question": "What is the photoelectric effect?", "answer": "Emission of electrons from a material when light above a threshold frequency strikes it." },
+        { "question": "What is Einstein's photoelectric equation?", "answer": "E = hf = Φ + KEmax, where hf is photon energy, Φ is work function, KEmax is maximum kinetic energy." },
+        { "question": "What is wave-particle duality?", "answer": "Light and matter exhibit both wave and particle properties depending on the experiment." },
+        { "question": "What is de Broglie wavelength?", "answer": "λ = h/p, the wavelength associated with any moving particle." },
+        { "question": "What is the uncertainty principle?", "answer": "Δx × Δp ≥ h/4π, you cannot simultaneously know exact position and momentum." }
+      ],
+      "2": [
+        { "question": "What is radioactive decay?", "answer": "The spontaneous breakdown of unstable nuclei, emitting radiation and transforming into other elements." },
+        { "question": "What is the decay constant?", "answer": "λ, the probability per unit time that a nucleus will decay." },
+        { "question": "What is half-life?", "answer": "The time for half the nuclei in a sample to decay: t₁/₂ = ln(2)/λ." },
+        { "question": "What are alpha particles?", "answer": "Helium nuclei (²He⁴) with +2 charge, stopped by paper, highly ionizing." },
+        { "question": "What are beta particles?", "answer": "High-speed electrons (β⁻) or positrons (β⁺), stopped by aluminum, moderately ionizing." },
+        { "question": "What are gamma rays?", "answer": "High-energy electromagnetic radiation, stopped by lead, weakly ionizing but very penetrating." }
+      ],
+      "3": [
+        { "question": "What is nuclear fission?", "answer": "The splitting of heavy nuclei into lighter fragments, releasing energy and neutrons." },
+        { "question": "What makes U-235 fissile?", "answer": "It can undergo fission when struck by thermal (slow) neutrons." },
+        { "question": "What is a chain reaction?", "answer": "Self-sustaining fission where neutrons from one fission cause further fissions." },
+        { "question": "What is critical mass?", "answer": "The minimum amount of fissile material needed to sustain a chain reaction." },
+        { "question": "How do nuclear reactors work?", "answer": "Controlled fission with fuel rods, control rods, and moderator to slow neutrons." }
+      ],
+      "4": [
+        { "question": "What is nuclear fusion?", "answer": "The combining of light nuclei to form heavier nuclei, releasing energy." },
+        { "question": "What is the proton-proton chain?", "answer": "The main fusion process in stars: 4¹H → ⁴He + 2e⁺ + 2νₑ + energy." },
+        { "question": "What is stellar nucleosynthesis?", "answer": "The creation of elements in stars through fusion processes." },
+        { "question": "What is the Chandrasekhar limit?", "answer": "~1.4 solar masses, the maximum mass of a white dwarf star." },
+        { "question": "What happens in a supernova?", "answer": "Massive stars explode when fusion stops, creating elements heavier than iron." }
+      ],
+      "5": [
+        { "question": "Carbon-14 has half-life 5730 years. What fraction remains after 11,460 years?", "answer": "After 2 half-lives: N = N₀(1/2)² = N₀/4, so 1/4 or 25% remains" },
+        { "question": "What energy is released when 1.0 g of matter converts to energy?", "answer": "E = mc² = (0.001)(3.0×10⁸)² = 9.0×10¹³ J" },
+        { "question": "What is the binding energy per nucleon for ⁴He (mass defect 0.03 u)?", "answer": "BE = (0.03 u)(931.5 MeV/u) = 28 MeV; BE per nucleon = 28/4 = 7.0 MeV" },
+        { "question": "A photon has wavelength 500 nm. What is its energy?", "answer": "E = hf = hc/λ = (6.63×10⁻³⁴)(3.0×10⁸)/(500×10⁻⁹) = 3.97×10⁻¹⁹ J = 2.48 eV" }
+      ]
+    }
+  },
+  "business management": {
+    "0": {
+      "0": [
+        { "question": "What is business management?", "answer": "The process of planning, organizing, leading, and controlling business resources to achieve organizational goals." },
+        { "question": "What are the four functions of management?", "answer": "Planning, Organizing, Leading, and Controlling (POLC)." },
+        { "question": "What are the sectors of the economy?", "answer": "Primary (extraction), Secondary (manufacturing), Tertiary (services), and Quaternary (knowledge-based)." },
+        { "question": "What is entrepreneurship?", "answer": "The process of starting and running a new business, taking financial risks in hope of profit." },
+        { "question": "What is a business?", "answer": "An organization that produces goods or provides services to satisfy consumer needs and wants for profit." },
+        { "question": "What are the main business functions?", "answer": "Human resources, finance and accounts, marketing, and operations management." },
+        { "question": "What is the role of a manager?", "answer": "To set objectives, analyze and make decisions, review effectiveness, and coordinate business activities." },
+        { "question": "What are management skills?", "answer": "Technical skills, people skills (human relations), and conceptual skills." },
+        { "question": "What is added value?", "answer": "The difference between the selling price and the cost of materials/components used." },
+        { "question": "How can businesses add value?", "answer": "Convenience, branding, quality, design, customer service, and unique selling proposition (USP)." },
+        { "question": "What is the role of an entrepreneur?", "answer": "Organize resources, make business decisions, take risks, and innovate to create successful businesses." },
+        { "question": "What are the characteristics of successful entrepreneurs?", "answer": "Risk-taking, innovative, hardworking, self-confident, effective communicators, and independent." },
+        { "question": "What are intrapreneurs?", "answer": "Employees who think and act like entrepreneurs within large organizations, driving innovation." },
+        { "question": "What is business planning?", "answer": "The process of setting objectives and deciding how to achieve them through resource allocation." },
+        { "question": "What are the reasons businesses fail?", "answer": "Poor planning, lack of finance, competition, economic conditions, poor leadership, and market changes." }
+      ],
+      "1": [
+        { "question": "What is a sole proprietorship?", "answer": "A business owned and operated by one person who has unlimited liability." },
+        { "question": "What is a partnership?", "answer": "A business owned by two or more people who share profits, losses, and responsibilities." },
+        { "question": "What is a corporation?", "answer": "A legal entity separate from its owners, with limited liability for shareholders." },
+        { "question": "What is the difference between public and private companies?", "answer": "Public companies can sell shares to the general public; private companies cannot." },
+        { "question": "What is unlimited liability?", "answer": "Business owners are personally responsible for all debts and obligations of the business." },
+        { "question": "What is limited liability?", "answer": "Shareholders are only liable for the business debts up to the amount they invested." },
+        { "question": "What are the advantages of sole proprietorship?", "answer": "Complete control, keep all profits, easy to set up, personal contact with customers, few legal formalities." },
+        { "question": "What are the disadvantages of sole proprietorship?", "answer": "Unlimited liability, limited capital, heavy workload, limited expertise, lack of continuity." },
+        { "question": "What are the advantages of partnerships?", "answer": "Shared responsibility, more capital, specialization, shared losses, easy to establish." },
+        { "question": "What are the disadvantages of partnerships?", "answer": "Unlimited liability, shared profits, potential conflicts, limited life, shared control." },
+        { "question": "What is a private limited company?", "answer": "Company owned by shareholders with limited liability; shares cannot be sold to public." },
+        { "question": "What is a public limited company?", "answer": "Company that can sell shares to the public through stock exchange; minimum capital requirements." },
+        { "question": "What are cooperatives?", "answer": "Businesses owned and controlled by members who use its services; profits shared among members." },
+        { "question": "What are social enterprises?", "answer": "Businesses with primary social objectives; profits reinvested for social purposes rather than private gain." },
+        { "question": "What is a franchise?", "answer": "Business model where franchisor licenses its brand, products, and business methods to franchisees." },
+        { "question": "What are joint ventures?", "answer": "Business arrangement where parties pool resources for specific project; shared risks and returns." }
+      ],
+      "2": [
+        { "question": "What are business objectives?", "answer": "Specific, measurable goals that a business aims to achieve within a certain timeframe." },
+        { "question": "What is profit maximization?", "answer": "The primary goal of increasing profits to the highest possible level." },
+        { "question": "What are social objectives?", "answer": "Goals related to improving society and the environment, not just making profit." },
+        { "question": "What is corporate social responsibility?", "answer": "A business approach that contributes to sustainable development by delivering economic, social, and environmental benefits." },
+        { "question": "What is profit satisficing?", "answer": "Earning sufficient profit to satisfy stakeholders rather than maximizing profit." },
+        { "question": "What are SMART objectives?", "answer": "Specific, Measurable, Achievable, Realistic, Time-bound objectives that provide clear direction." },
+        { "question": "What is market share?", "answer": "The percentage of total market sales that a company controls." },
+        { "question": "What is corporate growth?", "answer": "Increasing the size of the business through expansion of operations, markets, or products." },
+        { "question": "What are ethical objectives?", "answer": "Goals that focus on doing the right thing morally, even if it reduces short-term profits." },
+        { "question": "What is profit?", "answer": "The surplus of revenue over costs; the reward for taking business risks." },
+        { "question": "What are survival objectives?", "answer": "Minimum goals focused on keeping the business operating during difficult times." },
+        { "question": "What is market leadership?", "answer": "Being the dominant company in terms of market share, innovation, or influence in an industry." },
+        { "question": "What are personal objectives?", "answer": "Goals of business owners/managers such as status, independence, or personal satisfaction." },
+        { "question": "What are the potential conflicts between objectives?", "answer": "Short-term vs long-term, profit vs ethics, growth vs stability, shareholders vs stakeholders." },
+        { "question": "How do objectives change over time?", "answer": "Start-ups focus on survival, growth businesses focus on expansion, mature businesses focus on market share/profitability." }
+      ],
+      "3": [
+        { "question": "What are stakeholders?", "answer": "Individuals or groups who have an interest in or are affected by a business's activities." },
+        { "question": "Who are internal stakeholders?", "answer": "Owners, shareholders, managers, and employees who are part of the organization." },
+        { "question": "Who are external stakeholders?", "answer": "Customers, suppliers, creditors, government, and local community who are outside the organization." },
+        { "question": "What is stakeholder conflict?", "answer": "When different stakeholders have competing interests that cannot all be satisfied simultaneously." },
+        { "question": "What do shareholders want?", "answer": "High dividends, capital growth, share price increases, and good return on investment." },
+        { "question": "What do employees want?", "answer": "Job security, good wages, safe working conditions, career progression, and recognition." },
+        { "question": "What do customers want?", "answer": "Quality products, fair prices, good customer service, and after-sales support." },
+        { "question": "What do suppliers want?", "answer": "Prompt payment, regular orders, long-term contracts, and fair dealing." },
+        { "question": "What does the government want?", "answer": "Tax payments, job creation, legal compliance, and contribution to economic growth." },
+        { "question": "What does the local community want?", "answer": "Local employment, environmental protection, community support, and responsible business practices." },
+        { "question": "How can stakeholder conflicts be resolved?", "answer": "Communication, consultation, compromise, prioritization, and stakeholder mapping." },
+        { "question": "What is stakeholder mapping?", "answer": "Process of identifying stakeholders and analyzing their influence and interest in the business." },
+        { "question": "What are primary stakeholders?", "answer": "Groups directly affected by business decisions: shareholders, employees, customers, suppliers." },
+        { "question": "What are secondary stakeholders?", "answer": "Groups indirectly affected: government, local community, pressure groups, media." },
+        { "question": "What is the stakeholder concept?", "answer": "Business should consider all stakeholder interests, not just shareholders, in decision-making." }
+      ],
+      "4": [
+        { "question": "What is external environment analysis?", "answer": "Analyzing factors outside the organization that may affect business operations and strategy." },
+        { "question": "What is PESTLE analysis?", "answer": "Political, Economic, Social, Technological, Legal, Environmental - framework for analyzing external factors." },
+        { "question": "What are Porter's Five Forces?", "answer": "Competitive rivalry, supplier power, buyer power, threat of substitutes, threat of new entrants." },
+        { "question": "What is competitive advantage?", "answer": "An advantage that allows a business to outperform its competitors." },
+        { "question": "What are political factors in PESTLE?", "answer": "Government policies, tax policies, political stability, trade restrictions, labor laws." },
+        { "question": "What are economic factors in PESTLE?", "answer": "Economic growth, interest rates, inflation rates, exchange rates, unemployment levels." },
+        { "question": "What are social factors in PESTLE?", "answer": "Demographics, lifestyle changes, education levels, cultural trends, health consciousness." },
+        { "question": "What are technological factors in PESTLE?", "answer": "Automation, research and development, internet, artificial intelligence, new production processes." },
+        { "question": "What are legal factors in PESTLE?", "answer": "Employment law, consumer protection, health and safety regulations, competition law." },
+        { "question": "What are environmental factors in PESTLE?", "answer": "Climate change, environmental regulations, sustainability concerns, waste disposal, carbon footprint." },
+        { "question": "What increases competitive rivalry?", "answer": "Many competitors, slow market growth, high fixed costs, low differentiation, high exit barriers." },
+        { "question": "What increases supplier power?", "answer": "Few suppliers, unique products, high switching costs, supplier integration, essential inputs." },
+        { "question": "What increases buyer power?", "answer": "Few buyers, low switching costs, standardized products, price sensitivity, backward integration." },
+        { "question": "What increases threat of substitutes?", "answer": "Close substitute products, low switching costs, better value substitutes, changing consumer preferences." },
+        { "question": "What increases threat of new entrants?", "answer": "Low barriers to entry, profitable industry, weak brand loyalty, easy access to suppliers and distributors." }
+      ],
+      "5": [
+        { "question": "What is organic growth?", "answer": "Growth achieved through expanding existing operations, increasing sales, or developing new products." },
+        { "question": "What is inorganic growth?", "answer": "Growth achieved through mergers, acquisitions, takeovers, or joint ventures." },
+        { "question": "What is a merger?", "answer": "When two companies of similar size agree to combine into one new company." },
+        { "question": "What is an acquisition?", "answer": "When a larger company purchases a smaller company and absorbs its operations." },
+        { "question": "What are the methods of organic growth?", "answer": "Increasing market share, developing new products, expanding into new markets, increasing production capacity." },
+        { "question": "What are the advantages of organic growth?", "answer": "Lower risk, maintains company culture, uses existing expertise, builds on strengths, avoids culture clash." },
+        { "question": "What are the disadvantages of organic growth?", "answer": "Slower growth, limited by internal resources, may miss opportunities, faces existing competition." },
+        { "question": "What is horizontal integration?", "answer": "Merging with or acquiring companies at the same stage of production process." },
+        { "question": "What is vertical integration?", "answer": "Merging with or acquiring companies at different stages of the production process." },
+        { "question": "What is backward vertical integration?", "answer": "Acquiring suppliers or companies earlier in the supply chain." },
+        { "question": "What is forward vertical integration?", "answer": "Acquiring distributors or companies closer to the end consumer." },
+        { "question": "What are the advantages of mergers and acquisitions?", "answer": "Rapid growth, economies of scale, reduced competition, access to new markets, synergies." },
+        { "question": "What are the disadvantages of mergers and acquisitions?", "answer": "High costs, culture clash, job losses, integration problems, reduced competition." },
+        { "question": "What is a takeover?", "answer": "One company acquires control of another, often against the wishes of the target company." },
+        { "question": "What are economies of scale?", "answer": "Cost advantages that result from increased size, leading to lower average costs per unit." },
+        { "question": "What are diseconomies of scale?", "answer": "Increased costs per unit that occur when a company becomes too large to manage efficiently." }
+      ],
+      "6": [
+        { "question": "What is a SWOT analysis?", "answer": "Strengths, Weaknesses, Opportunities, Threats - internal and external analysis tool." },
+        { "question": "What is the Ansoff Matrix?", "answer": "Strategic planning tool showing market penetration, market development, product development, and diversification." },
+        { "question": "What is a decision tree?", "answer": "A diagram that shows the sequence of decisions and their possible outcomes." },
+        { "question": "What is force field analysis?", "answer": "Tool that identifies driving and restraining forces affecting change in an organization." },
+        { "question": "What are strengths in SWOT analysis?", "answer": "Internal positive factors: skilled workforce, strong brand, good location, patents, financial resources." },
+        { "question": "What are weaknesses in SWOT analysis?", "answer": "Internal negative factors: poor location, outdated equipment, lack of expertise, cash flow problems." },
+        { "question": "What are opportunities in SWOT analysis?", "answer": "External positive factors: market growth, new technology, demographic changes, competitor weaknesses." },
+        { "question": "What are threats in SWOT analysis?", "answer": "External negative factors: new competitors, economic downturn, changing regulations, technological change." },
+        { "question": "What is market penetration in Ansoff Matrix?", "answer": "Selling existing products to existing markets - lowest risk strategy." },
+        { "question": "What is market development in Ansoff Matrix?", "answer": "Selling existing products to new markets - moderate risk strategy." },
+        { "question": "What is product development in Ansoff Matrix?", "answer": "Selling new products to existing markets - moderate risk strategy." },
+        { "question": "What is diversification in Ansoff Matrix?", "answer": "Selling new products to new markets - highest risk strategy." },
+        { "question": "How do you calculate expected values in decision trees?", "answer": "Multiply each outcome value by its probability, then sum all values for each decision branch." },
+        { "question": "What are the advantages of decision trees?", "answer": "Visual representation, considers probabilities, quantifies outcomes, systematic approach to decision-making." },
+        { "question": "What are the limitations of decision trees?", "answer": "Based on estimates, doesn't consider qualitative factors, complex to construct, outcomes may not be reliable." }
+      ]
+    },
+    "1": {
+      "0": [
+        { "question": "What is human resource management?", "answer": "The strategic approach to managing people in an organization to achieve business objectives." },
+        { "question": "What are the main functions of HRM?", "answer": "Recruitment, selection, training, performance management, compensation, and employee relations." },
+        { "question": "What is workforce planning?", "answer": "Analyzing current and future staffing needs and developing strategies to meet those needs." },
+        { "question": "What is the difference between hard and soft HRM?", "answer": "Hard HRM treats employees as resources; soft HRM treats them as valuable assets." },
+        { "question": "What is recruitment?", "answer": "The process of attracting suitable candidates to apply for job vacancies." },
+        { "question": "What is selection?", "answer": "The process of choosing the most suitable candidate from those who applied." },
+        { "question": "What is internal recruitment?", "answer": "Filling job vacancies with existing employees through promotion or transfer." },
+        { "question": "What is external recruitment?", "answer": "Filling job vacancies with candidates from outside the organization." },
+        { "question": "What are the advantages of internal recruitment?", "answer": "Lower costs, faster process, candidate known to employer, motivates existing staff." },
+        { "question": "What are the disadvantages of internal recruitment?", "answer": "Limited pool of candidates, no new ideas, creates another vacancy, may cause jealousy." },
+        { "question": "What are methods of recruitment?", "answer": "Job advertisements, employment agencies, headhunting, internet recruitment, employee referrals." },
+        { "question": "What is a job description?", "answer": "Document outlining the tasks, duties, and responsibilities of a job." },
+        { "question": "What is a person specification?", "answer": "Document outlining the qualifications, skills, and experience required for a job." },
+        { "question": "What are selection methods?", "answer": "Application forms, interviews, aptitude tests, assessment centers, references." },
+        { "question": "What is induction training?", "answer": "Training given to new employees to introduce them to the job and organization." }
+      ],
+      "1": [
+        { "question": "What is organizational structure?", "answer": "The way tasks, roles, and responsibilities are arranged and coordinated in an organization." },
+        { "question": "What is a hierarchical structure?", "answer": "A traditional structure with multiple levels of management and clear chains of command." },
+        { "question": "What is a flat structure?", "answer": "An organizational structure with few management levels and wide spans of control." },
+        { "question": "What is delegation?", "answer": "The transfer of authority and responsibility from a manager to a subordinate." },
+        { "question": "What is span of control?", "answer": "The number of subordinates that a manager directly supervises." },
+        { "question": "What are the advantages of a hierarchical structure?", "answer": "Clear authority lines, specialization, career progression paths, clear accountability." },
+        { "question": "What are the disadvantages of a hierarchical structure?", "answer": "Slow decision-making, communication barriers, high costs, inflexibility, demotivation at lower levels." },
+        { "question": "What are the advantages of a flat structure?", "answer": "Faster communication, lower costs, greater employee empowerment, flexibility, better teamwork." },
+        { "question": "What are the disadvantages of a flat structure?", "answer": "Wide spans of control, role confusion, limited career progression, manager overload." },
+        { "question": "What is centralization?", "answer": "Decision-making authority is concentrated at the top levels of management." },
+        { "question": "What is decentralization?", "answer": "Decision-making authority is distributed throughout the organization." },
+        { "question": "What is the chain of command?", "answer": "The formal line of authority from top management to operational employees." },
+        { "question": "What is bureaucracy?", "answer": "Organizational structure characterized by formal procedures, rules, and hierarchy." },
+        { "question": "What is a matrix structure?", "answer": "Employees report to both functional managers and project managers simultaneously." },
+        { "question": "What factors influence organizational structure?", "answer": "Size, technology, environment, strategy, culture, and management style." }
+      ],
+      "2": [
+        { "question": "What is leadership?", "answer": "The ability to influence and motivate others to achieve organizational goals." },
+        { "question": "What is management?", "answer": "The process of planning, organizing, leading, and controlling resources to achieve objectives." },
+        { "question": "What are the differences between leaders and managers?", "answer": "Leaders inspire and create vision; managers organize and control day-to-day operations." },
+        { "question": "What are leadership styles?", "answer": "Autocratic (authoritarian), democratic (participative), and laissez-faire (hands-off)." },
+        { "question": "What is autocratic leadership?", "answer": "Leader makes decisions without consulting subordinates; centralized control and authority." },
+        { "question": "What is democratic leadership?", "answer": "Leader involves employees in decision-making; encourages participation and consultation." },
+        { "question": "What is laissez-faire leadership?", "answer": "Leader provides minimal direction; employees have freedom to make decisions independently." },
+        { "question": "What is situational leadership?", "answer": "Leadership style should adapt based on the situation and the maturity of followers." },
+        { "question": "What are the advantages of autocratic leadership?", "answer": "Quick decisions, clear direction, good in crisis situations, suitable for unskilled workers." },
+        { "question": "What are the disadvantages of autocratic leadership?", "answer": "Low morale, no creativity, high staff turnover, dependency on leader." },
+        { "question": "What are the advantages of democratic leadership?", "answer": "High motivation, better decisions through consultation, develops staff skills, job satisfaction." },
+        { "question": "What are the disadvantages of democratic leadership?", "answer": "Slower decision-making, may not work in crisis, requires skilled workforce." },
+        { "question": "What are management roles according to Mintzberg?", "answer": "Interpersonal (figurehead, leader, liaison), Informational (monitor, disseminator, spokesperson), Decisional (entrepreneur, handler, allocator, negotiator)." },
+        { "question": "What is emotional intelligence in leadership?", "answer": "The ability to understand and manage emotions, both one's own and others'." },
+        { "question": "What makes an effective leader?", "answer": "Vision, integrity, communication skills, decision-making ability, empathy, adaptability." }
+      ],
+      "3": [
+        { "question": "What is motivation?", "answer": "The internal drive that causes people to act in certain ways to achieve goals." },
+        { "question": "What is Maslow's hierarchy of needs?", "answer": "Physiological, safety, social, esteem, and self-actualization needs in pyramid structure." },
+        { "question": "What is Herzberg's two-factor theory?", "answer": "Hygiene factors (prevent dissatisfaction) and motivators (create satisfaction)." },
+        { "question": "What is McGregor's Theory X and Y?", "answer": "Theory X: people dislike work; Theory Y: people find work natural and seek responsibility." },
+        { "question": "What are Herzberg's hygiene factors?", "answer": "Company policy, supervision, salary, working conditions, job security - prevent dissatisfaction." },
+        { "question": "What are Herzberg's motivators?", "answer": "Achievement, recognition, responsibility, advancement, work itself - create satisfaction." },
+        { "question": "What are the levels of Maslow's hierarchy?", "answer": "1. Physiological, 2. Safety, 3. Social/Love, 4. Esteem, 5. Self-actualization." },
+        { "question": "What are financial motivators?", "answer": "Salary, bonuses, profit-sharing, stock options, commission, performance-related pay." },
+        { "question": "What are non-financial motivators?", "answer": "Recognition, job enrichment, empowerment, flexible working, training opportunities, autonomy." },
+        { "question": "What is job enrichment?", "answer": "Increasing job satisfaction by adding more meaningful and challenging tasks." },
+        { "question": "What is job enlargement?", "answer": "Increasing the number of tasks of similar difficulty level." },
+        { "question": "What is empowerment?", "answer": "Giving employees authority and responsibility to make decisions about their work." },
+        { "question": "What is teamwork?", "answer": "Collaborative effort by group members to achieve common goals efficiently." },
+        { "question": "What are the benefits of teamwork?", "answer": "Improved productivity, better decision-making, increased motivation, knowledge sharing, innovation." },
+        { "question": "What is performance-related pay?", "answer": "Linking employee compensation directly to individual or team performance results." },
+        { "question": "What are the advantages of performance-related pay?", "answer": "Motivates high performance, attracts talented staff, rewards achievement, links pay to contribution." },
+        { "question": "What are the disadvantages of performance-related pay?", "answer": "May reduce teamwork, difficult to measure performance objectively, short-term focus, demotivates poor performers." }
+      ],
+      "4": [
+        { "question": "What is organizational culture?", "answer": "Shared values, beliefs, and practices that characterize an organization." },
+        { "question": "What are the types of organizational culture?", "answer": "Power, role, task, and person cultures according to Charles Handy." },
+        { "question": "What influences organizational culture?", "answer": "Leadership style, history, size, technology, environment, and national culture." },
+        { "question": "How can culture be changed?", "answer": "Through leadership, communication, training, rewards, and changing organizational structure." },
+        { "question": "What is power culture?", "answer": "Centralized control by key individuals; quick decisions but dependent on central figures." },
+        { "question": "What is role culture?", "answer": "Hierarchical with clear roles and procedures; stable but slow to change." },
+        { "question": "What is task culture?", "answer": "Focus on completing specific tasks; flexible teams but may lack overall direction." },
+        { "question": "What is person culture?", "answer": "Individuals are the central focus; expertise-based but difficult to manage." },
+        { "question": "What are the benefits of strong culture?", "answer": "Clear identity, employee loyalty, consistent behavior, competitive advantage, reduced turnover." },
+        { "question": "What are the problems with strong culture?", "answer": "Resistance to change, groupthink, difficulty recruiting outsiders, inflexibility." },
+        { "question": "What is cultural clash?", "answer": "Conflict arising when different organizational cultures meet, often during mergers." },
+        { "question": "What are national cultural differences?", "answer": "Hofstede's dimensions: power distance, individualism, masculinity, uncertainty avoidance, long-term orientation." },
+        { "question": "How does culture affect performance?", "answer": "Influences motivation, communication, decision-making, innovation, and customer service." },
+        { "question": "What is cultural integration?", "answer": "Process of combining different cultures during mergers or international expansion." },
+        { "question": "What are cultural symbols?", "answer": "Physical manifestations of culture: logos, dress codes, office layout, ceremonies." }
+      ],
+      "5": [
+        { "question": "What are trade unions?", "answer": "Organizations that represent workers' interests in negotiations with employers." },
+        { "question": "What is collective bargaining?", "answer": "Negotiations between employers and trade unions on behalf of employees." },
+        { "question": "What are the types of industrial action?", "answer": "Strikes, work-to-rule, overtime bans, and go-slows." },
+        { "question": "What is employment legislation?", "answer": "Laws that protect workers' rights regarding wages, working conditions, and discrimination." },
+        { "question": "What are the reasons for trade union formation?", "answer": "Poor working conditions, low wages, job insecurity, lack of voice in workplace decisions." },
+        { "question": "What are the advantages of trade unions to employees?", "answer": "Collective bargaining power, job security, better working conditions, legal protection, training opportunities." },
+        { "question": "What are the disadvantages of trade unions to employers?", "answer": "Increased costs, reduced flexibility, potential for industrial action, slower decision-making." },
+        { "question": "What is a strike?", "answer": "Workers refuse to work until their demands are met or disputes are resolved." },
+        { "question": "What is work-to-rule?", "answer": "Workers follow rules and procedures exactly, reducing productivity without breaking contracts." },
+        { "question": "What is an overtime ban?", "answer": "Workers refuse to work beyond normal hours, reducing output and employer profits." },
+        { "question": "What are the methods of dispute resolution?", "answer": "Negotiation, mediation, conciliation, and arbitration." },
+        { "question": "What is single union agreements?", "answer": "Employer recognizes only one union for all workers, simplifying negotiations." },
+        { "question": "What is no-strike agreements?", "answer": "Unions agree not to take industrial action in exchange for other benefits." },
+        { "question": "What factors affect union membership?", "answer": "Economic conditions, government policies, employer attitudes, changing work patterns, globalization." },
+        { "question": "What is the decline in union membership?", "answer": "Due to service economy growth, flexible working, government deregulation, and globalization." }
+      ]
+    },
+    "2": {
+      "0": [
+        { "question": "What are the two main sources of finance?", "answer": "Internal sources (retained profits, sale of assets) and external sources (loans, shares, bonds)." },
+        { "question": "What is equity finance?", "answer": "Funding obtained by selling ownership stakes in the business to investors." },
+        { "question": "What is debt finance?", "answer": "Borrowed money that must be repaid with interest over time." },
+        { "question": "What is venture capital?", "answer": "Investment in high-potential startups in exchange for equity, often with management involvement." },
+        { "question": "What are internal sources of finance?", "answer": "Retained profits, sale of assets, reducing inventory, collecting receivables faster." },
+        { "question": "What are external sources of finance?", "answer": "Bank loans, mortgages, share capital, debentures, overdrafts, trade credit, leasing." },
+        { "question": "What is retained profit?", "answer": "Profit kept by the company instead of being distributed to shareholders as dividends." },
+        { "question": "What is share capital?", "answer": "Money raised by issuing shares to investors in exchange for ownership stakes." },
+        { "question": "What is a bank loan?", "answer": "Fixed amount borrowed from bank, repaid with interest over agreed period." },
+        { "question": "What is an overdraft?", "answer": "Bank facility allowing account to go negative up to agreed limit; flexible but expensive." },
+        { "question": "What is a mortgage?", "answer": "Long-term loan secured against property, typically for buying real estate." },
+        { "question": "What are debentures?", "answer": "Long-term loans to companies, often secured against company assets." },
+        { "question": "What is trade credit?", "answer": "Purchasing goods/services with payment delayed, typically 30-90 days." },
+        { "question": "What is leasing?", "answer": "Renting equipment/assets rather than purchasing them outright." },
+        { "question": "What factors influence choice of finance?", "answer": "Amount needed, time period, cost, control, risk, gearing, purpose." }
+      ],
+      "1": [
+        { "question": "What are fixed costs?", "answer": "Costs that don't change with the level of output, such as rent and insurance." },
+        { "question": "What are variable costs?", "answer": "Costs that change directly with the level of output, such as raw materials." },
+        { "question": "What is total revenue?", "answer": "The total income from sales, calculated as price × quantity sold." },
+        { "question": "What is profit?", "answer": "The difference between total revenue and total costs." }
+      ],
+      "2": [
+        { "question": "What is break-even analysis?", "answer": "Analysis to determine the point where total revenue equals total costs." },
+        { "question": "What is the break-even formula?", "answer": "Break-even point = Fixed Costs ÷ (Selling price per unit - Variable cost per unit)." },
+        { "question": "What is margin of safety?", "answer": "The difference between actual sales and break-even sales." },
+        { "question": "What is contribution per unit?", "answer": "Selling price per unit minus variable cost per unit." }
+      ],
+      "3": [
+        { "question": "What are final accounts?", "answer": "Profit and loss account, balance sheet, and cash flow statement." },
+        { "question": "What is a profit and loss account?", "answer": "Shows revenues, costs, and profit/loss over a specific period." },
+        { "question": "What is a balance sheet?", "answer": "Shows assets, liabilities, and equity at a specific point in time." },
+        { "question": "What is depreciation?", "answer": "The decrease in value of fixed assets over time." }
+      ],
+      "4": [
+        { "question": "What is profitability ratio analysis?", "answer": "Ratios that measure how efficiently a business generates profit." },
+        { "question": "What is gross profit margin?", "answer": "(Gross profit ÷ Sales revenue) × 100 - measures operational efficiency." },
+        { "question": "What is net profit margin?", "answer": "(Net profit ÷ Sales revenue) × 100 - measures overall profitability." },
+        { "question": "What are liquidity ratios?", "answer": "Current ratio and acid test ratio - measure ability to pay short-term debts." }
+      ],
+      "5": [
+        { "question": "What are efficiency ratios?", "answer": "Ratios that measure how effectively a business uses its resources." },
+        { "question": "What is stock turnover ratio?", "answer": "Cost of goods sold ÷ Average stock - measures inventory management efficiency." },
+        { "question": "What is debtor days?", "answer": "(Debtors ÷ Sales revenue) × 365 - average time to collect receivables." },
+        { "question": "What is creditor days?", "answer": "(Creditors ÷ Cost of goods sold) × 365 - average time to pay suppliers." }
+      ],
+      "6": [
+        { "question": "What is cash flow?", "answer": "The movement of money into and out of a business over time." },
+        { "question": "What is working capital?", "answer": "Current assets minus current liabilities - funds available for daily operations." },
+        { "question": "What causes cash flow problems?", "answer": "Poor sales, bad debts, overtrading, seasonal fluctuations, and excessive spending." },
+        { "question": "How can cash flow be improved?", "answer": "Speed up collections, delay payments, reduce inventory, improve sales, or obtain financing." }
+      ],
+      "7": [
+        { "question": "What is investment appraisal?", "answer": "Methods used to evaluate the profitability of potential investments." },
+        { "question": "What is payback period?", "answer": "The time taken to recover the initial investment from cash flows." },
+        { "question": "What is net present value (NPV)?", "answer": "Present value of cash inflows minus present value of cash outflows." },
+        { "question": "What is internal rate of return (IRR)?", "answer": "The discount rate that makes NPV equal to zero." }
+      ],
+      "8": [
+        { "question": "What is a budget?", "answer": "A financial plan that estimates income and expenditure over a future period." },
+        { "question": "What are the types of budgets?", "answer": "Sales, production, cash, capital expenditure, and master budgets." },
+        { "question": "What is variance analysis?", "answer": "Comparing actual results with budgeted figures to identify differences." },
+        { "question": "What are the benefits of budgeting?", "answer": "Planning, control, coordination, motivation, and performance evaluation." }
+      ]
+    },
+    "3": {
+      "0": [
+        { "question": "What is marketing?", "answer": "The process of identifying, creating, and delivering value to customers to satisfy their needs profitably." },
+        { "question": "What is market orientation?", "answer": "A business philosophy that prioritizes understanding and meeting customer needs." },
+        { "question": "What is product orientation?", "answer": "A business approach that focuses on the product itself rather than customer needs." },
+        { "question": "What is the marketing concept?", "answer": "The idea that businesses should focus on satisfying customer needs while achieving organizational goals." }
+      ],
+      "1": [
+        { "question": "What are the 4 Ps of marketing?", "answer": "Product, Price, Place, and Promotion - the core elements of the marketing mix." },
+        { "question": "What is market segmentation?", "answer": "Dividing a market into distinct groups of customers with similar characteristics or needs." },
+        { "question": "What is target marketing?", "answer": "Selecting specific market segments to focus marketing efforts on." },
+        { "question": "What is positioning?", "answer": "Creating a distinct image and identity for a product in customers' minds." }
+      ],
+      "2": [
+        { "question": "What is sales forecasting?", "answer": "Predicting future sales levels based on historical data and market analysis." },
+        { "question": "What are the methods of sales forecasting?", "answer": "Time series analysis, correlation, market research, and expert opinion." },
+        { "question": "What factors affect sales forecasting accuracy?", "answer": "Market volatility, competition, economic conditions, and seasonal patterns." },
+        { "question": "Why is sales forecasting important?", "answer": "For production planning, inventory management, cash flow planning, and resource allocation." }
+      ],
+      "3": [
+        { "question": "What is market research?", "answer": "The systematic collection and analysis of data about customers, markets, and competitors." },
+        { "question": "What is primary research?", "answer": "Original data collected directly from sources through surveys, interviews, and observations." },
+        { "question": "What is secondary research?", "answer": "Existing data collected by others, such as government statistics and industry reports." },
+        { "question": "What are the limitations of market research?", "answer": "Time consuming, expensive, data may become outdated, and sample bias." }
+      ],
+      "4": [
+        { "question": "What is product in the marketing mix?", "answer": "The goods or services offered to satisfy customer needs and wants." },
+        { "question": "What is price in the marketing mix?", "answer": "The amount customers pay for the product, affecting demand and profitability." },
+        { "question": "What is place in the marketing mix?", "answer": "How and where the product is distributed and made available to customers." },
+        { "question": "What is promotion in the marketing mix?", "answer": "Communication methods used to inform and persuade customers to buy." }
+      ],
+      "5": [
+        { "question": "What are the additional 3 Ps in services marketing?", "answer": "People, Process, and Physical Evidence - extending the 4 Ps to 7 Ps." },
+        { "question": "What is People in the 7 Ps?", "answer": "Staff and their skills, attitude, and behavior in service delivery." },
+        { "question": "What is Process in the 7 Ps?", "answer": "The procedures and flow of activities in service delivery." },
+        { "question": "What is Physical Evidence in the 7 Ps?", "answer": "Tangible elements that customers can see and experience." }
+      ],
+      "6": [
+        { "question": "What is international marketing?", "answer": "Marketing products and services across national boundaries to global markets." },
+        { "question": "What are the approaches to international marketing?", "answer": "Ethnocentric, polycentric, regiocentric, and geocentric approaches." },
+        { "question": "What is cultural adaptation?", "answer": "Modifying products and marketing strategies to fit local cultural preferences." },
+        { "question": "What are the barriers to international marketing?", "answer": "Cultural differences, legal restrictions, economic conditions, and currency fluctuations." }
+      ],
+      "7": [
+        { "question": "What is e-commerce?", "answer": "Buying and selling goods and services over the internet." },
+        { "question": "What are the types of e-commerce?", "answer": "B2C (business to consumer), B2B (business to business), C2C (consumer to consumer)." },
+        { "question": "What are the benefits of e-commerce?", "answer": "Global reach, lower costs, 24/7 availability, and personalized marketing." },
+        { "question": "What are the challenges of e-commerce?", "answer": "Security concerns, lack of personal contact, delivery issues, and technical problems." }
+      ]
+    },
+    "4": {
+      "0": [
+        { "question": "What is operations management?", "answer": "The administration of business practices to create the highest level of efficiency within an organization." },
+        { "question": "What is the operations function?", "answer": "Converting inputs (materials, labor, energy) into outputs (goods and services)." },
+        { "question": "What is productivity?", "answer": "The relationship between output produced and input used, measuring efficiency." },
+        { "question": "What is quality?", "answer": "The degree to which a product or service meets customer expectations and requirements." }
+      ],
+      "1": [
+        { "question": "What is job production?", "answer": "Making one-off, unique products to specific customer requirements." },
+        { "question": "What is batch production?", "answer": "Producing goods in batches, where each batch goes through one stage before moving to the next." },
+        { "question": "What is flow production?", "answer": "Continuous production of standardized products on an assembly line." },
+        { "question": "What is mass customization?", "answer": "Combining mass production efficiency with the customization of individual products." }
+      ],
+      "2": [
+        { "question": "What is lean production?", "answer": "A production approach focused on minimizing waste while maximizing value for customers." },
+        { "question": "What is just-in-time (JIT) production?", "answer": "Producing goods only when needed, reducing inventory and waste." },
+        { "question": "What is kaizen?", "answer": "Continuous improvement philosophy focusing on small, incremental changes." },
+        { "question": "What is total quality management (TQM)?", "answer": "Organization-wide approach to improving quality in all processes and functions." }
+      ],
+      "3": [
+        { "question": "What factors affect location decisions?", "answer": "Costs, proximity to markets/suppliers, labor availability, infrastructure, and government incentives." },
+        { "question": "What is qualitative analysis for location?", "answer": "Considering non-financial factors like quality of life and business environment." },
+        { "question": "What is quantitative analysis for location?", "answer": "Using financial data and calculations to compare location options." },
+        { "question": "What is offshoring?", "answer": "Moving business operations to another country to reduce costs." }
+      ],
+      "4": [
+        { "question": "What is production planning?", "answer": "Determining what to produce, when, and in what quantities to meet demand efficiently." },
+        { "question": "What is capacity utilization?", "answer": "The percentage of maximum possible output that is actually achieved." },
+        { "question": "What is supply chain management?", "answer": "Coordinating the flow of materials, information, and finances from supplier to customer." },
+        { "question": "What is inventory management?", "answer": "Controlling stock levels to balance carrying costs with service levels." }
+      ],
+      "5": [
+        { "question": "What is research and development (R&D)?", "answer": "Activities aimed at developing new products, services, or improving existing ones." },
+        { "question": "What are the types of innovation?", "answer": "Product, process, marketing, and organizational innovation." },
+        { "question": "What is intellectual property?", "answer": "Legal rights protecting creations of the mind: patents, trademarks, copyrights." },
+        { "question": "What are the benefits of R&D?", "answer": "Competitive advantage, higher profits, market leadership, and sustainability." }
+      ],
+      "6": [
+        { "question": "What is crisis management?", "answer": "Preparing for and responding to unexpected events that threaten business operations." },
+        { "question": "What is contingency planning?", "answer": "Developing alternative plans for different scenarios and potential problems." },
+        { "question": "What are the stages of crisis management?", "answer": "Prevention, preparation, response, and recovery." },
+        { "question": "What is business continuity planning?", "answer": "Ensuring essential business functions continue during and after a crisis." }
+      ]
+    }
+  },
+  "computer science": {
+    "0": {
+      "0": [
+        { "question": "What is the binary number system?", "answer": "A base-2 number system that uses only digits 0 and 1 to represent all numbers." },
+        { "question": "What is the difference between hardware and software?", "answer": "Hardware is the physical components of a computer system, while software is the programs and instructions that run on it." },
+        { "question": "What is the CPU?", "answer": "Central Processing Unit - the main processor that executes instructions and performs calculations." },
+        { "question": "What is RAM?", "answer": "Random Access Memory - temporary storage that holds data and programs currently being used." },
+        { "question": "What is the fetch-decode-execute cycle?", "answer": "The basic operating cycle of a CPU: fetch instruction from memory, decode what it means, execute the operation." },
+        { "question": "What is cache memory?", "answer": "Very fast, small memory located close to CPU that stores frequently used data and instructions." },
+        { "question": "What is virtual memory?", "answer": "Using hard disk space as an extension of RAM when physical memory is insufficient." },
+        { "question": "What is the difference between ROM and RAM?", "answer": "ROM (Read Only Memory) is permanent, non-volatile storage; RAM is temporary, volatile storage." },
+        { "question": "What is an operating system?", "answer": "System software that manages computer hardware and provides services for application programs." },
+        { "question": "What are the main functions of an OS?", "answer": "Memory management, process scheduling, file management, device management, user interface." },
+        { "question": "What is multitasking?", "answer": "The ability of an operating system to execute multiple programs simultaneously." },
+        { "question": "What is the difference between system and application software?", "answer": "System software manages computer operations; application software performs specific tasks for users." },
+        { "question": "What is machine code?", "answer": "Low-level programming language consisting of binary instructions that the CPU can execute directly." },
+        { "question": "What is assembly language?", "answer": "Low-level programming language using mnemonics to represent machine code instructions." },
+        { "question": "What is a high-level programming language?", "answer": "Programming language with syntax similar to human language, easier to read and write than machine code." }
+      ],
+      "1": [
+        { "question": "What is a network?", "answer": "A collection of interconnected devices that can communicate and share resources." },
+        { "question": "What is the difference between LAN and WAN?", "answer": "LAN (Local Area Network) covers a small area, WAN (Wide Area Network) covers large geographical areas." },
+        { "question": "What is an IP address?", "answer": "Internet Protocol address - a unique numerical identifier assigned to each device on a network." },
+        { "question": "What is a router?", "answer": "A network device that forwards data packets between different networks." },
+        { "question": "What is the OSI model?", "answer": "7-layer model for network communication: Physical, Data Link, Network, Transport, Session, Presentation, Application." },
+        { "question": "What is TCP/IP?", "answer": "Transmission Control Protocol/Internet Protocol - the fundamental communication protocols of the internet." },
+        { "question": "What is the difference between TCP and UDP?", "answer": "TCP is reliable, connection-oriented; UDP is faster but unreliable, connectionless." },
+        { "question": "What is a MAC address?", "answer": "Media Access Control address - unique identifier assigned to network interfaces by manufacturer." },
+        { "question": "What is DNS?", "answer": "Domain Name System - translates domain names (like google.com) into IP addresses." },
+        { "question": "What is HTTP vs HTTPS?", "answer": "HTTP is unsecured web communication; HTTPS is secured with encryption (SSL/TLS)." },
+        { "question": "What is a firewall?", "answer": "Network security device that monitors and controls incoming and outgoing network traffic." },
+        { "question": "What is bandwidth?", "answer": "The maximum rate of data transfer across a network connection, measured in bits per second." },
+        { "question": "What are network topologies?", "answer": "Physical or logical arrangement of devices in a network: star, ring, bus, mesh topologies." },
+        { "question": "What is wireless networking?", "answer": "Communication between devices using radio waves instead of physical cables." },
+        { "question": "What are the advantages of networks?", "answer": "Resource sharing, communication, centralized data, cost savings, collaboration." }
+      ],
+      "2": [
+        { "question": "What is a database?", "answer": "An organized collection of structured data stored electronically in a computer system." },
+        { "question": "What is SQL?", "answer": "Structured Query Language - a programming language designed for managing and querying relational databases." },
+        { "question": "What is a primary key?", "answer": "A unique identifier for each record in a database table that cannot be null or duplicate." },
+        { "question": "What is normalization?", "answer": "The process of organizing database tables to reduce redundancy and improve data integrity." },
+        { "question": "What is a relational database?", "answer": "Database that stores data in tables with relationships between them, following relational model principles." },
+        { "question": "What is a foreign key?", "answer": "A field that creates a link between two tables, referencing the primary key of another table." },
+        { "question": "What are the basic SQL commands?", "answer": "SELECT (query), INSERT (add), UPDATE (modify), DELETE (remove), CREATE (make tables), ALTER (change structure)." },
+        { "question": "What is data redundancy?", "answer": "Unnecessary duplication of data in a database, which can lead to inconsistencies." },
+        { "question": "What are the three normal forms?", "answer": "1NF: atomic values, 2NF: no partial dependencies, 3NF: no transitive dependencies." },
+        { "question": "What is a database management system (DBMS)?", "answer": "Software that provides an interface for users and applications to interact with databases." },
+        { "question": "What is data integrity?", "answer": "Accuracy, consistency, and reliability of data stored in a database." },
+        { "question": "What is a query?", "answer": "A request for data from a database, typically written in SQL." },
+        { "question": "What is indexing in databases?", "answer": "Creating data structures to improve the speed of data retrieval operations." },
+        { "question": "What is the difference between DDL and DML?", "answer": "DDL (Data Definition Language) defines structure; DML (Data Manipulation Language) manipulates data." },
+        { "question": "What is database security?", "answer": "Protecting databases from unauthorized access, data breaches, and malicious attacks." }
+      ],
+      "3": [
+        { "question": "What is machine learning?", "answer": "A subset of artificial intelligence where computers learn patterns from data without being explicitly programmed." },
+        { "question": "What is supervised learning?", "answer": "A type of machine learning where algorithms learn from labeled training data to make predictions." },
+        { "question": "What is an algorithm?", "answer": "A step-by-step procedure or formula for solving a problem or completing a task." },
+        { "question": "What is training data?", "answer": "The dataset used to teach a machine learning model to make accurate predictions or decisions." },
+        { "question": "What is unsupervised learning?", "answer": "Machine learning with unlabeled data, finding hidden patterns like clustering or association rules." },
+        { "question": "What is artificial intelligence?", "answer": "Computer systems that can perform tasks typically requiring human intelligence." },
+        { "question": "What is a neural network?", "answer": "Computing system inspired by biological neural networks, used in machine learning." },
+        { "question": "What is deep learning?", "answer": "Subset of machine learning using neural networks with multiple layers to analyze data." },
+        { "question": "What is computer vision?", "answer": "Field of AI that enables computers to interpret and understand visual information from images/videos." },
+        { "question": "What is natural language processing?", "answer": "AI branch that helps computers understand, interpret, and respond to human language." },
+        { "question": "What is big data?", "answer": "Extremely large datasets that require special tools and techniques to process and analyze." },
+        { "question": "What are the 3 Vs of big data?", "answer": "Volume (amount), Velocity (speed), and Variety (types) of data." },
+        { "question": "What is data mining?", "answer": "Process of discovering patterns and knowledge from large amounts of data." },
+        { "question": "What is the difference between AI and machine learning?", "answer": "AI is broader field of intelligent machines; ML is specific subset focusing on learning from data." },
+        { "question": "What are ethical considerations in AI?", "answer": "Privacy, bias, job displacement, accountability, transparency, and human autonomy concerns." }
+      ]
+    },
+    "1": {
+      "0": [
+        { "question": "What is computational thinking?", "answer": "Problem-solving process that includes decomposition, pattern recognition, abstraction, and algorithms." },
+        { "question": "What is decomposition?", "answer": "Breaking down a complex problem into smaller, more manageable sub-problems." },
+        { "question": "What is pattern recognition?", "answer": "Identifying similarities and trends in data or problems to help solve them more efficiently." },
+        { "question": "What is abstraction?", "answer": "Focusing on essential features while hiding unnecessary details to simplify complex systems." },
+        { "question": "What is algorithmic thinking?", "answer": "Developing step-by-step solutions to problems that can be implemented systematically." },
+        { "question": "What makes a good algorithm?", "answer": "Correctness, efficiency, clarity, finiteness, and definiteness." },
+        { "question": "What is pseudocode?", "answer": "Plain language description of algorithm steps without specific programming syntax." },
+        { "question": "What is a flowchart?", "answer": "Visual diagram showing algorithm steps using standard symbols and arrows." },
+        { "question": "What is algorithm complexity?", "answer": "Measure of resources (time/space) an algorithm requires as input size grows." },
+        { "question": "What is Big O notation?", "answer": "Mathematical way to describe algorithm efficiency in worst-case scenario." },
+        { "question": "What are searching algorithms?", "answer": "Methods to find specific data: linear search, binary search." },
+        { "question": "What are sorting algorithms?", "answer": "Methods to arrange data in order: bubble sort, selection sort, insertion sort, merge sort." },
+        { "question": "What is recursion?", "answer": "Programming technique where function calls itself to solve smaller versions of the same problem." },
+        { "question": "What is iteration?", "answer": "Repeating a process using loops (for, while) until a condition is met." },
+        { "question": "What is the difference between recursion and iteration?", "answer": "Recursion uses function self-calls; iteration uses loops. Both solve repetitive problems." }
+      ],
+      "1": [
+        { "question": "What is a variable?", "answer": "A named storage location in memory that holds a value which can change during program execution." },
+        { "question": "What is a function?", "answer": "A reusable block of code that performs a specific task and can accept inputs and return outputs." },
+        { "question": "What is a loop?", "answer": "A programming construct that repeats a block of code multiple times based on a condition." },
+        { "question": "What is debugging?", "answer": "The process of finding and fixing errors or bugs in computer programs." },
+        { "question": "What are data types?", "answer": "Categories of data: integers, floats, strings, booleans, arrays, objects." },
+        { "question": "What is an array?", "answer": "Data structure that stores multiple values of same type in sequential memory locations." },
+        { "question": "What is a string?", "answer": "Sequence of characters used to represent text in programming." },
+        { "question": "What is a boolean?", "answer": "Data type with only two values: true or false." },
+        { "question": "What is an if statement?", "answer": "Conditional statement that executes code only if specified condition is true." },
+        { "question": "What is a for loop?", "answer": "Loop that repeats code for predetermined number of iterations." },
+        { "question": "What is a while loop?", "answer": "Loop that continues as long as condition remains true." },
+        { "question": "What are logical operators?", "answer": "AND, OR, NOT - used to combine or modify boolean expressions." },
+        { "question": "What is syntax?", "answer": "Rules governing structure and format of programming language statements." },
+        { "question": "What is a compiler?", "answer": "Program that translates high-level code into machine code before execution." },
+        { "question": "What is an interpreter?", "answer": "Program that executes code line by line during runtime without pre-compilation." },
+        { "question": "What is object-oriented programming?", "answer": "Programming paradigm using objects containing data and methods." },
+        { "question": "What is procedural programming?", "answer": "Programming approach using functions and procedures to organize code." }
+      ],
+      "2": [
+        { "question": "What is a class?", "answer": "A blueprint or template for creating objects that defines attributes and methods." },
+        { "question": "What is an object?", "answer": "An instance of a class that contains data (attributes) and functions (methods)." },
+        { "question": "What is inheritance?", "answer": "A mechanism where a new class inherits properties and methods from an existing class." },
+        { "question": "What is encapsulation?", "answer": "The practice of bundling data and methods together while restricting access to internal details." },
+        { "question": "What is polymorphism?", "answer": "Ability for objects of different classes to be treated as instances of the same type." },
+        { "question": "What is abstraction in OOP?", "answer": "Hiding complex implementation details while showing only essential features." },
+        { "question": "What is a constructor?", "answer": "Special method called when object is created to initialize its attributes." },
+        { "question": "What is a method?", "answer": "Function defined within a class that operates on objects of that class." },
+        { "question": "What is an attribute?", "answer": "Variable that belongs to an object and stores data about that object." },
+        { "question": "What is public access?", "answer": "Class members accessible from anywhere in the program." },
+        { "question": "What is private access?", "answer": "Class members accessible only within the same class." },
+        { "question": "What is protected access?", "answer": "Class members accessible within the class and its subclasses." },
+        { "question": "What is overriding?", "answer": "Redefining parent class method in child class with same name but different implementation." },
+        { "question": "What is overloading?", "answer": "Multiple methods with same name but different parameters in the same class." },
+        { "question": "What is composition?", "answer": "Building complex objects by combining simpler objects as components." }
+      ],
+      "3": [
+        { "question": "What is an abstract data type?", "answer": "A data type defined by its behavior rather than its implementation details." },
+        { "question": "What is a stack?", "answer": "A Last-In-First-Out (LIFO) data structure where elements are added and removed from the same end." },
+        { "question": "What is a queue?", "answer": "A First-In-First-Out (FIFO) data structure where elements are added at one end and removed from the other." },
+        { "question": "What is a linked list?", "answer": "A linear data structure where elements are stored in nodes, each containing data and a reference to the next node." }
+      ]
+    }
+  },
+  "spanish": {
+    "0": {
+      "0": [
+        { "question": "What are the present tense endings for -ar verbs?", "answer": "-o, -as, -a, -amos, -áis, -an" },
+        { "question": "What are the present tense endings for -er verbs?", "answer": "-o, -es, -e, -emos, -éis, -en" },
+        { "question": "What are the present tense endings for -ir verbs?", "answer": "-o, -es, -e, -imos, -ís, -en" },
+        { "question": "How do you conjugate 'hablar' (to speak) in present tense?", "answer": "hablo, hablas, habla, hablamos, habláis, hablan" }
+      ],
+      "1": [
+        { "question": "What are the definite articles in Spanish?", "answer": "el (masculine singular), la (feminine singular), los (masculine plural), las (feminine plural)" },
+        { "question": "What are the indefinite articles in Spanish?", "answer": "un (masculine singular), una (feminine singular), unos (masculine plural), unas (feminine plural)" },
+        { "question": "How do you determine the gender of Spanish nouns?", "answer": "Most nouns ending in -a are feminine, most ending in -o are masculine, but there are exceptions that must be memorized." },
+        { "question": "What is the plural form of 'libro'?", "answer": "libros (add -s to words ending in vowels)" }
+      ],
+      "2": [
+        { "question": "How do adjectives agree with nouns in Spanish?", "answer": "Adjectives must match the gender (masculine/feminine) and number (singular/plural) of the nouns they describe." },
+        { "question": "What is the feminine form of 'alto' (tall)?", "answer": "alta" },
+        { "question": "What is the plural form of 'inteligente'?", "answer": "inteligentes (add -s to adjectives ending in -e)" },
+        { "question": "Where do most adjectives go in relation to nouns?", "answer": "Most adjectives come after the noun they describe (la casa blanca)" }
+      ],
+      "3": [
+        { "question": "When do you use 'ser'?", "answer": "For permanent characteristics, identity, time, dates, and origin (DOCTOR: Description, Occupation, Characteristics, Time, Origin, Relationships)" },
+        { "question": "When do you use 'estar'?", "answer": "For temporary states, location, ongoing actions, and conditions (PLACE: Position, Location, Action, Condition, Emotion)" },
+        { "question": "How do you conjugate 'ser' in present tense?", "answer": "soy, eres, es, somos, sois, son" },
+        { "question": "How do you conjugate 'estar' in present tense?", "answer": "estoy, estás, está, estamos, estáis, están" }
+      ]
+    },
+    "1": {
+      "0": [
+        { "question": "What are the regular preterite endings for -ar verbs?", "answer": "-é, -aste, -ó, -amos, -asteis, -aron" },
+        { "question": "What are the regular preterite endings for -er/-ir verbs?", "answer": "-í, -iste, -ió, -imos, -isteis, -ieron" },
+        { "question": "When do you use the preterite tense?", "answer": "For completed actions in the past, specific past events, and actions with definite time frames" },
+        { "question": "How do you conjugate 'hablar' in preterite?", "answer": "hablé, hablaste, habló, hablamos, hablasteis, hablaron" }
+      ],
+      "1": [
+        { "question": "What are the regular imperfect endings for -ar verbs?", "answer": "-aba, -abas, -aba, -ábamos, -abais, -aban" },
+        { "question": "What are the regular imperfect endings for -er/-ir verbs?", "answer": "-ía, -ías, -ía, -íamos, -íais, -ían" },
+        { "question": "When do you use the imperfect tense?", "answer": "For ongoing past actions, descriptions in the past, habitual past actions, and background information" },
+        { "question": "What are the only three irregular verbs in the imperfect?", "answer": "ser (era, eras, era...), ir (iba, ibas, iba...), ver (veía, veías, veía...)" }
+      ],
+      "2": [
+        { "question": "How do you form the present perfect tense?", "answer": "Use present tense of 'haber' + past participle" },
+        { "question": "How do you form regular past participles?", "answer": "Remove -ar and add -ado; remove -er/-ir and add -ido" },
+        { "question": "What are some irregular past participles?", "answer": "hacer → hecho, escribir → escrito, ver → visto, decir → dicho, poner → puesto" },
+        { "question": "How do you conjugate 'haber' in present tense?", "answer": "he, has, ha, hemos, habéis, han" }
+      ],
+      "3": [
+        { "question": "How do you form the past perfect (pluperfect)?", "answer": "Use imperfect tense of 'haber' + past participle" },
+        { "question": "How do you conjugate 'haber' in imperfect?", "answer": "había, habías, había, habíamos, habíais, habían" },
+        { "question": "When do you use the past perfect?", "answer": "To describe an action that occurred before another past action" },
+        { "question": "Give an example of past perfect usage", "answer": "Ya había comido cuando llegaste. (I had already eaten when you arrived.)" }
+      ]
+    },
+    "2": {
+      "0": [
+        { "question": "How do you form the simple future tense?", "answer": "Add future endings to the infinitive: -é, -ás, -á, -emos, -éis, -án" },
+        { "question": "What are some irregular future stems?", "answer": "decir→dir-, hacer→har-, poder→podr-, poner→pondr-, querer→querr-, saber→sabr-, salir→saldr-, tener→tendr-, venir→vendr-" },
+        { "question": "When do you use the future tense?", "answer": "For future actions, predictions, probability in the present, and formal commands" },
+        { "question": "How do you conjugate 'hablar' in future tense?", "answer": "hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán" }
+      ],
+      "1": [
+        { "question": "How do you form the conditional tense?", "answer": "Add conditional endings to the infinitive: -ía, -ías, -ía, -íamos, -íais, -ían" },
+        { "question": "When do you use the conditional tense?", "answer": "For hypothetical situations, polite requests, probability in the past, and 'would' statements" },
+        { "question": "What verbs are irregular in the conditional?", "answer": "The same verbs that are irregular in the future tense use the same irregular stems" },
+        { "question": "Give an example of conditional usage", "answer": "Me gustaría viajar a España. (I would like to travel to Spain.)" }
+      ],
+      "2": [
+        { "question": "How do you form the future perfect?", "answer": "Use future tense of 'haber' + past participle" },
+        { "question": "How do you conjugate 'haber' in future tense?", "answer": "habré, habrás, habrá, habremos, habréis, habrán" },
+        { "question": "When do you use future perfect?", "answer": "To express an action that will be completed before another future action or time" },
+        { "question": "Give an example of future perfect", "answer": "Para mañana habré terminado el proyecto. (By tomorrow I will have finished the project.)" }
+      ],
+      "3": [
+        { "question": "How do you form the conditional perfect?", "answer": "Use conditional tense of 'haber' + past participle" },
+        { "question": "How do you conjugate 'haber' in conditional?", "answer": "habría, habrías, habría, habríamos, habríais, habrían" },
+        { "question": "When do you use conditional perfect?", "answer": "For hypothetical situations in the past, 'would have' statements, and speculation about the past" },
+        { "question": "Give an example of conditional perfect", "answer": "Habría estudiado más si hubiera tenido tiempo. (I would have studied more if I had had time.)" }
+      ]
+    },
+    "3": {
+      "0": [
+        { "question": "What is the subjunctive mood used for?", "answer": "To express doubt, emotion, desire, possibility, necessity, and subjective opinions rather than facts" },
+        { "question": "What triggers the subjunctive?", "answer": "WEIRDO: Wishes/Wants, Emotions, Impersonal expressions, Recommendations, Doubt/Denial, Ojalá" },
+        { "question": "How do you form present subjunctive for -ar verbs?", "answer": "Take yo form, drop -o, add -e, -es, -e, -emos, -éis, -en" },
+        { "question": "How do you form present subjunctive for -er/-ir verbs?", "answer": "Take yo form, drop -o, add -a, -as, -a, -amos, -áis, -an" }
+      ],
+      "1": [
+        { "question": "How do you form affirmative tú commands?", "answer": "Use the third person singular (él/ella) form of the present tense" },
+        { "question": "How do you form negative tú commands?", "answer": "Use the tú form of the present subjunctive" },
+        { "question": "What are the irregular affirmative tú commands?", "answer": "decir→di, hacer→haz, ir→ve, poner→pon, salir→sal, ser→sé, tener→ten, venir→ven" },
+        { "question": "How do you form formal (usted) commands?", "answer": "Use the usted form of the present subjunctive for both affirmative and negative commands" }
+      ],
+      "2": [
+        { "question": "What are relative pronouns?", "answer": "Words that connect clauses and refer back to a noun: que, quien/quienes, el que/la que, donde, cuyo" },
+        { "question": "When do you use 'que'?", "answer": "'Que' is the most common relative pronoun and can refer to people or things" },
+        { "question": "When do you use 'quien/quienes'?", "answer": "Use after prepositions when referring to people, or in non-restrictive clauses about people" },
+        { "question": "What does 'cuyo' mean and how is it used?", "answer": "'Cuyo' means 'whose' and must agree in gender and number with the noun it modifies" }
+      ],
+      "3": [
+        { "question": "What are complex sentence structures?", "answer": "Sentences with multiple clauses connected by conjunctions, relative pronouns, or other linking words" },
+        { "question": "When do you use 'aunque'?", "answer": "'Aunque' means 'although/even though' and can take indicative (known fact) or subjunctive (doubt/hypothesis)" },
+        { "question": "What is the difference between 'por' and 'para'?", "answer": "'Por' indicates reason, duration, exchange; 'Para' indicates purpose, destination, deadline, recipient" },
+        { "question": "How do you express hypothetical situations?", "answer": "Use 'si' clauses: Si + imperfect subjunctive + conditional, or Si + pluperfect subjunctive + conditional perfect" }
+      ]
+    }
+  }
+}

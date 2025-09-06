@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARDWISE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-ultimate.css?v=5.0">
+  <style>
+    /* INLINE FORCE OVERRIDE - SLATE GRAY CARDS WITH WHITE TEXT */
+    .subject-button, .chapter-card, .flashcard-front, .flashcard-back {
+      background-color: #2D3748 !important;
+      background: #2D3748 !important;
+    }
+    .subject-button:hover, .chapter-card:hover, .flashcard-back {
+      background-color: #4A5568 !important;
+      background: #4A5568 !important;
+    }
+    
+    /* White text for all card content */
+    .subject-name, .subject-description, .chapter-title, .flashcard-content {
+      color: #FFFFFF !important;
+    }
+    
+    /* Light gray for descriptions to create hierarchy */
+    .subject-description {
+      color: #CBD5E0 !important;
+    }
+    
+    /* White for the main heading */
+    .choose-subject-text {
+      color: #FFFFFF !important;
+    }
+    
+    /* Remove border from tagline highlight, keep just the blue color */
+    .tagline-highlight {
+      background: transparent !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+    }
+    
+    /* Subject-specific accent colors for navigation cards only */
+    .subject-economics.subject-button:hover,
+    .subject-economics.chapter-card:hover {
+      border-color: #f59e0b !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(245, 158, 11, 0.3) !important;
+    }
+    
+    .subject-physics.subject-button:hover,
+    .subject-physics.chapter-card:hover {
+      border-color: #8b5cf6 !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(139, 92, 246, 0.3) !important;
+    }
+    
+    .subject-business-management.subject-button:hover,
+    .subject-business-management.chapter-card:hover {
+      border-color: #06b6d4 !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(6, 182, 212, 0.3) !important;
+    }
+    
+    .subject-computer-science.subject-button:hover,
+    .subject-computer-science.chapter-card:hover {
+      border-color: #10b981 !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(16, 185, 129, 0.3) !important;
+    }
+    
+    .subject-spanish.subject-button:hover,
+    .subject-spanish.chapter-card:hover {
+      border-color: #ef4444 !important;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(239, 68, 68, 0.3) !important;
+    }
+    
+    /* Click to reveal message in italics */
+    .click-message {
+      font-style: italic !important;
+    }
+    
+    /* Better text hierarchy for chapter cards */
+    .chapter-card .chapter-title {
+      color: #FFFFFF !important;
+      font-weight: 600 !important;
+    }
+    
+    /* Unit prefix text - bright blue for better visibility and hierarchy */
+    .chapter-card .chapter-unit {
+      color: #60A5FA !important;
+      font-weight: 500 !important;
+      font-size: 13px !important;
+      opacity: 0.9 !important;
+    }
+    
+    /* Fix flashcard 3D flip to prevent displacement */
+    .flashcard-flip-container {
+      perspective: 1000px !important;
+      position: relative !important;
+    }
+    
+    .flashcard-inner {
+      width: 100% !important;
+      height: 100% !important;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+      transform-style: preserve-3d !important;
+      position: relative !important;
+      transform-origin: center center !important;
+    }
+    
+    .flashcard.flipped .flashcard-inner {
+      transform: rotateY(180deg) !important;
+    }
+    
+    .flashcard-front, .flashcard-back {
+      position: absolute !important;
+      width: 100% !important;
+      height: 100% !important;
+      backface-visibility: hidden !important;
+      top: 0 !important;
+      left: 0 !important;
+    }
+    
+    .flashcard-back {
+      transform: rotateY(180deg) !important;
+    }
+    
+    /* Remove any hover transforms on flashcards */
+    .flashcard:hover {
+      transform: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Landing Page -->
+  <div id="landingPage" class="screen">
+    <div class="landing-container">
+      <div class="hero-section">
+        <div class="title-logo-container">
+          <span class="app-logo">📚</span>
+          <h1 class="app-title">CARDWISE</h1>
+        </div>
+        <p class="tagline">Master your subjects with <span class="tagline-highlight">interactive flashcards</span></p>
+      </div>
+      
+      <h2 class="choose-subject-text">CHOOSE YOUR SUBJECT!</h2>
+      
+      <div class="subject-icons-container" id="subjectIconsContainer">
+        <!-- Subject icons will be populated by JavaScript -->
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Subject Units View -->
+  <div id="subjectUnitsScreen" class="screen" style="display: none;">
+    <div class="chapter-container">
+      <div class="breadcrumb">
+        <a onclick="showLandingPage()">Home</a> → <span id="currentSubjectBreadcrumb">Economics</span>
+      </div>
+      <div class="subject-header">
+        <h1 class="subject-title" id="subjectPageTitle">Economics</h1>
+        <p class="subject-subtitle" id="subjectPageSubtitle">Supply and demand</p>
+      </div>
+      <div class="chapters-grid" id="unitsGrid">
+        <!-- Units will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit Chapters View -->
+  <div id="unitChaptersScreen" class="screen" style="display: none;">
+    <div class="chapter-container">
+      <div class="breadcrumb">
+        <a onclick="showLandingPage()">Home</a> → <a onclick="showSubjectUnitsScreen(currentSubject, currentSubjectName, currentSubjectDescription)" id="subjectBreadcrumbLink">Economics</a> → <span id="currentUnitBreadcrumb">Unit 1</span>
+      </div>
+      <div class="subject-header">
+        <h1 class="subject-title" id="unitPageTitle">Unit 1: Introduction to Economics</h1>
+        <p class="subject-subtitle">Chapters in this unit</p>
+      </div>
+      <div class="chapters-grid" id="chaptersGrid">
+        <!-- Chapters will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter Flashcards View -->
+  <div id="chapterFlashcardsScreen" class="screen" style="display: none;">
+    <div class="flashcard-container">
+      <div class="breadcrumb">
+        <a onclick="showLandingPage()">Home</a> → <a onclick="showSubjectUnitsScreen(currentSubject, currentSubjectName, currentSubjectDescription)" id="chapterSubjectBreadcrumbLink">Economics</a> → <a onclick="showUnitChaptersScreen(currentUnit, currentUnitName)" id="chapterUnitBreadcrumbLink">Unit 1</a> → <span id="currentChapterBreadcrumb">Chapter 1</span>
+      </div>
+      <div class="subject-header">
+        <h1 class="subject-title" id="chapterPageTitle">Chapter 1: The Foundations of Economics</h1>
+        <p class="subject-subtitle">Click cards to flip and reveal answers</p>
+      </div>
+      <div class="flashcards-grid" id="flashcardsGrid">
+        <!-- Flashcards will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
