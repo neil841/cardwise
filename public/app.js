@@ -5,6 +5,14 @@ let currentSubjectName = '';
 let currentSubjectDescription = '';
 let currentUnit = '';
 let currentUnitName = '';
+let currentChapter = '';
+let currentChapterTitle = '';
+
+// Quiz variables
+let quizFlashcards = [];
+let currentQuestionIndex = 0;
+let quizScore = 0;
+let totalQuestions = 0;
 
 function showScreenWithTransition(targetScreenId) {
   const currentScreen = document.querySelector('.screen:not([style*="display: none"])');
@@ -63,6 +71,10 @@ function showUnitChaptersScreen(unitIndex, unitName) {
 }
 
 function showChapterFlashcards(subjectKey, unitIndex, chapterIndex, chapterTitle) {
+  // Store current chapter info
+  currentChapter = chapterIndex;
+  currentChapterTitle = chapterTitle;
+  
   // Update breadcrumb and title
   document.getElementById('chapterSubjectBreadcrumbLink').textContent = currentSubjectName;
   document.getElementById('chapterUnitBreadcrumbLink').textContent = currentUnitName;
@@ -213,6 +225,9 @@ function loadChapterFlashcards(subjectKey, unitIndex, chapterIndex) {
 // Flashcard data - loaded from external JSON file
 let chapterFlashcards = {};
 
+// Textbook quiz data - loaded from external JSON file
+let textbookQuizData = {};
+
 // Function to load flashcards from JSON file
 async function loadChapterFlashcardsFromJSON() {
   try {
@@ -228,6 +243,24 @@ async function loadChapterFlashcardsFromJSON() {
   } catch (error) {
     console.error('Error loading flashcards:', error);
     chapterFlashcards = {};
+  }
+}
+
+// Function to load textbook quiz questions from JSON file
+async function loadTextbookQuizFromJSON() {
+  try {
+    const response = await fetch('textbook-quiz.json');
+    if (response.ok) {
+      textbookQuizData = await response.json();
+      console.log('Textbook quiz data loaded from JSON file:', textbookQuizData);
+    } else {
+      console.error('Failed to load textbook-quiz.json, response status:', response.status);
+      // Fallback to empty structure
+      textbookQuizData = {};
+    }
+  } catch (error) {
+    console.error('Error loading textbook quiz data:', error);
+    textbookQuizData = {};
   }
 }
 
@@ -687,11 +720,230 @@ function handleClear() {
 }
 
 
+// Quiz functionality
+function startQuiz() {
+  // Get questions for current chapter - prioritize textbook questions, fallback to flashcards
+  const unitKey = currentUnit.toString();
+  const chapterKey = currentChapter.toString();
+  
+  // Try to get textbook quiz questions first
+  let questions = [];
+  const textbookChapter = textbookQuizData[currentSubject]?.[unitKey]?.[chapterKey];
+  if (textbookChapter && textbookChapter.textbook_questions) {
+    questions = textbookChapter.textbook_questions.map(q => ({
+      question: q.question,
+      answer: q.answer,
+      source: 'textbook',
+      type: q.type,
+      bold_concept: q.bold_concept,
+      exam_frequency: q.ib_exam_frequency
+    }));
+    console.log('Using textbook questions for quiz:', questions.length);
+  }
+  
+  // If no textbook questions, fallback to flashcards
+  if (questions.length === 0) {
+    const flashcards = chapterFlashcards[currentSubject]?.[unitKey]?.[chapterKey] || [];
+    questions = flashcards.map(f => ({
+      question: f.question,
+      answer: f.answer,
+      source: 'flashcard'
+    }));
+    console.log('Using flashcard questions for quiz:', questions.length);
+  }
+  
+  if (questions.length === 0) {
+    alert('No quiz questions available for this chapter.');
+    return;
+  }
+  
+  // Initialize quiz
+  quizFlashcards = [...questions]; // Copy array to avoid modifying original
+  currentQuestionIndex = 0;
+  quizScore = 0;
+  totalQuestions = quizFlashcards.length;
+  
+  // Shuffle flashcards for variety
+  for (let i = quizFlashcards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [quizFlashcards[i], quizFlashcards[j]] = [quizFlashcards[j], quizFlashcards[i]];
+  }
+  
+  // Update quiz page elements
+  document.getElementById('quizSubjectBreadcrumbLink').textContent = currentSubjectName;
+  document.getElementById('quizUnitBreadcrumbLink').textContent = currentUnitName;
+  document.getElementById('quizChapterBreadcrumbLink').textContent = currentChapterTitle;
+  document.getElementById('quizPageTitle').textContent = `Quiz: ${currentChapterTitle}`;
+  
+  showScreenWithTransition('quizScreen');
+  displayCurrentQuestion();
+}
+
+function displayCurrentQuestion() {
+  if (currentQuestionIndex >= totalQuestions) {
+    showQuizResults();
+    return;
+  }
+  
+  const question = quizFlashcards[currentQuestionIndex];
+  
+  // Update question display
+  document.getElementById('quizQuestion').textContent = question.question;
+  document.getElementById('quizAnswerInput').value = '';
+  document.getElementById('quizProgressText').textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
+  
+  // Update progress bar
+  const progressPercent = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+  document.getElementById('quizProgressBar').style.width = `${progressPercent}%`;
+  
+  // Reset buttons and feedback
+  document.getElementById('submitAnswerButton').style.display = 'inline-block';
+  document.getElementById('showAnswerButton').style.display = 'inline-block';
+  document.getElementById('nextQuestionButton').style.display = 'none';
+  document.getElementById('finishQuizButton').style.display = 'none';
+  document.getElementById('quizFeedback').style.display = 'none';
+  document.getElementById('quizAnswerInput').disabled = false;
+  
+  // Update navigation buttons
+  const prevButton = document.getElementById('previousQuestionButton');
+  const nextNavButton = document.getElementById('nextQuestionNavButton');
+  
+  // Show/hide previous button
+  if (currentQuestionIndex > 0) {
+    prevButton.style.display = 'inline-block';
+  } else {
+    prevButton.style.display = 'none';
+  }
+  
+  // Show/hide next navigation button
+  if (currentQuestionIndex < totalQuestions - 1) {
+    nextNavButton.style.display = 'inline-block';
+  } else {
+    nextNavButton.style.display = 'none';
+  }
+  
+  // Focus on input
+  document.getElementById('quizAnswerInput').focus();
+}
+
+function submitAnswer() {
+  const userAnswer = document.getElementById('quizAnswerInput').value.trim();
+  const correctAnswer = quizFlashcards[currentQuestionIndex].answer;
+  
+  if (!userAnswer) {
+    alert('Please enter an answer.');
+    return;
+  }
+  
+  // Check if answer is correct (case-insensitive exact match)
+  const isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+  
+  if (isCorrect) {
+    quizScore++;
+  }
+  
+  showFeedback(isCorrect, correctAnswer);
+}
+
+function showAnswer() {
+  const correctAnswer = quizFlashcards[currentQuestionIndex].answer;
+  showFeedback(false, correctAnswer, true);
+}
+
+function showFeedback(isCorrect, correctAnswer, showAnswerClicked = false) {
+  const feedbackDiv = document.getElementById('quizFeedback');
+  
+  if (showAnswerClicked) {
+    feedbackDiv.className = 'quiz-feedback quiz-feedback-incorrect';
+    feedbackDiv.innerHTML = `
+      <div>You chose to reveal the answer.</div>
+      <div class="quiz-feedback-answer"><strong>Correct Answer:</strong> ${correctAnswer}</div>
+    `;
+  } else if (isCorrect) {
+    feedbackDiv.className = 'quiz-feedback quiz-feedback-correct';
+    feedbackDiv.innerHTML = `
+      <div>✓ Correct!</div>
+    `;
+  } else {
+    feedbackDiv.className = 'quiz-feedback quiz-feedback-incorrect';
+    feedbackDiv.innerHTML = `
+      <div>✗ Incorrect</div>
+      <div class="quiz-feedback-answer"><strong>Correct Answer:</strong> ${correctAnswer}</div>
+    `;
+  }
+  
+  feedbackDiv.style.display = 'block';
+  
+  // Disable input and hide submission buttons
+  document.getElementById('quizAnswerInput').disabled = true;
+  document.getElementById('submitAnswerButton').style.display = 'none';
+  document.getElementById('showAnswerButton').style.display = 'none';
+  
+  // Show next/finish button
+  if (currentQuestionIndex + 1 >= totalQuestions) {
+    document.getElementById('finishQuizButton').style.display = 'inline-block';
+  } else {
+    document.getElementById('nextQuestionButton').style.display = 'inline-block';
+  }
+}
+
+function nextQuestion() {
+  currentQuestionIndex++;
+  displayCurrentQuestion();
+}
+
+function previousQuestion() {
+  if (currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+    displayCurrentQuestion();
+  }
+}
+
+function nextQuestionNav() {
+  if (currentQuestionIndex < totalQuestions - 1) {
+    currentQuestionIndex++;
+    displayCurrentQuestion();
+  }
+}
+
+function finishQuiz() {
+  showQuizResults();
+}
+
+function showQuizResults() {
+  const percentage = Math.round((quizScore / totalQuestions) * 100);
+  const quizQuestionCard = document.getElementById('quizQuestionCard');
+  
+  quizQuestionCard.innerHTML = `
+    <div class="quiz-score-summary">
+      <div class="quiz-score">${quizScore}/${totalQuestions}</div>
+      <div class="quiz-score-text">You scored ${percentage}% on this quiz!</div>
+      <div class="quiz-buttons">
+        <button class="quiz-btn quiz-btn-primary" onclick="retryQuiz()">Try Again</button>
+        <button class="quiz-btn quiz-btn-secondary" onclick="backToChapter()">Back to Chapter</button>
+      </div>
+    </div>
+  `;
+  
+  // Hide navigation buttons
+  document.getElementById('nextQuestionButton').style.display = 'none';
+  document.getElementById('finishQuizButton').style.display = 'none';
+}
+
+function retryQuiz() {
+  startQuiz();
+}
+
+function backToChapter() {
+  showChapterFlashcards(currentSubject, currentUnit, currentChapter, currentChapterTitle);
+}
+
 // Initialize the app
 window.addEventListener('DOMContentLoaded', async () => {
   console.log('DOM Content Loaded - Starting initialization');
   
   await loadChapterFlashcardsFromJSON();
+  await loadTextbookQuizFromJSON();
   await loadSubjectsFromJSON();
   console.log('About to create subject icons');
   createSubjectIcons();
@@ -701,6 +953,59 @@ window.addEventListener('DOMContentLoaded', async () => {
   // Initialize search and filter functionality
   initializeSearchAndFilter();
   
+  // Initialize quiz functionality
+  initializeQuizFunctionality();
+  
   console.log('Initialization complete');
 });
+
+function initializeQuizFunctionality() {
+  // Add event listener for start quiz button
+  const startQuizButton = document.getElementById('startQuizButton');
+  if (startQuizButton) {
+    startQuizButton.addEventListener('click', startQuiz);
+  }
+  
+  // Add event listeners for quiz buttons
+  const submitAnswerButton = document.getElementById('submitAnswerButton');
+  const showAnswerButton = document.getElementById('showAnswerButton');
+  const nextQuestionButton = document.getElementById('nextQuestionButton');
+  const finishQuizButton = document.getElementById('finishQuizButton');
+  const previousQuestionButton = document.getElementById('previousQuestionButton');
+  const nextQuestionNavButton = document.getElementById('nextQuestionNavButton');
+  
+  if (submitAnswerButton) {
+    submitAnswerButton.addEventListener('click', submitAnswer);
+  }
+  
+  if (showAnswerButton) {
+    showAnswerButton.addEventListener('click', showAnswer);
+  }
+  
+  if (nextQuestionButton) {
+    nextQuestionButton.addEventListener('click', nextQuestion);
+  }
+  
+  if (finishQuizButton) {
+    finishQuizButton.addEventListener('click', finishQuiz);
+  }
+  
+  if (previousQuestionButton) {
+    previousQuestionButton.addEventListener('click', previousQuestion);
+  }
+  
+  if (nextQuestionNavButton) {
+    nextQuestionNavButton.addEventListener('click', nextQuestionNav);
+  }
+  
+  // Allow submitting answer with Enter key
+  const quizAnswerInput = document.getElementById('quizAnswerInput');
+  if (quizAnswerInput) {
+    quizAnswerInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !document.getElementById('quizAnswerInput').disabled) {
+        submitAnswer();
+      }
+    });
+  }
+}
 

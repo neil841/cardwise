@@ -1,0 +1,2022 @@
+{
+  "economics": {
+    "0": {
+      "0": {
+        "chapter_title": "The Foundations of Economics",
+        "syllabus_topics": ["Scarcity", "Choice", "Opportunity cost", "Economic systems", "Factors of production"],
+        "textbook_questions": [
+          {
+            "question": "What is the fundamental economic problem of unlimited wants but limited resources?",
+            "answer": "Scarcity",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the value of the next best alternative given up when making a choice?",
+            "answer": "Opportunity",
+            "type": "definition", 
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What economic system relies on supply and demand to allocate resources?",
+            "answer": "Market",
+            "type": "system",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What factor of production includes natural resources?",
+            "answer": "Land",
+            "type": "factor",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What factor of production involves human effort and skills?",
+            "answer": "Labor",
+            "type": "factor",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What factor of production includes machinery and buildings?",
+            "answer": "Capital",
+            "type": "factor",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the condition where all other variables remain unchanged?",
+            "answer": "Ceteris",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What curve shows maximum combinations of goods that can be produced?",
+            "answer": "PPC",
+            "type": "model",
+            "bold_concept": false,
+            "ib_exam_frequency": "high"
+          }
+        ]
+      }
+    },
+    "1": {
+      "0": {
+        "chapter_title": "Competitive markets: demand and supply",
+        "syllabus_topics": ["Demand", "Supply", "Equilibrium", "Market forces"],
+        "textbook_questions": [
+          {
+            "question": "What is the quantity of goods consumers are willing and able to buy at various prices?",
+            "answer": "Demand",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the quantity of goods producers are willing and able to sell at various prices?",
+            "answer": "Supply",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What occurs when quantity demanded equals quantity supplied?",
+            "answer": "Equilibrium",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What goods increase in demand when income rises?",
+            "answer": "Normal",
+            "type": "classification",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What goods decrease in demand when income rises?",
+            "answer": "Inferior",
+            "type": "classification",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What goods have positive cross elasticity of demand?",
+            "answer": "Substitute",
+            "type": "classification",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "Elasticities",
+        "syllabus_topics": ["PED", "YED", "XED", "Price elasticity"],
+        "textbook_questions": [
+          {
+            "question": "What does PED measure?",
+            "answer": "Elasticity",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of demand responds significantly to price changes?",
+            "answer": "Elastic",
+            "type": "classification",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of demand responds little to price changes?",
+            "answer": "Inelastic",
+            "type": "classification",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is elasticity equal to exactly 1 called?",
+            "answer": "Unitary",
+            "type": "classification",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What goods have negative cross elasticity of demand?",
+            "answer": "Complement",
+            "type": "classification",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "Government intervention in microeconomics",
+        "syllabus_topics": ["Subsidies", "Taxes", "Price controls", "Regulation"],
+        "textbook_questions": [
+          {
+            "question": "What government payment reduces production costs?",
+            "answer": "Subsidy",
+            "type": "policy",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is a maximum price set by government called?",
+            "answer": "Ceiling",
+            "type": "control",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is a minimum price set by government called?",
+            "answer": "Floor",
+            "type": "control",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What tax is imposed on imports?",
+            "answer": "Tariff",
+            "type": "trade",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is a physical limit on imports called?",
+            "answer": "Quota",
+            "type": "trade",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "Market failure and socially undesirable outcomes I",
+        "syllabus_topics": ["Externalities", "Common pool resources", "Tragedy of commons"],
+        "textbook_questions": [
+          {
+            "question": "What are costs or benefits affecting third parties called?",
+            "answer": "Externality",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is an alternative term for externality?",
+            "answer": "Spillover",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What negative externality affects air quality?",
+            "answer": "Pollution",
+            "type": "example",
+            "bold_concept": false,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What occurs when negative externalities cause too much production?",
+            "answer": "Overproduction",
+            "type": "outcome",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What describes the depletion of shared resources?",
+            "answer": "Tragedy",
+            "type": "theory",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "4": {
+        "chapter_title": "Market failure and socially undesirable outcomes II",
+        "syllabus_topics": ["Public goods", "Merit goods", "Information asymmetries"],
+        "textbook_questions": [
+          {
+            "question": "What characteristic means no one can be excluded from using a good?",
+            "answer": "Non-excludable",
+            "type": "characteristic",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What characteristic means one person's use doesn't reduce availability?",
+            "answer": "Non-rival",
+            "type": "characteristic",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What problem occurs when people use public goods without paying?",
+            "answer": "Free-rider",
+            "type": "problem",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What occurs when bad risks are more likely to seek insurance?",
+            "answer": "Adverse-selection",
+            "type": "problem",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What problem occurs when insurance reduces careful behavior?",
+            "answer": "Moral-hazard",
+            "type": "problem",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "5": {
+        "chapter_title": "Market failure and socially undesirable outcomes III: Market power",
+        "syllabus_topics": ["Monopoly", "Oligopoly", "Market concentration"],
+        "textbook_questions": [
+          {
+            "question": "What market structure has only one seller?",
+            "answer": "Monopoly",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What market structure has few large sellers?",
+            "answer": "Oligopoly",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What prevents new firms from entering a market?",
+            "answer": "Barriers",
+            "type": "obstacle",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is secret cooperation between firms called?",
+            "answer": "Collusion",
+            "type": "behavior",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is a formal agreement between firms to fix prices?",
+            "answer": "Cartel",
+            "type": "agreement",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    },
+    "2": {
+      "0": {
+        "chapter_title": "The level of overall economic activity",
+        "syllabus_topics": ["GDP", "National income", "Circular flow"],
+        "textbook_questions": [
+          {
+            "question": "What measures the total value of goods and services produced?",
+            "answer": "GDP",
+            "type": "measure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What measures national income including foreign earnings?",
+            "answer": "GNP",
+            "type": "measure",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What GDP is measured in current prices?",
+            "answer": "Nominal",
+            "type": "classification",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What GDP is adjusted for inflation?",
+            "answer": "Real",
+            "type": "classification",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What approach measures GDP by adding all spending?",
+            "answer": "Expenditure",
+            "type": "method",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "Aggregate demand and aggregate supply",
+        "syllabus_topics": ["AD", "AS", "Macroeconomic equilibrium"],
+        "textbook_questions": [
+          {
+            "question": "What shows total spending at different price levels?",
+            "answer": "AD",
+            "type": "curve",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What shows total production at different price levels?",
+            "answer": "AS",
+            "type": "curve",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What AS curve shows short-run price flexibility?",
+            "answer": "SRAS",
+            "type": "curve",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What AS curve shows long-run full employment output?",
+            "answer": "LRAS",
+            "type": "curve",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What amplifies the effect of spending changes?",
+            "answer": "Multiplier",
+            "type": "effect",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "Macroeconomic objectives I: Low unemployment, low and stable rate of inflation",
+        "syllabus_topics": ["Unemployment", "Inflation", "Price stability"],
+        "textbook_questions": [
+          {
+            "question": "What occurs when people want work but cannot find jobs?",
+            "answer": "Unemployment",
+            "type": "condition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is a sustained increase in the general price level?",
+            "answer": "Inflation",
+            "type": "condition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What index measures average price changes for consumers?",
+            "answer": "CPI",
+            "type": "index",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is a sustained decrease in the general price level?",
+            "answer": "Deflation",
+            "type": "condition",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What curve shows the trade-off between inflation and unemployment?",
+            "answer": "Phillips",
+            "type": "curve",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "Macroeconomic objectives II: Economic growth, sustainable level of debt",
+        "syllabus_topics": ["Economic growth", "Business cycles", "Government debt"],
+        "textbook_questions": [
+          {
+            "question": "What is an increase in real GDP over time?",
+            "answer": "Growth",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is a period of negative economic growth?",
+            "answer": "Recession",
+            "type": "phase",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is a period of rapid economic expansion?",
+            "answer": "Boom",
+            "type": "phase",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the total amount government owes?",
+            "answer": "Debt",
+            "type": "liability",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the yearly difference between spending and revenue?",
+            "answer": "Deficit",
+            "type": "shortfall",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "4": {
+        "chapter_title": "Economics of inequality and poverty",
+        "syllabus_topics": ["Income distribution", "Poverty", "Inequality measures"],
+        "textbook_questions": [
+          {
+            "question": "What coefficient measures income inequality?",
+            "answer": "Gini",
+            "type": "measure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What curve shows cumulative income distribution?",
+            "answer": "Lorenz",
+            "type": "curve",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What condition occurs when income is below minimum needs?",
+            "answer": "Poverty",
+            "type": "condition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What tax rate increases as income increases?",
+            "answer": "Progressive",
+            "type": "system",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What tax rate decreases as income increases?",
+            "answer": "Regressive",
+            "type": "system",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "5": {
+        "chapter_title": "Demand-side and supply-side policies",
+        "syllabus_topics": ["Fiscal policy", "Monetary policy", "Supply-side policies"],
+        "textbook_questions": [
+          {
+            "question": "What policy uses government spending and taxation?",
+            "answer": "Fiscal",
+            "type": "policy",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What policy uses interest rates and money supply?",
+            "answer": "Monetary",
+            "type": "policy",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What policy increases spending to boost demand?",
+            "answer": "Expansionary",
+            "type": "stance",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What policy decreases spending to reduce demand?",
+            "answer": "Contractionary",
+            "type": "stance",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What economic school emphasizes government intervention?",
+            "answer": "Keynesian",
+            "type": "school",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    },
+    "3": {
+      "0": {
+        "chapter_title": "International trade: Part 1",
+        "syllabus_topics": ["Comparative advantage", "Trade benefits", "Specialization"],
+        "textbook_questions": [
+          {
+            "question": "What advantage means producing at lowest opportunity cost?",
+            "answer": "Comparative",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What advantage means producing more efficiently than others?",
+            "answer": "Absolute",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What occurs when countries focus on their best products?",
+            "answer": "Specialization",
+            "type": "strategy",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What are goods sold to other countries?",
+            "answer": "Exports",
+            "type": "trade",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What are goods bought from other countries?",
+            "answer": "Imports",
+            "type": "trade",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "International trade: Part 2",
+        "syllabus_topics": ["Trade protection", "WTO", "Economic integration"],
+        "textbook_questions": [
+          {
+            "question": "What is blocking free trade called?",
+            "answer": "Protectionism",
+            "type": "policy",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is a complete ban on imports?",
+            "answer": "Embargo",
+            "type": "restriction",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is selling below cost in foreign markets?",
+            "answer": "Dumping",
+            "type": "practice",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What organization promotes free trade globally?",
+            "answer": "WTO",
+            "type": "organization",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What agreement removes tariffs between members?",
+            "answer": "Free-trade",
+            "type": "agreement",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "Exchange rates and the balance of payments",
+        "syllabus_topics": ["Exchange rates", "Balance of payments", "Current account"],
+        "textbook_questions": [
+          {
+            "question": "What is the price of one currency in terms of another?",
+            "answer": "Exchange-rate",
+            "type": "price",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What occurs when a currency increases in value?",
+            "answer": "Appreciation",
+            "type": "movement",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What occurs when a currency decreases in value?",
+            "answer": "Depreciation",
+            "type": "movement",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What exchange rate system has government-set rates?",
+            "answer": "Fixed",
+            "type": "system",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What exchange rate system uses market forces?",
+            "answer": "Floating",
+            "type": "system",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "Further topics on exchange rates and the balance of payments",
+        "syllabus_topics": ["Marshall-Lerner condition", "J-curve", "Capital flows"],
+        "textbook_questions": [
+          {
+            "question": "What system allows some government intervention in rates?",
+            "answer": "Managed-float",
+            "type": "system",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is official reduction of fixed exchange rate?",
+            "answer": "Devaluation",
+            "type": "action",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What condition determines if devaluation improves trade balance?",
+            "answer": "Marshall-Lerner",
+            "type": "condition",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What curve shows short-term worsening then improvement?",
+            "answer": "J-curve",
+            "type": "pattern",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What capital seeks short-term profit from rate changes?",
+            "answer": "Hot-money",
+            "type": "capital",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    },
+    "4": {
+      "0": {
+        "chapter_title": "Understanding economic development",
+        "syllabus_topics": ["Development indicators", "HDI", "Sustainable development"],
+        "textbook_questions": [
+          {
+            "question": "What process improves living standards over time?",
+            "answer": "Development",
+            "type": "process",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What index combines income, health, and education?",
+            "answer": "HDI",
+            "type": "index",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What development meets present needs without harming future?",
+            "answer": "Sustainability",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What goals aim to end poverty by 2030?",
+            "answer": "SDG",
+            "type": "goals",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What approach focuses on human freedoms and choices?",
+            "answer": "Capability",
+            "type": "approach",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "Barriers to economic growth and economic development",
+        "syllabus_topics": ["Poverty traps", "Institutional barriers", "Geographic factors"],
+        "textbook_questions": [
+          {
+            "question": "What self-reinforcing cycle keeps countries poor?",
+            "answer": "Poverty-trap",
+            "type": "cycle",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What occurs when educated people leave their country?",
+            "answer": "Brain-drain",
+            "type": "problem",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What cycle occurs when debt payments prevent development?",
+            "answer": "Debt-trap",
+            "type": "cycle",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What illegal practice undermines development?",
+            "answer": "Corruption",
+            "type": "problem",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What basic facilities are needed for development?",
+            "answer": "Infrastructure",
+            "type": "requirement",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "Strategies to promote economic growth and economic development",
+        "syllabus_topics": ["Foreign aid", "FDI", "Trade strategies"],
+        "textbook_questions": [
+          {
+            "question": "What is financial assistance from rich to poor countries?",
+            "answer": "Aid",
+            "type": "assistance",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What investment involves foreign ownership of domestic assets?",
+            "answer": "FDI",
+            "type": "investment",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What are money transfers from workers abroad?",
+            "answer": "Remittances",
+            "type": "transfer",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What provides small loans to poor entrepreneurs?",
+            "answer": "Microfinance",
+            "type": "service",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What trade guarantees better prices for producers?",
+            "answer": "Fair-trade",
+            "type": "system",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    }
+  },
+  "physics": {
+    "0": {
+      "0": {
+        "chapter_title": "A.1 Kinematics",
+        "syllabus_topics": ["Motion", "Velocity", "Acceleration", "Displacement"],
+        "textbook_questions": [
+          {
+            "question": "What is the change in position of an object?",
+            "answer": "Displacement",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the rate of change of displacement?",
+            "answer": "Velocity",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the rate of change of velocity?",
+            "answer": "Acceleration",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What quantity has both magnitude and direction?",
+            "answer": "Vector",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What quantity has only magnitude?",
+            "answer": "Scalar",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "A.2 Forces and Momentum",
+        "syllabus_topics": ["Force", "Newton's laws", "Momentum", "Impulse"],
+        "textbook_questions": [
+          {
+            "question": "What is mass times velocity?",
+            "answer": "Momentum",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the change in momentum?",
+            "answer": "Impulse",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the SI unit of force?",
+            "answer": "Newton",
+            "type": "unit",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What law states that force equals mass times acceleration?",
+            "answer": "Newton's",
+            "type": "law",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "A.3 Work, Energy and Power",
+        "syllabus_topics": ["Work", "Energy", "Power", "Conservation"],
+        "textbook_questions": [
+          {
+            "question": "What is energy transfer through force and displacement?",
+            "answer": "Work",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the rate of energy transfer?",
+            "answer": "Power",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the SI unit of energy?",
+            "answer": "Joule",
+            "type": "unit",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the energy of motion called?",
+            "answer": "Kinetic",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is stored energy called?",
+            "answer": "Potential",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the SI unit of power?",
+            "answer": "Watt",
+            "type": "unit",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "A.4 Rigid Body Mechanics",
+        "syllabus_topics": ["Torque", "Angular motion", "Rotational equilibrium"],
+        "textbook_questions": [
+          {
+            "question": "What is the rotational equivalent of force?",
+            "answer": "Torque",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the rotational equivalent of mass?",
+            "answer": "Inertia",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What describes rotation-related quantities?",
+            "answer": "Angular",
+            "type": "description",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the unit of angular measurement?",
+            "answer": "Radian",
+            "type": "unit",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "4": {
+        "chapter_title": "A.5 Galilean and Special Relativity",
+        "syllabus_topics": ["Relativity", "Time dilation", "Length contraction"],
+        "textbook_questions": [
+          {
+            "question": "What are Einstein's fundamental principles called?",
+            "answer": "Postulate",
+            "type": "principle",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What effect causes time to stretch at high speeds?",
+            "answer": "Dilation",
+            "type": "effect",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What effect causes length to shorten at high speeds?",
+            "answer": "Contraction",
+            "type": "effect",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the combined space-time continuum called?",
+            "answer": "Spacetime",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "5": {
+        "chapter_title": "End-of-Theme Questions",
+        "syllabus_topics": ["Review", "Applications", "Problem solving"],
+        "textbook_questions": [
+          {
+            "question": "What approach combines multiple physics concepts?",
+            "answer": "Integration",
+            "type": "method",
+            "bold_concept": false,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What skill involves using physics in real situations?",
+            "answer": "Application",
+            "type": "skill",
+            "bold_concept": false,
+            "ib_exam_frequency": "high"
+          }
+        ]
+      }
+    },
+    "1": {
+      "0": {
+        "chapter_title": "B.1 Thermal Energy Transfers",
+        "syllabus_topics": ["Heat transfer", "Temperature", "Thermal equilibrium"],
+        "textbook_questions": [
+          {
+            "question": "What heat transfer occurs through direct contact?",
+            "answer": "Conduction",
+            "type": "mechanism",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What heat transfer occurs through fluid motion?",
+            "answer": "Convection",
+            "type": "mechanism",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What heat transfer occurs through electromagnetic waves?",
+            "answer": "Radiation",
+            "type": "mechanism",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What occurs when objects reach the same temperature?",
+            "answer": "Equilibrium",
+            "type": "state",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is hidden heat during phase changes?",
+            "answer": "Latent",
+            "type": "heat",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "B.2 Greenhouse Effect",
+        "syllabus_topics": ["Greenhouse gases", "Climate", "Radiation"],
+        "textbook_questions": [
+          {
+            "question": "What effect traps heat in Earth's atmosphere?",
+            "answer": "Greenhouse",
+            "type": "effect",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of radiation carries heat energy?",
+            "answer": "Infrared",
+            "type": "radiation",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What greenhouse gas contains carbon?",
+            "answer": "Carbon",
+            "type": "gas",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is Earth's gas layer called?",
+            "answer": "Atmosphere",
+            "type": "layer",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "B.3 Gas Laws",
+        "syllabus_topics": ["Pressure", "Volume", "Temperature", "Gas behavior"],
+        "textbook_questions": [
+          {
+            "question": "What law relates pressure and volume?",
+            "answer": "Boyle",
+            "type": "law",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What law relates volume and temperature?",
+            "answer": "Charles",
+            "type": "law",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is force per unit area?",
+            "answer": "Pressure",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the SI unit of pressure?",
+            "answer": "Pascal",
+            "type": "unit",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the absolute temperature scale?",
+            "answer": "Kelvin",
+            "type": "scale",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "B.4 Thermodynamics",
+        "syllabus_topics": ["Entropy", "Heat engines", "Efficiency"],
+        "textbook_questions": [
+          {
+            "question": "What measures the disorder of a system?",
+            "answer": "Entropy",
+            "type": "measure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What process has no heat transfer?",
+            "answer": "Adiabatic",
+            "type": "process",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What process has constant temperature?",
+            "answer": "Isothermal",
+            "type": "process",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the ideal heat engine cycle?",
+            "answer": "Carnot",
+            "type": "cycle",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "4": {
+        "chapter_title": "B.5 Current and Circuits",
+        "syllabus_topics": ["Electric current", "Resistance", "Circuit laws"],
+        "textbook_questions": [
+          {
+            "question": "What is the flow of electric charge?",
+            "answer": "Current",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What opposes the flow of current?",
+            "answer": "Resistance",
+            "type": "property",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is electric potential difference?",
+            "answer": "Voltage",
+            "type": "definition",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What law relates voltage, current, and resistance?",
+            "answer": "Ohm",
+            "type": "law",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the SI unit of current?",
+            "answer": "Ampere",
+            "type": "unit",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    }
+  },
+  "business management": {
+    "0": {
+      "0": {
+        "chapter_title": "1.1 Introduction to business management",
+        "syllabus_topics": ["Business functions", "Management", "Organization"],
+        "textbook_questions": [
+          {
+            "question": "What function involves recruiting and training staff?",
+            "answer": "HR",
+            "type": "function",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What function involves promoting and selling products?",
+            "answer": "Marketing",
+            "type": "function",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What function involves managing money and budgets?",
+            "answer": "Finance",
+            "type": "function",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What function involves producing goods and services?",
+            "answer": "Operations",
+            "type": "function",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "1.2 Types of organisations",
+        "syllabus_topics": ["Business structures", "Ownership", "Legal forms"],
+        "textbook_questions": [
+          {
+            "question": "What business type has one owner with unlimited liability?",
+            "answer": "Sole",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What business structure involves shared ownership and liability?",
+            "answer": "Partnership",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What legal entity has limited liability for shareholders?",
+            "answer": "Corporation",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What business model involves licensing a brand name?",
+            "answer": "Franchise",
+            "type": "model",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "1.3 Organisational objectives",
+        "syllabus_topics": ["Mission", "Vision", "Goals", "Stakeholder objectives"],
+        "textbook_questions": [
+          {
+            "question": "What statement describes a company's purpose?",
+            "answer": "Mission",
+            "type": "statement",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What statement describes a company's future aspirations?",
+            "answer": "Vision",
+            "type": "statement",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the main financial objective of most businesses?",
+            "answer": "Profit",
+            "type": "objective",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What objective involves increasing company size?",
+            "answer": "Growth",
+            "type": "objective",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "1.4 Stakeholders",
+        "syllabus_topics": ["Internal stakeholders", "External stakeholders", "Stakeholder interests"],
+        "textbook_questions": [
+          {
+            "question": "What are the owners of a company called?",
+            "answer": "Shareholders",
+            "type": "stakeholder",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What stakeholders buy the company's products?",
+            "answer": "Customers",
+            "type": "stakeholder",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What stakeholders work for the company?",
+            "answer": "Employees",
+            "type": "stakeholder",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What stakeholders provide goods to the company?",
+            "answer": "Suppliers",
+            "type": "stakeholder",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    }
+  },
+  "computer science": {
+    "0": {
+      "0": {
+        "chapter_title": "A1: Computer Fundamentals",
+        "syllabus_topics": ["Hardware", "Software", "CPU", "Memory", "Storage"],
+        "textbook_questions": [
+          {
+            "question": "What is the brain of the computer that executes instructions?",
+            "answer": "CPU",
+            "type": "hardware",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of memory is volatile and used for temporary storage?",
+            "answer": "RAM",
+            "type": "hardware",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of memory is non-volatile and stores the BIOS?",
+            "answer": "ROM",
+            "type": "hardware",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What number system uses only 0s and 1s?",
+            "answer": "Binary",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the smallest unit of data in computing?",
+            "answer": "Bit",
+            "type": "unit",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What consists of 8 bits?",
+            "answer": "Byte",
+            "type": "unit",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "A2: Networks",
+        "syllabus_topics": ["Protocols", "Internet", "Communication"],
+        "textbook_questions": [
+          {
+            "question": "What are the rules for network communication called?",
+            "answer": "Protocol",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What protocol ensures reliable data transmission?",
+            "answer": "TCP",
+            "type": "protocol",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What protocol handles web page transfers?",
+            "answer": "HTTP",
+            "type": "protocol",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What device forwards data between networks?",
+            "answer": "Router",
+            "type": "hardware",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the data-carrying capacity of a network called?",
+            "answer": "Bandwidth",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "A3: Databases",
+        "syllabus_topics": ["Database structure", "SQL", "Data relationships"],
+        "textbook_questions": [
+          {
+            "question": "What defines the structure of a database?",
+            "answer": "Schema",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of database uses tables with relationships?",
+            "answer": "Relational",
+            "type": "database",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What uniquely identifies each record in a table?",
+            "answer": "Primary",
+            "type": "key",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What key links tables together?",
+            "answer": "Foreign",
+            "type": "key",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What language is used to query databases?",
+            "answer": "SQL",
+            "type": "language",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "A4: Machine Learning",
+        "syllabus_topics": ["AI", "Learning algorithms", "Data training"],
+        "textbook_questions": [
+          {
+            "question": "What type of learning uses labeled training data?",
+            "answer": "Supervised",
+            "type": "learning",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of learning finds patterns without labels?",
+            "answer": "Unsupervised",
+            "type": "learning",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What technique predicts numerical values?",
+            "answer": "Regression",
+            "type": "technique",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What technique categorizes data into groups?",
+            "answer": "Classification",
+            "type": "technique",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What problem occurs when a model fits training data too closely?",
+            "answer": "Overfitting",
+            "type": "problem",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    },
+    "1": {
+      "0": {
+        "chapter_title": "B1: Computational Thinking",
+        "syllabus_topics": ["Algorithms", "Abstraction", "Decomposition", "Pattern recognition"],
+        "textbook_questions": [
+          {
+            "question": "What is a step-by-step procedure to solve a problem?",
+            "answer": "Algorithm",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is hiding unnecessary details to focus on essential features?",
+            "answer": "Abstraction",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is breaking down complex problems into smaller parts?",
+            "answer": "Decomposition",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "B2: Programming",
+        "syllabus_topics": ["Variables", "Arrays", "Loops", "Functions"],
+        "textbook_questions": [
+          {
+            "question": "What stores data that can change during program execution?",
+            "answer": "Variable",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What data structure stores multiple values of the same type?",
+            "answer": "Array",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What programming construct repeats code multiple times?",
+            "answer": "Loop",
+            "type": "construct",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is a reusable block of code called?",
+            "answer": "Function",
+            "type": "construct",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is a function calling itself called?",
+            "answer": "Recursion",
+            "type": "technique",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "B3: Object-Oriented Programming",
+        "syllabus_topics": ["Classes", "Objects", "Inheritance", "Encapsulation"],
+        "textbook_questions": [
+          {
+            "question": "What is a template for creating objects?",
+            "answer": "Class",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is an instance of a class?",
+            "answer": "Object",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What allows a class to acquire properties from another class?",
+            "answer": "Inheritance",
+            "type": "principle",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What principle hides internal implementation details?",
+            "answer": "Encapsulation",
+            "type": "principle",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What allows objects to take multiple forms?",
+            "answer": "Polymorphism",
+            "type": "principle",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "B4: Abstract Data Types",
+        "syllabus_topics": ["Data structures", "Stack", "Queue", "Trees"],
+        "textbook_questions": [
+          {
+            "question": "What data structure follows Last-In-First-Out order?",
+            "answer": "Stack",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What data structure follows First-In-First-Out order?",
+            "answer": "Queue",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What hierarchical data structure has nodes and branches?",
+            "answer": "Tree",
+            "type": "structure",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is an element in a data structure called?",
+            "answer": "Node",
+            "type": "element",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the process of visiting all elements in a structure?",
+            "answer": "Traversal",
+            "type": "process",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    }
+  },
+  "spanish": {
+    "0": {
+      "0": {
+        "chapter_title": "Chapter 1: Present Tense Verbs",
+        "syllabus_topics": ["Regular verbs", "Irregular verbs", "Conjugation"],
+        "textbook_questions": [
+          {
+            "question": "What is the Spanish word for 'to speak'?",
+            "answer": "Hablar",
+            "type": "vocabulary",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the Spanish word for 'to eat'?",
+            "answer": "Comer",
+            "type": "vocabulary",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the Spanish word for 'to write'?",
+            "answer": "Escribir",
+            "type": "vocabulary",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the first person singular ending for -AR verbs?",
+            "answer": "O",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "Chapter 2: Articles and Gender",
+        "syllabus_topics": ["Definite articles", "Indefinite articles", "Gender rules"],
+        "textbook_questions": [
+          {
+            "question": "What is the masculine definite article in Spanish?",
+            "answer": "El",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the feminine definite article in Spanish?",
+            "answer": "La",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What is the masculine indefinite article in Spanish?",
+            "answer": "Un",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What is the feminine indefinite article in Spanish?",
+            "answer": "Una",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "Chapter 3: Adjective Agreement",
+        "syllabus_topics": ["Gender agreement", "Number agreement", "Endings"],
+        "textbook_questions": [
+          {
+            "question": "What grammatical category includes masculine and feminine?",
+            "answer": "Género",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What grammatical category includes singular and plural?",
+            "answer": "Número",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What word modifies a noun in Spanish?",
+            "answer": "Adjetivo",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "Chapter 4: Ser vs Estar",
+        "syllabus_topics": ["Permanent vs temporary", "Location", "Characteristics"],
+        "textbook_questions": [
+          {
+            "question": "Which 'to be' verb expresses permanent characteristics?",
+            "answer": "Ser",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "Which 'to be' verb expresses temporary states or location?",
+            "answer": "Estar",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          }
+        ]
+      }
+    },
+    "1": {
+      "0": {
+        "chapter_title": "Chapter 5: Preterite Tense",
+        "syllabus_topics": ["Past actions", "Completed events", "Irregular forms"],
+        "textbook_questions": [
+          {
+            "question": "What tense describes completed past actions?",
+            "answer": "Pretérito",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of past action does preterite describe?",
+            "answer": "Completed",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "Chapter 6: Imperfect Tense",
+        "syllabus_topics": ["Habitual actions", "Ongoing past", "Descriptions"],
+        "textbook_questions": [
+          {
+            "question": "What tense describes ongoing or habitual past actions?",
+            "answer": "Imperfecto",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of past action does imperfect describe?",
+            "answer": "Habitual",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "2": {
+        "chapter_title": "Chapter 7: Present Perfect",
+        "syllabus_topics": ["Recent actions", "Life experiences", "Results"],
+        "textbook_questions": [
+          {
+            "question": "What auxiliary verb is used in present perfect?",
+            "answer": "Haber",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What verb form follows the auxiliary in present perfect?",
+            "answer": "Participio",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "3": {
+        "chapter_title": "Chapter 8: Past Perfect",
+        "syllabus_topics": ["Prior actions", "Sequence of events", "Before past"],
+        "textbook_questions": [
+          {
+            "question": "What tense shows actions completed before another past action?",
+            "answer": "Pluscuamperfecto",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          },
+          {
+            "question": "What auxiliary form is used in past perfect?",
+            "answer": "Había",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    },
+    "2": {
+      "0": {
+        "chapter_title": "Chapter 9: Simple Future",
+        "syllabus_topics": ["Future actions", "Predictions", "Intentions"],
+        "textbook_questions": [
+          {
+            "question": "What tense expresses future actions?",
+            "answer": "Futuro",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What does future tense express besides future time?",
+            "answer": "Probability",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "Chapter 10: Conditional Tense",
+        "syllabus_topics": ["Hypothetical situations", "Polite requests", "Probability"],
+        "textbook_questions": [
+          {
+            "question": "What tense expresses hypothetical or polite situations?",
+            "answer": "Condicional",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of situation does conditional express?",
+            "answer": "Hypothetical",
+            "type": "concept",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    },
+    "3": {
+      "0": {
+        "chapter_title": "Chapter 13: Subjunctive Mood",
+        "syllabus_topics": ["Doubt", "Emotion", "Desire", "Uncertainty"],
+        "textbook_questions": [
+          {
+            "question": "What mood expresses doubt, emotion, or desire?",
+            "answer": "Subjuntivo",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What feeling triggers subjunctive mood?",
+            "answer": "Doubt",
+            "type": "trigger",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      },
+      "1": {
+        "chapter_title": "Chapter 14: Commands (Imperatives)",
+        "syllabus_topics": ["Direct commands", "Formal vs informal", "Object pronouns"],
+        "textbook_questions": [
+          {
+            "question": "What mood expresses direct orders?",
+            "answer": "Imperativo",
+            "type": "grammar",
+            "bold_concept": true,
+            "ib_exam_frequency": "high"
+          },
+          {
+            "question": "What type of communication uses imperative mood?",
+            "answer": "Command",
+            "type": "communication",
+            "bold_concept": true,
+            "ib_exam_frequency": "medium"
+          }
+        ]
+      }
+    }
+  }
+}

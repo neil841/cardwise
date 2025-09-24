@@ -414,6 +414,212 @@
         font-size: 15px !important;
       }
     }
+
+    /* Quiz Button Styling */
+    .start-quiz-btn {
+      background: #60A5FA;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      margin-top: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+    }
+    
+    .start-quiz-btn:hover {
+      background: #3B82F6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(96, 165, 250, 0.4);
+    }
+    
+    .start-quiz-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Quiz Screen Styling */
+    .quiz-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .quiz-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .quiz-progress {
+      background: rgba(45, 55, 72, 0.8);
+      border-radius: 10px;
+      height: 8px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+    
+    .quiz-progress-bar {
+      background: #60A5FA;
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+    
+    .quiz-progress-text {
+      color: #CBD5E0;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    
+    .quiz-question-card {
+      background: rgba(45, 55, 72, 0.9);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .quiz-question {
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    
+    .quiz-answer-input {
+      width: 100%;
+      padding: 16px;
+      background: rgba(74, 85, 104, 0.6);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 20px;
+      transition: border-color 0.3s ease;
+    }
+    
+    .quiz-answer-input:focus {
+      outline: none;
+      border-color: #60A5FA;
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+    }
+    
+    .quiz-answer-input::placeholder {
+      color: #9CA3AF;
+    }
+    
+    .quiz-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    
+    .quiz-btn {
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .quiz-btn-primary {
+      background: #60A5FA;
+      color: white;
+    }
+    
+    .quiz-btn-primary:hover {
+      background: #3B82F6;
+      transform: translateY(-1px);
+    }
+    
+    .quiz-btn-secondary {
+      background: rgba(74, 85, 104, 0.6);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .quiz-btn-secondary:hover {
+      background: rgba(74, 85, 104, 0.8);
+    }
+    
+    .quiz-feedback {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    
+    .quiz-feedback-correct {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #10B981;
+    }
+    
+    .quiz-feedback-incorrect {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #EF4444;
+    }
+    
+    .quiz-feedback-answer {
+      margin-top: 8px;
+      color: #FFFFFF;
+      font-weight: normal;
+    }
+    
+    .quiz-score-summary {
+      text-align: center;
+      background: rgba(45, 55, 72, 0.9);
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .quiz-score {
+      font-size: 48px;
+      font-weight: bold;
+      color: #60A5FA;
+      margin-bottom: 16px;
+    }
+    
+    .quiz-score-text {
+      color: #FFFFFF;
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+    
+    @media (max-width: 768px) {
+      .quiz-container {
+        padding: 20px 16px;
+      }
+      
+      .quiz-question-card {
+        padding: 24px;
+      }
+      
+      .quiz-question {
+        font-size: 18px;
+      }
+      
+      .quiz-buttons {
+        flex-direction: column;
+      }
+      
+      .quiz-btn {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -508,6 +714,7 @@
       <div class="subject-header">
         <h1 class="subject-title" id="chapterPageTitle">Chapter 1: The Foundations of Economics</h1>
         <p class="subject-subtitle">Click cards to flip and reveal answers</p>
+        <button id="startQuizButton" class="start-quiz-btn">Start Quiz</button>
       </div>
       <div class="flashcards-grid" id="flashcardsGrid">
         <!-- Flashcards will be populated by JavaScript -->
@@ -515,7 +722,39 @@
     </div>
   </div>
 
-
+  <!-- Quiz Screen -->
+  <div id="quizScreen" class="screen" style="display: none;">
+    <div class="quiz-container">
+      <div class="breadcrumb">
+        <a onclick="showLandingPage()">Home</a> → <a onclick="showSubjectUnitsScreen(currentSubject, currentSubjectName, currentSubjectDescription)" id="quizSubjectBreadcrumbLink">Economics</a> → <a onclick="showUnitChaptersScreen(currentUnit, currentUnitName)" id="quizUnitBreadcrumbLink">Unit 1</a> → <a onclick="showChapterFlashcards(currentSubject, currentUnit, currentChapter, currentChapterTitle)" id="quizChapterBreadcrumbLink">Chapter 1</a> → <span>Quiz</span>
+      </div>
+      
+      <div class="quiz-header">
+        <h1 class="subject-title" id="quizPageTitle">Quiz: Chapter 1</h1>
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="quizProgressBar"></div>
+        </div>
+        <div class="quiz-progress-text" id="quizProgressText">Question 1 of 10</div>
+      </div>
+      
+      <div class="quiz-question-card" id="quizQuestionCard">
+        <div class="quiz-question" id="quizQuestion">Loading question...</div>
+        <input type="text" class="quiz-answer-input" id="quizAnswerInput" placeholder="Type your answer here..." />
+        <div class="quiz-buttons">
+          <button class="quiz-btn quiz-btn-secondary" id="previousQuestionButton">Previous Question</button>
+          <button class="quiz-btn quiz-btn-primary" id="submitAnswerButton">Submit Answer</button>
+          <button class="quiz-btn quiz-btn-secondary" id="showAnswerButton">Show Answer</button>
+          <button class="quiz-btn quiz-btn-secondary" id="nextQuestionNavButton">Next Question</button>
+        </div>
+        <div id="quizFeedback" class="quiz-feedback" style="display: none;"></div>
+      </div>
+      
+      <div class="quiz-buttons">
+        <button class="quiz-btn quiz-btn-secondary" id="nextQuestionButton" style="display: none;">Next Question</button>
+        <button class="quiz-btn quiz-btn-secondary" id="finishQuizButton" style="display: none;">Finish Quiz</button>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
