@@ -72,9 +72,32 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 4px 16px rgba(239, 68, 68, 0.3) !important;
     }
     
-    /* Click to reveal message in italics */
+    /* Click to reveal message in italics - restore original simple styling */
     .click-message {
       font-style: italic !important;
+      font-size: 14px !important;
+      color: #6B7280 !important;
+      margin-top: auto !important;
+      opacity: 0.8 !important;
+      align-self: flex-end !important;
+    }
+    
+    /* Ensure flashcard content is flexbox for proper positioning */
+    .flashcard-content {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      height: 100% !important;
+      text-align: center !important;
+    }
+    
+    /* Make sure flashcard questions and answers in search results match chapter style */
+    .flashcard-question,
+    .flashcard-answer {
+      color: #FFFFFF !important;
+      font-size: 16px !important;
+      line-height: 1.5 !important;
     }
     
     /* Better text hierarchy for chapter cards */
@@ -127,6 +150,270 @@
     .flashcard:hover {
       transform: none !important;
     }
+    
+    /* Search and Filter Styling - Match chapter flashcard container width exactly */
+    .search-filter-container {
+      background: rgba(45, 55, 72, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 32px auto;
+      max-width: 800px !important;
+      width: 100% !important;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-sizing: border-box;
+    }
+    
+    .search-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    
+    #searchInput {
+      flex: 1;
+      padding: 12px 16px;
+      background: rgba(74, 85, 104, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+    }
+    
+    #searchInput:focus {
+      outline: none;
+      border-color: #60A5FA;
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+    }
+    
+    #searchInput::placeholder {
+      color: #CBD5E0;
+    }
+    
+    #searchButton {
+      padding: 12px 16px;
+      background: #60A5FA;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    
+    #searchButton:hover {
+      background: #3B82F6;
+      transform: translateY(-1px);
+    }
+    
+    .filter-dropdowns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    .filter-dropdowns select {
+      padding: 10px 12px;
+      background: rgba(74, 85, 104, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      color: #FFFFFF;
+      font-size: 13px;
+      font-family: 'Inter', sans-serif;
+      min-width: 140px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .filter-dropdowns select:focus {
+      outline: none;
+      border-color: #60A5FA;
+      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.1);
+    }
+    
+    .filter-dropdowns select option {
+      background: #2D3748;
+      color: #FFFFFF;
+    }
+    
+    /* Clear button styling */
+    .clear-button {
+      padding: 10px 16px;
+      background: #ef4444;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      min-width: 80px;
+    }
+    
+    .clear-button:hover {
+      background: #dc2626;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+    }
+    
+    .clear-button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+    }
+    
+    
+    /* Search Results Styling - Match chapter flashcard container width exactly */
+    .search-results {
+      background: rgba(45, 55, 72, 0.9);
+      backdrop-filter: blur(15px);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px auto;
+      max-width: 800px !important;
+      width: 100% !important;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: fadeInUp 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+    .search-header {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    #searchResultsTitle {
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    
+    /* Search result meta styling */
+    .search-result-meta {
+      font-size: 11px;
+      color: #60A5FA;
+      margin-bottom: 12px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    
+    /* Ensure ALL flashcard grids use identical layout - consistent across all views */
+    .flashcards-grid,
+    #searchResultsGrid,
+    #flashcardsGrid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 40px !important;
+      width: 100% !important;
+      max-width: 800px !important;
+      margin: 0 auto !important;
+      margin-top: 20px !important;
+      padding: 0 20px !important;
+    }
+    
+    /* Ensure ALL flashcards have identical sizing and styling */
+    .flashcard,
+    #searchResults .flashcard,
+    #flashcardsGrid .flashcard,
+    #searchResultsGrid .flashcard {
+      width: 100% !important;
+      height: 220px !important;
+      min-height: 220px !important;
+      max-width: none !important;
+      position: relative !important;
+      cursor: pointer !important;
+      flex-shrink: 0 !important;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Responsive design for search and flashcards */
+    @media (max-width: 768px) {
+      .search-filter-container {
+        margin: 20px 16px;
+        padding: 20px;
+      }
+      
+      .filter-dropdowns {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .filter-dropdowns select {
+        width: 100%;
+      }
+      
+      .clear-button {
+        width: 100%;
+        margin-top: 8px;
+      }
+      
+      .search-results {
+        margin: 20px 16px;
+        padding: 20px;
+        max-width: 100% !important;
+      }
+      
+      .search-filter-container {
+        max-width: 100% !important;
+      }
+      
+      /* Mobile flashcard layout consistency */
+      .flashcards-grid,
+      #searchResultsGrid,
+      #flashcardsGrid {
+        padding: 0 16px !important;
+        gap: 32px !important;
+        max-width: 100% !important;
+        margin-top: 16px !important;
+      }
+      
+      .flashcard,
+      #searchResults .flashcard,
+      #flashcardsGrid .flashcard,
+      #searchResultsGrid .flashcard {
+        height: 200px !important;
+        min-height: 200px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      /* Extra small mobile adjustments for flashcards */
+      .flashcards-grid,
+      #searchResultsGrid,
+      #flashcardsGrid {
+        padding: 0 12px !important;
+        gap: 28px !important;
+      }
+      
+      .flashcard,
+      #searchResults .flashcard,
+      #flashcardsGrid .flashcard,
+      #searchResultsGrid .flashcard {
+        height: 180px !important;
+        min-height: 180px !important;
+      }
+      
+      .flashcard-content {
+        font-size: 15px !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -139,6 +426,36 @@
           <h1 class="app-title">CARDWISE</h1>
         </div>
         <p class="tagline">Master your subjects with <span class="tagline-highlight">interactive flashcards</span></p>
+      </div>
+      
+      <!-- Search and Filter Section -->
+      <div class="search-filter-container">
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search flashcards..." autocomplete="off" />
+          <button id="searchButton">🔍</button>
+        </div>
+        <div class="filter-dropdowns">
+          <select id="subjectFilter">
+            <option value="">All Subjects</option>
+          </select>
+          <select id="unitFilter">
+            <option value="">All Units</option>
+          </select>
+          <select id="chapterFilter">
+            <option value="">All Chapters</option>
+          </select>
+          <button id="clearButton" class="clear-button" style="display: none;">Clear</button>
+        </div>
+      </div>
+      
+      <!-- Search Results Section -->
+      <div id="searchResults" class="search-results" style="display: none;">
+        <div class="search-header">
+          <h3 id="searchResultsTitle">Search Results</h3>
+        </div>
+        <div id="searchResultsGrid" class="flashcards-grid">
+          <!-- Search results will be populated by JavaScript -->
+        </div>
       </div>
       
       <h2 class="choose-subject-text">CHOOSE YOUR SUBJECT!</h2>
