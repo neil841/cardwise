@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles-ultimate.css?v=5.0">
+  <link rel="stylesheet" href="styles/auth.css">
   <style>
     /* INLINE FORCE OVERRIDE - SLATE GRAY CARDS WITH WHITE TEXT */
     .subject-button, .chapter-card, .flashcard-front, .flashcard-back {
@@ -756,6 +757,13 @@
     </div>
   </div>
 
+  <!-- Authentication Modal -->
+  <div id="auth-modal" class="hidden"></div>
+
+  <script type="module" src="firebase/config.js"></script>
+  <script type="module" src="services/authService.js"></script>
+  <script type="module" src="components/auth.js"></script>
+  <script src="answerChecker.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

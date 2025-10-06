@@ -1,4 +1,11 @@
 
+// Authentication integration - Firebase imports and auth state
+let authModal = null;
+let currentUser = null;
+
+// Make currentUser accessible globally for auth component
+window.currentUser = currentUser;
+
 // Screen navigation
 let currentSubject = '';
 let currentSubjectName = '';
@@ -13,6 +20,7 @@ let quizFlashcards = [];
 let currentQuestionIndex = 0;
 let quizScore = 0;
 let totalQuestions = 0;
+let quizAnswers = []; // Store all quiz answers for saving to Firestore
 
 function showScreenWithTransition(targetScreenId) {
   const currentScreen = document.querySelector('.screen:not([style*="display: none"])');
@@ -71,7 +79,8 @@ function showUnitChaptersScreen(unitIndex, unitName) {
 }
 
 function showChapterFlashcards(subjectKey, unitIndex, chapterIndex, chapterTitle) {
-  // Store current chapter info
+  // Store current chapter info and ensure unit is also updated
+  currentUnit = unitIndex;
   currentChapter = chapterIndex;
   currentChapterTitle = chapterTitle;
   
@@ -228,38 +237,97 @@ let chapterFlashcards = {};
 // Textbook quiz data - loaded from external JSON file
 let textbookQuizData = {};
 
-// Function to load flashcards from JSON file
-async function loadChapterFlashcardsFromJSON() {
+// Function to load flashcards from Firestore
+async function loadChapterFlashcardsFromFirestore() {
   try {
-    const response = await fetch('flashcards.json');
-    if (response.ok) {
-      chapterFlashcards = await response.json();
-      console.log('Chapter flashcards loaded from JSON file:', chapterFlashcards);
-    } else {
-      console.error('Failed to load flashcards.json, response status:', response.status);
-      // Fallback to empty structure
-      chapterFlashcards = {};
-    }
+    // Import database service dynamically
+    const { db } = await import('./firebase/config.js');
+    const { collection, getDocs } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+    
+    // Get all flashcards from Firestore
+    const flashcardsSnapshot = await getDocs(collection(db, 'flashcards'));
+    
+    // Rebuild the same structure as JSON: chapterFlashcards[subjectKey][unitKey][chapterKey]
+    chapterFlashcards = {};
+    
+    flashcardsSnapshot.forEach((doc) => {
+      const flashcard = doc.data();
+      const { subjectKey, unitIndex, chapterIndex } = flashcard;
+      const unitKey = unitIndex.toString();
+      const chapterKey = chapterIndex.toString();
+      
+      // Initialize nested structure if needed
+      if (!chapterFlashcards[subjectKey]) {
+        chapterFlashcards[subjectKey] = {};
+      }
+      if (!chapterFlashcards[subjectKey][unitKey]) {
+        chapterFlashcards[subjectKey][unitKey] = {};
+      }
+      if (!chapterFlashcards[subjectKey][unitKey][chapterKey]) {
+        chapterFlashcards[subjectKey][unitKey][chapterKey] = [];
+      }
+      
+      // Add flashcard to the array
+      chapterFlashcards[subjectKey][unitKey][chapterKey].push({
+        question: flashcard.question,
+        answer: flashcard.answer
+      });
+    });
+    
+    console.log('Chapter flashcards loaded from Firestore:', chapterFlashcards);
   } catch (error) {
-    console.error('Error loading flashcards:', error);
+    console.error('Error loading flashcards from Firestore:', error);
+    // Fallback to empty structure
     chapterFlashcards = {};
   }
 }
 
-// Function to load textbook quiz questions from JSON file
-async function loadTextbookQuizFromJSON() {
+// Function to load textbook quiz questions from Firestore
+async function loadTextbookQuizFromFirestore() {
   try {
-    const response = await fetch('textbook-quiz.json');
-    if (response.ok) {
-      textbookQuizData = await response.json();
-      console.log('Textbook quiz data loaded from JSON file:', textbookQuizData);
-    } else {
-      console.error('Failed to load textbook-quiz.json, response status:', response.status);
-      // Fallback to empty structure
-      textbookQuizData = {};
-    }
+    // Import database service dynamically
+    const { db } = await import('./firebase/config.js');
+    const { collection, getDocs } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+    
+    // Get all quiz questions from Firestore
+    const quizSnapshot = await getDocs(collection(db, 'quizzes'));
+    
+    // Rebuild the same structure as JSON: textbookQuizData[subjectKey][unitKey][chapterKey].textbook_questions
+    textbookQuizData = {};
+    
+    quizSnapshot.forEach((doc) => {
+      const quiz = doc.data();
+      const { subjectKey, unitIndex, chapterIndex } = quiz;
+      const unitKey = unitIndex.toString();
+      const chapterKey = chapterIndex.toString();
+      
+      // Initialize nested structure if needed
+      if (!textbookQuizData[subjectKey]) {
+        textbookQuizData[subjectKey] = {};
+      }
+      if (!textbookQuizData[subjectKey][unitKey]) {
+        textbookQuizData[subjectKey][unitKey] = {};
+      }
+      if (!textbookQuizData[subjectKey][unitKey][chapterKey]) {
+        textbookQuizData[subjectKey][unitKey][chapterKey] = {
+          textbook_questions: []
+        };
+      }
+      
+      // Add quiz question to the array
+      textbookQuizData[subjectKey][unitKey][chapterKey].textbook_questions.push({
+        question: quiz.question,
+        answer: quiz.answer,
+        type: quiz.type,
+        bold_concept: quiz.bold_concept,
+        ib_exam_frequency: quiz.ib_exam_frequency
+      });
+    });
+    
+    console.log('Textbook quiz data loaded from Firestore:', textbookQuizData);
   } catch (error) {
-    console.error('Error loading textbook quiz data:', error);
+    console.error('Error loading textbook quiz data from Firestore:', error);
+    // Fallback to empty structure
     textbookQuizData = {};
   }
 }
@@ -267,20 +335,16 @@ async function loadTextbookQuizFromJSON() {
 // Subject units and chapters data - loaded from external JSON file
 let subjectData = {};
 
-// Function to load subjects from JSON file
-async function loadSubjectsFromJSON() {
+// Function to load subjects from Firestore
+async function loadSubjectsFromFirestore() {
   try {
-    const response = await fetch('subjects.json');
-    if (response.ok) {
-      subjectData = await response.json();
-      console.log('Subject data loaded from JSON file:', subjectData);
-    } else {
-      console.error('Failed to load subjects.json, response status:', response.status);
-      // Fallback to empty structure
-      subjectData = {};
-    }
+    // Import database service dynamically
+    const { getAllSubjects } = await import('./services/databaseService.js');
+    subjectData = await getAllSubjects();
+    console.log('Subject data loaded from Firestore:', subjectData);
   } catch (error) {
-    console.error('Error loading subjects:', error);
+    console.error('Error loading subjects from Firestore:', error);
+    // Fallback to empty structure
     subjectData = {};
   }
 }
@@ -663,7 +727,7 @@ function navigateToChapter(subjectKey, unitKey, chapterKey) {
     // Finally show chapter flashcards
     setTimeout(() => {
       const chapterName = subjectData[subjectKey].units[unitKey].chapters[chapterKey].title;
-      showChapterFlashcardsScreen(chapterKey, chapterName);
+      showChapterFlashcards(subjectKey, unitKey, chapterKey, chapterName);
     }, 300);
   }, 300);
 }
@@ -722,6 +786,16 @@ function handleClear() {
 
 // Quiz functionality
 function startQuiz() {
+  // Debug: Log current navigation state
+  console.log('Starting quiz with navigation state:', {
+    currentSubject,
+    currentUnit,
+    currentChapter,
+    currentSubjectName,
+    currentUnitName,
+    currentChapterTitle
+  });
+  
   // Get questions for current chapter - prioritize textbook questions, fallback to flashcards
   const unitKey = currentUnit.toString();
   const chapterKey = currentChapter.toString();
@@ -762,6 +836,7 @@ function startQuiz() {
   currentQuestionIndex = 0;
   quizScore = 0;
   totalQuestions = quizFlashcards.length;
+  quizAnswers = []; // Initialize empty array to store all answers
   
   // Shuffle flashcards for variety
   for (let i = quizFlashcards.length - 1; i > 0; i--) {
@@ -785,6 +860,51 @@ function displayCurrentQuestion() {
     return;
   }
   
+  // Restore quiz question structure if it was replaced by results
+  const quizQuestionCard = document.getElementById('quizQuestionCard');
+  if (!document.getElementById('quizQuestion')) {
+    quizQuestionCard.innerHTML = `
+      <div class="quiz-question" id="quizQuestion">Loading question...</div>
+      <input type="text" class="quiz-answer-input" id="quizAnswerInput" placeholder="Type your answer here..." />
+      <div class="quiz-buttons">
+        <button class="quiz-btn quiz-btn-secondary" id="previousQuestionButton">Previous Question</button>
+        <button class="quiz-btn quiz-btn-primary" id="submitAnswerButton">Submit Answer</button>
+        <button class="quiz-btn quiz-btn-secondary" id="showAnswerButton">Show Answer</button>
+        <button class="quiz-btn quiz-btn-secondary" id="nextQuestionNavButton">Next Question</button>
+      </div>
+      <div id="quizFeedback" class="quiz-feedback" style="display: none;"></div>
+    `;
+    
+    // Re-initialize event listeners for the restored buttons
+    document.getElementById('submitAnswerButton').addEventListener('click', submitAnswer);
+    document.getElementById('showAnswerButton').addEventListener('click', showAnswer);
+    document.getElementById('previousQuestionButton').addEventListener('click', previousQuestion);
+    document.getElementById('nextQuestionNavButton').addEventListener('click', nextQuestionNav);
+    
+    // Allow submitting answer with Enter key
+    document.getElementById('quizAnswerInput').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !document.getElementById('quizAnswerInput').disabled) {
+        submitAnswer();
+      }
+    });
+    
+    // Restore the external action buttons if they don't exist
+    const quizContainer = document.querySelector('#quizScreen .quiz-container');
+    if (!document.getElementById('nextQuestionButton')) {
+      const actionButtonsDiv = document.createElement('div');
+      actionButtonsDiv.className = 'quiz-buttons';
+      actionButtonsDiv.innerHTML = `
+        <button class="quiz-btn quiz-btn-secondary" id="nextQuestionButton" style="display: none;">Next Question</button>
+        <button class="quiz-btn quiz-btn-secondary" id="finishQuizButton" style="display: none;">Finish Quiz</button>
+      `;
+      quizContainer.appendChild(actionButtonsDiv);
+      
+      // Add event listeners for these buttons
+      document.getElementById('nextQuestionButton').addEventListener('click', nextQuestion);
+      document.getElementById('finishQuizButton').addEventListener('click', finishQuiz);
+    }
+  }
+  
   const question = quizFlashcards[currentQuestionIndex];
   
   // Update question display
@@ -804,22 +924,26 @@ function displayCurrentQuestion() {
   document.getElementById('quizFeedback').style.display = 'none';
   document.getElementById('quizAnswerInput').disabled = false;
   
-  // Update navigation buttons
+  // Update navigation buttons (if they exist)
   const prevButton = document.getElementById('previousQuestionButton');
   const nextNavButton = document.getElementById('nextQuestionNavButton');
   
   // Show/hide previous button
-  if (currentQuestionIndex > 0) {
-    prevButton.style.display = 'inline-block';
-  } else {
-    prevButton.style.display = 'none';
+  if (prevButton) {
+    if (currentQuestionIndex > 0) {
+      prevButton.style.display = 'inline-block';
+    } else {
+      prevButton.style.display = 'none';
+    }
   }
   
   // Show/hide next navigation button
-  if (currentQuestionIndex < totalQuestions - 1) {
-    nextNavButton.style.display = 'inline-block';
-  } else {
-    nextNavButton.style.display = 'none';
+  if (nextNavButton) {
+    if (currentQuestionIndex < totalQuestions - 1) {
+      nextNavButton.style.display = 'inline-block';
+    } else {
+      nextNavButton.style.display = 'none';
+    }
   }
   
   // Focus on input
@@ -835,22 +959,47 @@ function submitAnswer() {
     return;
   }
   
-  // Check if answer is correct (case-insensitive exact match)
-  const isCorrect = userAnswer.toLowerCase() === correctAnswer.toLowerCase();
+  // Check if answer is correct using fuzzy matching
+  const answerChecker = new AnswerChecker(0.8); // 80% threshold
+  const result = answerChecker.checkAnswer(userAnswer, correctAnswer);
+  const isCorrect = result.isCorrect;
+  const similarity = result.similarity;
   
   if (isCorrect) {
     quizScore++;
   }
   
-  showFeedback(isCorrect, correctAnswer);
+  // Record this answer for saving to Firestore
+  quizAnswers.push({
+    questionIndex: currentQuestionIndex,
+    question: quizFlashcards[currentQuestionIndex].question,
+    userAnswer: userAnswer,
+    correctAnswer: correctAnswer,
+    isCorrect: isCorrect,
+    similarity: similarity
+  });
+  
+  showFeedback(isCorrect, correctAnswer, false, similarity);
 }
 
 function showAnswer() {
   const correctAnswer = quizFlashcards[currentQuestionIndex].answer;
-  showFeedback(false, correctAnswer, true);
+  
+  // Record that user revealed the answer (marked as incorrect)
+  quizAnswers.push({
+    questionIndex: currentQuestionIndex,
+    question: quizFlashcards[currentQuestionIndex].question,
+    userAnswer: '',
+    correctAnswer: correctAnswer,
+    isCorrect: false,
+    similarity: 0,
+    revealed: true
+  });
+  
+  showFeedback(false, correctAnswer, true, 0);
 }
 
-function showFeedback(isCorrect, correctAnswer, showAnswerClicked = false) {
+function showFeedback(isCorrect, correctAnswer, showAnswerClicked = false, similarity = 0) {
   const feedbackDiv = document.getElementById('quizFeedback');
   
   if (showAnswerClicked) {
@@ -910,9 +1059,29 @@ function finishQuiz() {
   showQuizResults();
 }
 
-function showQuizResults() {
+async function showQuizResults() {
   const percentage = Math.round((quizScore / totalQuestions) * 100);
   const quizQuestionCard = document.getElementById('quizQuestionCard');
+  
+  // Save quiz attempt to Firestore if user is authenticated
+  if (window.currentUser) {
+    try {
+      const { saveQuizAttempt } = await import('./services/databaseService.js');
+      
+      await saveQuizAttempt(
+        window.currentUser.uid,
+        currentSubject,
+        parseInt(currentUnit),
+        parseInt(currentChapter),
+        quizAnswers,
+        quizScore,
+        totalQuestions
+      );
+      console.log('Quiz attempt saved successfully');
+    } catch (error) {
+      console.error('Error saving quiz attempt:', error);
+    }
+  }
   
   quizQuestionCard.innerHTML = `
     <div class="quiz-score-summary">
@@ -942,9 +1111,9 @@ function backToChapter() {
 window.addEventListener('DOMContentLoaded', async () => {
   console.log('DOM Content Loaded - Starting initialization');
   
-  await loadChapterFlashcardsFromJSON();
-  await loadTextbookQuizFromJSON();
-  await loadSubjectsFromJSON();
+  await loadChapterFlashcardsFromFirestore();
+  await loadTextbookQuizFromFirestore();
+  await loadSubjectsFromFirestore();
   console.log('About to create subject icons');
   createSubjectIcons();
   console.log('About to show landing page');
@@ -957,6 +1126,11 @@ window.addEventListener('DOMContentLoaded', async () => {
   initializeQuizFunctionality();
   
   console.log('Initialization complete');
+  
+  // Initialize authentication
+  if (typeof AuthModal !== 'undefined') {
+    authModal = new AuthModal();
+  }
 });
 
 function initializeQuizFunctionality() {

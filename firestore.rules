@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read access to subjects, flashcards, and quiz questions
+    // These are educational content that should be publicly accessible
+    
+    // Subjects collection - public read access
+    match /subjects/{subjectId} {
+      allow read: if true;
+      allow write: if true; // Allow writes for migration
+    }
+    
+    // Flashcards collection - public read access
+    match /flashcards/{flashcardId} {
+      allow read: if true;
+      allow write: if true; // Allow writes for migration
+    }
+    
+    // Quiz questions collection - public read access  
+    match /quizzes/{quizId} {
+      allow read: if true;
+      allow write: if true; // Allow writes for migration
+    }
+    
+    // Users collection - users can only access their own data
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Quiz attempts collection - users can only access their own attempts
+    match /quiz_attempts/{attemptId} {
+      allow read, write: if request.auth != null && 
+                         resource.data.userId == request.auth.uid;
+      allow create: if request.auth != null && 
+                   request.resource.data.userId == request.auth.uid;
+    }
+    
+    // Default deny rule for all other documents
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
