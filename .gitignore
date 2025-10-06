@@ -87,3 +87,4 @@ Thumbs.db
 dist/
 build/
 scripts/serviceAccountKey.json
+public/firebase/config.js
