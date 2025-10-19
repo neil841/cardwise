@@ -6,33 +6,40 @@
   <title>CARDWISE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles-ultimate.css?v=5.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Aleo:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-ultimate.css?v=5.4">
   <link rel="stylesheet" href="styles/auth.css">
   <style>
-    /* INLINE FORCE OVERRIDE - SLATE GRAY CARDS WITH WHITE TEXT */
+    /* INLINE FORCE OVERRIDE - LIGHT CREAM THEME WITH DARK TEXT */
     .subject-button, .chapter-card, .flashcard-front, .flashcard-back {
-      background-color: #2D3748 !important;
-      background: #2D3748 !important;
+      background-color: #FFFFFF !important;
+      background: #FFFFFF !important;
+      border: 1px solid #E5E7EB !important;
     }
-    .subject-button:hover, .chapter-card:hover, .flashcard-back {
-      background-color: #4A5568 !important;
-      background: #4A5568 !important;
+    .subject-button:hover, .chapter-card:hover {
+      background-color: #F9FAFB !important;
+      background: #F9FAFB !important;
+      border-color: #7C3AED !important;
     }
-    
-    /* White text for all card content */
+
+    .flashcard-back {
+      background-color: #FFFFFF !important;
+      background: #FFFFFF !important;
+    }
+
+    /* Dark text for all card content */
     .subject-name, .subject-description, .chapter-title, .flashcard-content {
-      color: #FFFFFF !important;
+      color: #333333 !important;
     }
-    
-    /* Light gray for descriptions to create hierarchy */
+
+    /* Medium gray for descriptions to create hierarchy */
     .subject-description {
-      color: #CBD5E0 !important;
+      color: #666666 !important;
     }
-    
-    /* White for the main heading */
+
+    /* Dark gray for the main heading */
     .choose-subject-text {
-      color: #FFFFFF !important;
+      color: #333333 !important;
     }
     
     /* Remove border from tagline highlight, keep just the blue color */
@@ -93,23 +100,41 @@
       text-align: center !important;
     }
     
+    /* Hide Start Quiz button in flashcard section - this is flashcards only, not quiz */
+    #startQuizButton, .modern-quiz-btn {
+      display: none !important;
+    }
+
+    /* Authentication modal - controlled by JavaScript */
+
+    /* Improve readability of subject and unit titles - increase opacity */
+    .modern-chapter-title, .chapter-title, h1 {
+      opacity: 1 !important;
+      color: #1F2937 !important;
+    }
+
+    .modern-chapter-subtitle {
+      opacity: 0.9 !important;
+      color: #6B7280 !important;
+    }
+
     /* Make sure flashcard questions and answers in search results match chapter style */
     .flashcard-question,
     .flashcard-answer {
-      color: #FFFFFF !important;
+      color: #333333 !important;
       font-size: 16px !important;
       line-height: 1.5 !important;
     }
-    
+
     /* Better text hierarchy for chapter cards */
     .chapter-card .chapter-title {
-      color: #FFFFFF !important;
+      color: #333333 !important;
       font-weight: 600 !important;
     }
-    
-    /* Unit prefix text - bright blue for better visibility and hierarchy */
+
+    /* Unit prefix text - purple for better visibility and hierarchy */
     .chapter-card .chapter-unit {
-      color: #60A5FA !important;
+      color: #7C3AED !important;
       font-weight: 500 !important;
       font-size: 13px !important;
       opacity: 0.9 !important;
@@ -154,15 +179,15 @@
     
     /* Search and Filter Styling - Match chapter flashcard container width exactly */
     .search-filter-container {
-      background: rgba(45, 55, 72, 0.8);
-      backdrop-filter: blur(10px);
+      background: #FFFFFF;
       border-radius: 16px;
       padding: 24px;
       margin: 32px auto;
       max-width: 800px !important;
       width: 100% !important;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid #E5E7EB;
       box-sizing: border-box;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
     
     .search-bar {
@@ -174,39 +199,43 @@
     #searchInput {
       flex: 1;
       padding: 12px 16px;
-      background: rgba(74, 85, 104, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: #F9FAFB;
+      border: 1px solid #D1D5DB;
       border-radius: 8px;
-      color: #FFFFFF;
+      color: #333333;
       font-size: 14px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       transition: all 0.3s ease;
     }
-    
+
     #searchInput:focus {
       outline: none;
-      border-color: #60A5FA;
-      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+      border-color: #7C3AED;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+      background: #FFFFFF;
     }
-    
+
     #searchInput::placeholder {
-      color: #CBD5E0;
+      color: #999999;
     }
-    
+
     #searchButton {
       padding: 12px 16px;
-      background: #60A5FA;
+      background: #7C3AED;
       border: none;
       border-radius: 8px;
       color: white;
       cursor: pointer;
       font-size: 16px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
       transition: all 0.3s ease;
     }
-    
+
     #searchButton:hover {
-      background: #3B82F6;
+      background: #6B21A8;
       transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(124, 58, 237, 0.2);
     }
     
     .filter-dropdowns {
@@ -218,26 +247,27 @@
     
     .filter-dropdowns select {
       padding: 10px 12px;
-      background: rgba(74, 85, 104, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: #F9FAFB;
+      border: 1px solid #D1D5DB;
       border-radius: 6px;
-      color: #FFFFFF;
+      color: #333333;
       font-size: 13px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       min-width: 140px;
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    
+
     .filter-dropdowns select:focus {
       outline: none;
-      border-color: #60A5FA;
-      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.1);
+      border-color: #7C3AED;
+      box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.1);
+      background: #FFFFFF;
     }
-    
+
     .filter-dropdowns select option {
-      background: #2D3748;
-      color: #FFFFFF;
+      background: #FFFFFF;
+      color: #333333;
     }
     
     /* Clear button styling */
@@ -269,37 +299,37 @@
     
     /* Search Results Styling - Match chapter flashcard container width exactly */
     .search-results {
-      background: rgba(45, 55, 72, 0.9);
-      backdrop-filter: blur(15px);
+      background: #FFFFFF;
       border-radius: 16px;
       padding: 24px;
       margin: 24px auto;
       max-width: 800px !important;
       width: 100% !important;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid #E5E7EB;
       animation: fadeInUp 0.3s ease;
       box-sizing: border-box;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
-    
+
     .search-header {
       margin-bottom: 24px;
       padding-bottom: 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid #E5E7EB;
     }
-    
+
     #searchResultsTitle {
-      color: #FFFFFF;
+      color: #333333;
       font-size: 24px;
       font-weight: 600;
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Quicksand', sans-serif;
     }
     
     
     /* Search result meta styling */
     .search-result-meta {
       font-size: 11px;
-      color: #60A5FA;
+      color: #7C3AED;
       margin-bottom: 12px;
       font-weight: 500;
       opacity: 0.9;
@@ -418,26 +448,26 @@
 
     /* Quiz Button Styling */
     .start-quiz-btn {
-      background: #60A5FA;
+      background: #7C3AED;
       border: none;
       border-radius: 12px;
       color: white;
       padding: 14px 28px;
       font-size: 16px;
       font-weight: 600;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       cursor: pointer;
       margin-top: 16px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
     }
-    
+
     .start-quiz-btn:hover {
-      background: #3B82F6;
+      background: #6B21A8;
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(96, 165, 250, 0.4);
+      box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4);
     }
-    
+
     .start-quiz-btn:active {
       transform: translateY(0);
     }
@@ -458,63 +488,67 @@
     }
     
     .quiz-progress {
-      background: rgba(45, 55, 72, 0.8);
+      background: #E5E7EB;
       border-radius: 10px;
       height: 8px;
       margin: 20px 0;
       overflow: hidden;
     }
-    
+
     .quiz-progress-bar {
-      background: #60A5FA;
+      background: #7C3AED;
       height: 100%;
       transition: width 0.3s ease;
     }
-    
+
     .quiz-progress-text {
-      color: #CBD5E0;
+      color: #666666;
       font-size: 14px;
       text-align: center;
       margin-top: 8px;
+      font-family: 'Quicksand', sans-serif;
     }
-    
+
     .quiz-question-card {
-      background: rgba(45, 55, 72, 0.9);
+      background: #FFFFFF;
       border-radius: 16px;
       padding: 32px;
       margin-bottom: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid #E5E7EB;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     
     .quiz-question {
-      color: #FFFFFF;
+      color: #333333;
       font-size: 20px;
       font-weight: 500;
       line-height: 1.5;
       margin-bottom: 24px;
+      font-family: 'Quicksand', sans-serif;
     }
-    
+
     .quiz-answer-input {
       width: 100%;
       padding: 16px;
-      background: rgba(74, 85, 104, 0.6);
-      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: #F9FAFB;
+      border: 2px solid #D1D5DB;
       border-radius: 12px;
-      color: #FFFFFF;
+      color: #333333;
       font-size: 16px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       margin-bottom: 20px;
       transition: border-color 0.3s ease;
     }
-    
+
     .quiz-answer-input:focus {
       outline: none;
-      border-color: #60A5FA;
-      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+      border-color: #7C3AED;
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+      background: #FFFFFF;
     }
-    
+
     .quiz-answer-input::placeholder {
-      color: #9CA3AF;
+      color: #999999;
     }
     
     .quiz-buttons {
@@ -528,30 +562,32 @@
       border: none;
       border-radius: 8px;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Quicksand', sans-serif;
     }
-    
+
     .quiz-btn-primary {
-      background: #60A5FA;
+      background: #7C3AED;
       color: white;
     }
-    
+
     .quiz-btn-primary:hover {
-      background: #3B82F6;
+      background: #6B21A8;
       transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(124, 58, 237, 0.2);
     }
-    
+
     .quiz-btn-secondary {
-      background: rgba(74, 85, 104, 0.6);
-      color: #FFFFFF;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: #F9FAFB;
+      color: #333333;
+      border: 1px solid #D1D5DB;
     }
-    
+
     .quiz-btn-secondary:hover {
-      background: rgba(74, 85, 104, 0.8);
+      background: #E5E7EB;
+      border-color: #9CA3AF;
     }
     
     .quiz-feedback {
@@ -575,29 +611,32 @@
     
     .quiz-feedback-answer {
       margin-top: 8px;
-      color: #FFFFFF;
+      color: #333333;
       font-weight: normal;
     }
-    
+
     .quiz-score-summary {
       text-align: center;
-      background: rgba(45, 55, 72, 0.9);
+      background: #FFFFFF;
       border-radius: 16px;
       padding: 40px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid #E5E7EB;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     
     .quiz-score {
       font-size: 48px;
       font-weight: bold;
-      color: #60A5FA;
+      color: #7C3AED;
       margin-bottom: 16px;
+      font-family: 'Quicksand', sans-serif;
     }
-    
+
     .quiz-score-text {
-      color: #FFFFFF;
+      color: #333333;
       font-size: 18px;
       margin-bottom: 24px;
+      font-family: 'Quicksand', sans-serif;
     }
     
     @media (max-width: 768px) {
@@ -621,12 +660,1947 @@
         width: 100%;
       }
     }
+
+    /* ===== NEW LANDING PAGE STYLES ===== */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .new-landing-wrapper {
+      min-height: 100vh;
+      width: 100%;
+      background: #F7F7F7;
+      position: relative;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+    }
+
+    /* Header Navigation */
+    .landing-header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      padding: 37px 85px;
+      position: relative;
+      z-index: 10;
+      max-width: 1500px;
+      margin: 0 auto;
+      gap: 0;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      grid-column: 1;
+    }
+
+    .logo-icon {
+      font-size: 36px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1D1C24;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 0;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 24px;
+      grid-column: 2;
+    }
+
+    .nav-link {
+      color: #666666;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0 20px;
+      white-space: nowrap;
+    }
+
+    .nav-link.active {
+      color: #333333;
+    }
+
+    .nav-link:hover {
+      color: #333333;
+    }
+
+    .quote-btn {
+      background: #7C3AED;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      grid-column: 3;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .quote-btn:hover {
+      background: #6B21A8;
+      transform: translateY(-1px);
+    }
+
+    /* Hero Content */
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding: 80px 85px;
+      position: relative;
+      z-index: 5;
+      align-items: center;
+      min-height: calc(100vh - 200px);
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .hero-left {
+      max-width: 550px;
+    }
+
+    .hero-title {
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0 0 32px 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .hero-line-1 {
+      color: #333333;
+      display: block;
+    }
+
+    .hero-line-2 {
+      color: #DC2626;
+      display: inline;
+      white-space: nowrap;
+    }
+
+    .hero-line-3 {
+      color: #F59E0B;
+      display: block;
+    }
+
+    .hero-highlight {
+      color: #7C3AED;
+    }
+
+    .hero-description {
+      font-size: 20px;
+      color: #666666;
+      line-height: 1.6;
+      margin: 0 0 40px 0;
+      font-weight: 400;
+      font-family: 'Aleo', serif;
+    }
+
+    /* Hero Search Container */
+    .hero-search-container {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border-radius: 8px;
+      padding: 6px;
+      border: 1px solid #E5E5E5;
+      margin-bottom: 24px;
+      max-width: 500px;
+      gap: 8px;
+    }
+
+    .hero-search-input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      color: #333333;
+      font-size: 16px;
+      padding: 12px 16px;
+      outline: none;
+      font-family: 'Aleo', serif;
+      font-weight: 400;
+    }
+
+    .hero-search-input::placeholder {
+      color: #999999;
+      font-weight: 400;
+    }
+
+    .hero-search-btn {
+      background: #7C3AED;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .hero-search-btn:hover {
+      background: #6B21A8;
+      transform: translateY(-1px);
+    }
+
+    .hero-search-btn svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #8468F5 0%, #A78BFA 100%);
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(132, 104, 245, 0.2);
+    }
+
+    .social-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(132, 104, 245, 0.4);
+    }
+
+    /* Hero Right - 3D Shapes */
+    .hero-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    .shapes-container {
+      width: 100%;
+      max-width: 700px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .shapes-bg {
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Decorative Strips */
+    .decorative-strips {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .strip {
+      position: absolute;
+      background: linear-gradient(135deg, rgba(132, 104, 245, 0.35) 0%, rgba(167, 139, 250, 0.35) 100%);
+      transform: rotate(145deg);
+      opacity: 1;
+    }
+
+    .strip-1 {
+      width: 12px;
+      height: 280px;
+      top: -20px;
+      left: 12%;
+      border-radius: 6px;
+    }
+
+    .strip-2 {
+      width: 35px;
+      height: 480px;
+      top: -50px;
+      left: 15%;
+      border-radius: 18px;
+    }
+
+    .strip-3 {
+      width: 10px;
+      height: 220px;
+      top: 20px;
+      left: 38%;
+      border-radius: 5px;
+    }
+
+    .strip-4 {
+      width: 25px;
+      height: 500px;
+      top: -80px;
+      right: 18%;
+      border-radius: 12px;
+    }
+
+    .strip-5 {
+      width: 14px;
+      height: 100px;
+      top: 150px;
+      right: 10%;
+      border-radius: 7px;
+    }
+
+    .strip-6 {
+      width: 28px;
+      height: 520px;
+      bottom: -100px;
+      right: 12%;
+      border-radius: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 60px;
+      }
+
+      .hero-title {
+        font-size: 48px;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .shapes-container {
+        max-width: 500px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .landing-header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 30px;
+      }
+
+      .nav-menu {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-content {
+        padding: 30px 30px;
+      }
+
+      .hero-title {
+        font-size: 36px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .hero-search-container {
+        max-width: 100%;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+
+      .shapes-container {
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .landing-header {
+        padding: 16px 20px;
+      }
+
+      .logo-text {
+        font-size: 20px;
+      }
+
+      .nav-menu {
+        gap: 12px;
+      }
+
+      .nav-link {
+        font-size: 14px;
+      }
+
+      .hero-content {
+        padding: 20px 20px;
+      }
+
+      .hero-title {
+        font-size: 28px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-search-container {
+        padding: 6px 6px 6px 16px;
+      }
+
+      .hero-search-input {
+        font-size: 13px;
+      }
+
+      .hero-search-btn {
+        width: 36px;
+        height: 36px;
+      }
+
+      .social-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .social-icon svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    /* Divider Line */
+    .section-divider {
+      display: none;
+    }
+
+    /* ===== RESOURCE SECTIONS (Flashcards, Books, Quizzes, Practice Papers) ===== */
+    .resource-landing-wrapper {
+      min-height: 100vh;
+      width: 100%;
+      background: #F7F7F7;
+      padding: 80px 100px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+    }
+
+    .resource-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: #666666;
+      font-weight: 500;
+    }
+
+    .resource-breadcrumb a {
+      color: #7C3AED;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .resource-breadcrumb a:hover {
+      color: #6B21A8;
+    }
+
+    .resource-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .resource-main-title {
+      font-size: 56px;
+      font-weight: 700;
+      color: #333333;
+      margin: 0 0 16px 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .resource-subtitle {
+      font-size: 20px;
+      color: #666666;
+      margin: 0;
+      font-family: 'Aleo', serif;
+    }
+
+    /* Subject Grid for Resource Sections */
+    .resource-subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .resource-subject-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E5E5;
+      border-radius: 12px;
+      padding: 32px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 200px;
+    }
+
+    .resource-subject-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border-color: #7C3AED;
+    }
+
+    .resource-subject-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .resource-subject-name {
+      font-size: 22px;
+      font-weight: 600;
+      color: #333333;
+      margin: 0 0 8px 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .resource-subject-desc {
+      font-size: 14px;
+      color: #666666;
+      margin: 0;
+      font-family: 'Aleo', serif;
+    }
+
+    /* Items Grid (Books, Papers, Quizzes) */
+    .resource-items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .resource-item-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E5E5;
+      border-radius: 12px;
+      padding: 28px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .resource-item-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-color: #D0D0D0;
+    }
+
+    .resource-item-meta {
+      font-size: 12px;
+      color: #7C3AED;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .resource-item-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333333;
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      line-height: 1.4;
+    }
+
+    .resource-loading {
+      text-align: center;
+      color: #666666;
+      font-size: 16px;
+      padding: 60px 20px;
+      font-family: 'Aleo', serif;
+    }
+
+    .resource-error {
+      text-align: center;
+      color: #EF4444;
+      font-size: 16px;
+      padding: 60px 20px;
+      font-family: 'Aleo', serif;
+    }
+
+    .resource-empty {
+      text-align: center;
+      color: #999999;
+      font-size: 16px;
+      padding: 60px 20px;
+      font-family: 'Aleo', serif;
+    }
+
+    /* Responsive Design for Resource Sections */
+    @media (max-width: 1200px) {
+      .resource-landing-wrapper {
+        padding: 60px 60px;
+      }
+
+      .resource-main-title {
+        font-size: 48px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resource-landing-wrapper {
+        padding: 40px 30px;
+      }
+
+      .resource-main-title {
+        font-size: 36px;
+      }
+
+      .resource-subtitle {
+        font-size: 16px;
+      }
+
+      .resource-subjects-grid,
+      .resource-items-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .resource-landing-wrapper {
+        padding: 30px 20px;
+      }
+
+      .resource-main-title {
+        font-size: 28px;
+      }
+
+      .resource-subtitle {
+        font-size: 14px;
+      }
+
+      .resource-subject-card,
+      .resource-item-card {
+        padding: 24px;
+      }
+    }
+
+    /* Products Section */
+    .products-section {
+      background: #ECECEC;
+      padding: 100px 100px;
+      width: 100%;
+      position: relative;
+    }
+
+    .products-header {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 60px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .products-heading {
+      flex-shrink: 0;
+    }
+
+    .products-label {
+      color: #333333;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.2;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .products-description {
+      font-family: 'Aleo', serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #666666;
+      max-width: 700px;
+      margin: 0;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .product-card {
+      border-radius: 12px;
+      padding: 40px;
+      position: relative;
+      border: 1px solid #E5E5E5;
+      box-shadow: none;
+      transition: all 0.2s ease;
+      min-height: 240px;
+      background: #FFFFFF;
+    }
+
+    .product-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-color: #D0D0D0;
+    }
+
+    /* Resource Card Colors - Builder Methods Exact Match */
+    .card-gray {
+      background: #4A4A4A;
+      color: white;
+    }
+
+    .card-violet {
+      background: #7C3AED;
+      color: white;
+    }
+
+    .card-yellow {
+      background: #FBBF24;
+      color: #1D1C24;
+    }
+
+    .card-red {
+      background: #FF3366;
+      color: white;
+    }
+
+    /* New Resource Card Layout */
+    .card-content-new {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      min-height: 280px;
+      position: relative;
+      padding: 40px;
+    }
+
+    .resource-icon-corner {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      opacity: 0.4;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .resource-title {
+      font-size: 40px;
+      font-weight: 600;
+      margin: 0 0 16px 0;
+      font-family: 'Aleo', serif;
+      letter-spacing: -0.5px;
+    }
+
+    .resource-description {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 auto 0;
+      opacity: 0.95;
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 400;
+    }
+
+    .resource-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 32px;
+      padding: 10px 16px;
+      border: 2px solid currentColor;
+      border-radius: 8px;
+      width: fit-content;
+      transition: all 0.2s ease;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+    }
+
+    .resource-link:hover {
+      transform: translateX(4px);
+      opacity: 0.9;
+    }
+
+    .resource-arrow {
+      transition: transform 0.2s ease;
+      font-size: 16px;
+    }
+
+    .resource-link:hover .resource-arrow {
+      transform: translateX(4px);
+    }
+
+    .card-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    .card-text {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .card-title {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .title-highlight {
+      padding: 4px 10px;
+      border-radius: 7px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .highlight-purple {
+      background: linear-gradient(135deg, #A78BFA 0%, #8468F5 100%);
+      color: white;
+    }
+
+    .highlight-white {
+      background: white;
+      color: #1D1C24;
+    }
+
+    .card-link {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+      color: #1D1C24;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      transition: all 0.3s ease;
+    }
+
+    .card-link-light {
+      color: #1D1C24;
+    }
+
+    .card-link:hover {
+      gap: 20px;
+    }
+
+    .link-icon {
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8468F5 0%, #A78BFA 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .card-link-light .link-icon {
+      background: linear-gradient(135deg, #8468F5 0%, #A78BFA 100%);
+      color: white;
+    }
+
+    .link-text {
+      line-height: 1.4;
+    }
+
+    .card-icon {
+      font-size: 80px;
+      flex-shrink: 0;
+    }
+
+    /* Products Section Responsive */
+    @media (max-width: 1200px) {
+      .products-section {
+        padding: 60px 60px;
+      }
+
+      .products-header {
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+
+      .products-description {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .products-section {
+        padding: 40px 30px;
+      }
+
+      .products-label {
+        font-size: 32px;
+      }
+
+      .products-description {
+        font-size: 16px;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .product-card {
+        padding: 35px;
+        min-height: 240px;
+      }
+
+      .title-highlight {
+        font-size: 26px;
+      }
+
+      .card-icon {
+        font-size: 60px;
+      }
+
+      .card-text {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .products-section {
+        padding: 30px 20px;
+      }
+
+      .products-label {
+        font-size: 28px;
+      }
+
+      .products-description {
+        font-size: 14px;
+      }
+
+      .product-card {
+        padding: 25px;
+        border-radius: 30px;
+        min-height: auto;
+      }
+
+      .card-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+      }
+
+      .title-highlight {
+        font-size: 22px;
+      }
+
+      .card-icon {
+        font-size: 50px;
+        align-self: flex-end;
+      }
+
+      .card-text {
+        gap: 30px;
+        width: 100%;
+      }
+
+      .card-link {
+        font-size: 18px;
+      }
+
+      .link-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+      }
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      background: #FFFFFF;
+      padding: 100px 100px;
+      width: 100%;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .testimonials-header-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .testimonials-title {
+      font-size: 42px;
+      font-weight: 700;
+      color: #333333;
+      margin: 0 0 16px 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .testimonials-subtitle {
+      font-size: 20px;
+      color: #666666;
+      margin: 0;
+      font-family: 'Aleo', serif;
+    }
+
+    .testimonials-nav {
+      display: none;
+    }
+
+    .testimonials-btn {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: #374151;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .testimonials-btn:hover:not(:disabled) {
+      background: #F9FAFB;
+      border-color: #D1D5DB;
+    }
+
+    .testimonials-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      background: #E5E7EB;
+      color: #9CA3AF;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 32px 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .testimonial-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-rating {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+
+    .star {
+      font-size: 18px;
+      color: #E5E7EB;
+    }
+
+    .star.filled {
+      color: #FFA500;
+    }
+
+    .testimonial-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1D1C24;
+      margin: 0 0 12px 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #52575C;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .testimonials-pagination {
+      display: none;
+    }
+
+    .pagination-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #D1D5DB;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .pagination-dot.active {
+      background: #6B7280;
+      width: 24px;
+      border-radius: 5px;
+    }
+
+    /* Testimonials Responsive */
+    @media (max-width: 1200px) {
+      .testimonials-section {
+        padding: 60px 60px;
+      }
+
+      .testimonials-grid {
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-section {
+        padding: 40px 30px;
+      }
+
+      .testimonials-header {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .testimonials-title {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .testimonials-section {
+        padding: 30px 20px;
+      }
+
+      .testimonials-title {
+        font-size: 24px;
+      }
+
+      .testimonials-nav {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .testimonials-btn {
+        flex: 1;
+        padding: 12px 16px;
+      }
+
+      .testimonial-card {
+        padding: 24px 20px;
+      }
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: #ECECEC;
+      padding: 100px 100px;
+      width: 100%;
+    }
+
+    .faq-header {
+      text-align: left;
+      max-width: 100%;
+      margin: 0 0 60px 0;
+    }
+
+    .faq-title {
+      font-size: 42px;
+      font-weight: 700;
+      color: #333333;
+      margin: 0 0 16px 0;
+      font-family: 'Quicksand', sans-serif;
+      line-height: 1.2;
+    }
+
+    .faq-subtitle {
+      font-size: 20px;
+      color: #666666;
+      margin: 0;
+      font-family: 'Aleo', serif;
+      line-height: 1.6;
+    }
+
+    .faq-content {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #E5E7EB;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      cursor: pointer;
+      gap: 20px;
+      transition: opacity 0.2s ease;
+    }
+
+    .faq-question span {
+      font-size: 20px;
+      color: #1D1C24;
+      font-family: 'Aleo', serif;
+      font-weight: 600;
+      flex: 1;
+    }
+
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      color: #8468F5;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                  opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                  padding-bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                  margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      padding-bottom: 0;
+      margin-top: 0;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding-bottom: 28px;
+      opacity: 1;
+      margin-top: 8px;
+    }
+
+    .faq-answer p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #52575C;
+      margin: 0;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .faq-question:hover {
+      opacity: 0.7;
+    }
+
+    /* FAQ Responsive */
+    @media (max-width: 1200px) {
+      .faq-section {
+        padding: 60px 60px;
+      }
+
+      .faq-title {
+        font-size: 48px;
+      }
+
+      .faq-subtitle {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .faq-section {
+        padding: 40px 30px;
+      }
+
+      .faq-header {
+        margin-bottom: 50px;
+      }
+
+      .faq-title {
+        font-size: 36px;
+      }
+
+      .faq-subtitle {
+        font-size: 16px;
+      }
+
+      .faq-question span {
+        font-size: 18px;
+      }
+
+      .faq-answer p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .faq-section {
+        padding: 30px 20px;
+      }
+
+      .faq-title {
+        font-size: 28px;
+      }
+
+      .faq-subtitle {
+        font-size: 15px;
+      }
+
+      .faq-question {
+        padding: 20px 0;
+      }
+
+      .faq-question span {
+        font-size: 16px;
+      }
+
+      .faq-answer p {
+        font-size: 15px;
+      }
+
+      .faq-icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    /* ========== MODERN FLASHCARD SCREEN STYLES ========== */
+
+    .modern-flashcard-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      width: 100%;
+    }
+
+    .modern-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb-link {
+      color: #666666;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .breadcrumb-link:hover {
+      color: #7C3AED;
+    }
+
+    .breadcrumb-arrow {
+      color: #999999;
+    }
+
+    .breadcrumb-current {
+      color: #333333;
+      font-weight: 600;
+    }
+
+    .modern-flashcard-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .modern-chapter-title {
+      font-family: 'Aleo', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: #333333;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .modern-chapter-subtitle {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 16px;
+      color: #666666;
+      margin-bottom: 28px;
+    }
+
+    .modern-quiz-btn {
+      background: #7C3AED;
+      color: #FFFFFF;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modern-quiz-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(124, 58, 237, 0.4);
+      background: #6B21A8;
+    }
+
+    .modern-quiz-btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-icon {
+      font-size: 20px;
+    }
+
+    .modern-flashcards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    /* Modern Flashcard Card Styling */
+    .modern-flashcards-grid .flashcard {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 28px;
+      min-height: 220px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .modern-flashcards-grid .flashcard:hover {
+      border-color: #7C3AED;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(124, 58, 237, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .modern-flashcards-grid .flashcard-content {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #333333;
+    }
+
+    .modern-flashcards-grid .flashcard-question,
+    .modern-flashcards-grid .flashcard-answer {
+      font-family: 'Quicksand', sans-serif;
+      color: #333333;
+    }
+
+    .modern-flashcards-grid .click-message {
+      font-family: 'Quicksand', sans-serif;
+      color: #999999;
+      font-style: italic;
+      font-size: 13px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .modern-flashcard-container {
+        padding: 24px 16px 60px;
+      }
+
+      .modern-breadcrumb {
+        font-size: 13px;
+        gap: 8px;
+      }
+
+      .modern-chapter-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+      }
+
+      .modern-chapter-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      .modern-quiz-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+      }
+
+      .modern-flashcards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .modern-flashcards-grid .flashcard {
+        min-height: 200px;
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .modern-flashcard-header {
+        margin-bottom: 32px;
+      }
+
+      .modern-chapter-title {
+        font-size: 24px;
+      }
+
+      .modern-flashcards-grid .flashcard {
+        min-height: 180px;
+        padding: 20px;
+      }
+
+      .modern-flashcards-grid .flashcard-content {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Landing Page -->
   <div id="landingPage" class="screen">
-    <div class="landing-container">
+    <!-- New Landing Page Design -->
+    <div class="new-landing-wrapper">
+      <!-- Header Navigation -->
+      <header class="landing-header">
+        <div class="logo-container">
+          <span class="logo-icon">📚</span>
+          <span class="logo-text">CardWise</span>
+        </div>
+        <nav class="nav-menu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#subjects" class="nav-link">Resources</a>
+        </nav>
+        <button class="quote-btn" id="header-signin-btn">Sign In</button>
+      </header>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero-content">
+        <div class="hero-left">
+          <h1 class="hero-title">
+            <span class="hero-line-1">Study smarter.</span>
+            <span class="hero-line-2">Ace your exams.</span>
+            <span class="hero-line-3">Master the IB.</span>
+          </h1>
+          <p class="hero-description">
+            Join the free <strong>CardWise</strong>—your IB study companion with curated flashcards and chapter quizzes that make mastering core subjects effortless.
+          </p>
+
+          <!-- Search Bar -->
+          <div class="hero-search-container">
+            <input type="text" id="searchInput" class="hero-search-input" placeholder="Your email address" autocomplete="off" />
+            <button id="searchButton" class="hero-search-btn">
+              Subscribe Free
+            </button>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="#" class="social-icon facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon behance">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon dribbble">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Decorative Strips -->
+      <div class="decorative-strips">
+        <div class="strip strip-1"></div>
+        <div class="strip strip-2"></div>
+        <div class="strip strip-3"></div>
+        <div class="strip strip-4"></div>
+        <div class="strip strip-5"></div>
+        <div class="strip strip-6"></div>
+      </div>
+    </div>
+
+    <!-- Divider Line -->
+    <div class="section-divider"></div>
+
+    <!-- Resources Section -->
+    <section id="subjects" class="products-section">
+      <div class="products-header">
+        <div class="products-heading">
+          <span class="products-label">Resources</span>
+        </div>
+        <p class="products-description">
+          Everything you need to master the IB curriculum. From flashcards to practice papers, we've got you covered.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Flashcards -->
+        <div class="product-card card-gray">
+          <div class="card-content-new">
+            <div class="resource-icon-corner">↗</div>
+            <h3 class="resource-title">Flashcards</h3>
+            <p class="resource-description">Spaced repetition flashcards for every IB subject and topic.</p>
+            <a href="javascript:void(0)" class="resource-link" onclick="showFlashcardsLanding()">
+              <span>Browse flashcards</span>
+              <span class="resource-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Books -->
+        <div class="product-card card-violet">
+          <div class="card-content-new">
+            <div class="resource-icon-corner">↗</div>
+            <h3 class="resource-title">Books</h3>
+            <p class="resource-description">Digital textbooks and study guides covering the full IB syllabus.</p>
+            <a href="javascript:void(0)" class="resource-link" onclick="showBooksLanding()">
+              <span>View books</span>
+              <span class="resource-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quizzes -->
+        <div class="product-card card-yellow">
+          <div class="card-content-new">
+            <div class="resource-icon-corner">↗</div>
+            <h3 class="resource-title">Quizzes</h3>
+            <p class="resource-description">Practice quizzes with instant feedback to test your knowledge.</p>
+            <a href="javascript:void(0)" class="resource-link" onclick="showQuizzesLanding()">
+              <span>Take a quiz</span>
+              <span class="resource-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Practice Papers -->
+        <div class="product-card card-red">
+          <div class="card-content-new">
+            <div class="resource-icon-corner">↗</div>
+            <h3 class="resource-title">Practice Papers</h3>
+            <p class="resource-description">Past papers and mock exams to prepare for your IB assessments.</p>
+            <a href="javascript:void(0)" class="resource-link" onclick="showPracticePapersLanding()">
+              <span>Get papers</span>
+              <span class="resource-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="testimonials-header">
+        <div class="testimonials-header-content">
+          <h2 class="testimonials-title">Our Customer Feedback</h2>
+          <p class="testimonials-subtitle">Don't take our word for it. Trust our customers</p>
+        </div>
+        <div class="testimonials-nav">
+          <button class="testimonials-btn testimonials-prev">← Previous</button>
+          <button class="testimonials-btn testimonials-next">Next →</button>
+        </div>
+      </div>
+
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Page 1 Reviews -->
+        <div class="testimonial-card" data-page="1">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Chen" class="testimonial-avatar">
+          <div class="testimonial-rating">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          <h3 class="testimonial-name">Sarah Chen</h3>
+          <p class="testimonial-text">
+            CardWise transformed how I study for IB Economics! The spaced-repetition system helped me memorize key concepts effortlessly. I went from struggling with unit tests to scoring 7s consistently. The flashcards are perfectly aligned with the syllabus!
+          </p>
+        </div>
+
+        <div class="testimonial-card" data-page="1">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Thompson" class="testimonial-avatar">
+          <div class="testimonial-rating">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          <h3 class="testimonial-name">Marcus Thompson</h3>
+          <p class="testimonial-text">
+            Physics was my weakest subject until I found CardWise. The chapter quizzes helped me identify my knowledge gaps, and the instant feedback made studying so much more efficient. Best IB study tool ever!
+          </p>
+        </div>
+
+        <div class="testimonial-card" data-page="1">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel" class="testimonial-avatar">
+          <div class="testimonial-rating">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          <h3 class="testimonial-name">Priya Patel</h3>
+          <p class="testimonial-text">
+            I love how CardWise organizes flashcards by units and chapters. Makes it super easy to focus on specific topics before exams. The search feature is also a lifesaver when I need to find specific concepts quickly!
+          </p>
+        </div>
+
+        <!-- Row 2 Reviews -->
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Alex Rodriguez" class="testimonial-avatar">
+          <div class="testimonial-rating">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          <h3 class="testimonial-name">Alex Rodriguez</h3>
+          <p class="testimonial-text">
+            Business Management became my favorite subject thanks to CardWise! The way flashcards break down complex theories into digestible pieces is brilliant. I can study anywhere on my phone during commute time.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Wilson" class="testimonial-avatar">
+          <div class="testimonial-rating">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+          </div>
+          <h3 class="testimonial-name">Emma Wilson</h3>
+          <p class="testimonial-text">
+            CardWise's Computer Science flashcards are perfectly curated. They cover everything from pseudocode to system architecture. The quiz feature with instant answers helped me ace my mock exams with ease!
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="James Park" class="testimonial-avatar">
+          <div class="testimonial-rating">
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star filled">★</span>
+            <span class="star">★</span>
+          </div>
+          <h3 class="testimonial-name">James Park</h3>
+          <p class="testimonial-text">
+            As an IB student juggling multiple subjects, CardWise is a game-changer. I can quickly review Spanish vocab during breaks and tackle Economics concepts at night. The progress tracking keeps me motivated!
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Pagination Dots -->
+      <div class="testimonials-pagination">
+        <span class="pagination-dot active"></span>
+        <span class="pagination-dot"></span>
+        <span class="pagination-dot"></span>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="faq-header">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-content">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>What is CardWise used for?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>CardWise is a flashcard study platform designed specifically for IB students. It helps you ace your exams by providing curated flashcards and chapter quizzes for core subjects like Economics, Physics, Business Management, Computer Science, and Spanish. Our spaced-repetition system makes recall effortless and study time efficient.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What subjects does CardWise cover?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Currently, CardWise offers comprehensive study materials for Economics, Physics, Business Management, Computer Science, and Spanish. Each subject is organized by units and chapters, with more subjects coming soon!</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do I need to create an account?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, creating an account allows you to track your progress, save your quiz attempts, and access all features of CardWise. Sign up is quick and easy using your email address.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I use CardWise on mobile?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! CardWise is fully responsive and works seamlessly on desktop, tablet, and mobile devices. Study anywhere, anytime, on any device.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is CardWise really free to use?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 9l-7 7-7-7"/>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, CardWise is completely free for IB students. We believe quality education resources should be accessible to everyone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Original Subject Selection (Hidden by default) -->
+    <div class="original-landing-container" style="display: none;">
       <div class="hero-section">
         <div class="title-logo-container">
           <span class="app-logo">📚</span>
@@ -634,12 +2608,12 @@
         </div>
         <p class="tagline">Master your subjects with <span class="tagline-highlight">interactive flashcards</span></p>
       </div>
-      
+
       <!-- Search and Filter Section -->
       <div class="search-filter-container">
         <div class="search-bar">
-          <input type="text" id="searchInput" placeholder="Search flashcards..." autocomplete="off" />
-          <button id="searchButton">🔍</button>
+          <input type="text" id="originalSearchInput" placeholder="Search flashcards..." autocomplete="off" />
+          <button id="originalSearchButton">🔍</button>
         </div>
         <div class="filter-dropdowns">
           <select id="subjectFilter">
@@ -654,7 +2628,7 @@
           <button id="clearButton" class="clear-button" style="display: none;">Clear</button>
         </div>
       </div>
-      
+
       <!-- Search Results Section -->
       <div id="searchResults" class="search-results" style="display: none;">
         <div class="search-header">
@@ -664,13 +2638,12 @@
           <!-- Search results will be populated by JavaScript -->
         </div>
       </div>
-      
+
       <h2 class="choose-subject-text">CHOOSE YOUR SUBJECT!</h2>
-      
+
       <div class="subject-icons-container" id="subjectIconsContainer">
         <!-- Subject icons will be populated by JavaScript -->
       </div>
-      
     </div>
   </div>
 
@@ -708,16 +2681,25 @@
 
   <!-- Chapter Flashcards View -->
   <div id="chapterFlashcardsScreen" class="screen" style="display: none;">
-    <div class="flashcard-container">
-      <div class="breadcrumb">
-        <a onclick="showLandingPage()">Home</a> → <a onclick="showSubjectUnitsScreen(currentSubject, currentSubjectName, currentSubjectDescription)" id="chapterSubjectBreadcrumbLink">Economics</a> → <a onclick="showUnitChaptersScreen(currentUnit, currentUnitName)" id="chapterUnitBreadcrumbLink">Unit 1</a> → <span id="currentChapterBreadcrumb">Chapter 1</span>
+    <div class="modern-flashcard-container">
+      <div class="modern-breadcrumb">
+        <a onclick="showLandingPage()" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-arrow">→</span>
+        <a onclick="showSubjectUnitsScreen(currentSubject, currentSubjectName, currentSubjectDescription)" id="chapterSubjectBreadcrumbLink" class="breadcrumb-link">Economics</a>
+        <span class="breadcrumb-arrow">→</span>
+        <a onclick="showUnitChaptersScreen(currentUnit, currentUnitName)" id="chapterUnitBreadcrumbLink" class="breadcrumb-link">Unit 1</a>
+        <span class="breadcrumb-arrow">→</span>
+        <span id="currentChapterBreadcrumb" class="breadcrumb-current">Chapter 1</span>
       </div>
-      <div class="subject-header">
-        <h1 class="subject-title" id="chapterPageTitle">Chapter 1: The Foundations of Economics</h1>
-        <p class="subject-subtitle">Click cards to flip and reveal answers</p>
-        <button id="startQuizButton" class="start-quiz-btn">Start Quiz</button>
+      <div class="modern-flashcard-header">
+        <h1 class="modern-chapter-title" id="chapterPageTitle">Chapter 1: The Foundations of Economics</h1>
+        <p class="modern-chapter-subtitle">Click cards to flip and reveal answers</p>
+        <button id="startQuizButton" class="modern-quiz-btn">
+          <span class="btn-icon">📝</span>
+          <span class="btn-text">Start Quiz</span>
+        </button>
       </div>
-      <div class="flashcards-grid" id="flashcardsGrid">
+      <div class="modern-flashcards-grid" id="flashcardsGrid">
         <!-- Flashcards will be populated by JavaScript -->
       </div>
     </div>
@@ -757,6 +2739,138 @@
     </div>
   </div>
 
+  <!-- Flashcards Landing (Subjects List) -->
+  <div id="flashcardsLanding" class="screen" style="display: none;">
+    <div class="resource-landing-wrapper">
+      <div class="resource-breadcrumb">
+        <a onclick="showLandingPage()">Home</a>
+        <span>→</span>
+        <span>Flashcards</span>
+      </div>
+      <div class="resource-header">
+        <h1 class="resource-main-title">Flashcards</h1>
+        <p class="resource-subtitle">Choose a subject to start studying</p>
+      </div>
+      <div class="resource-subjects-grid" id="flashcardsSubjectsGrid">
+        <!-- Subjects will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Books Landing (Subjects List) -->
+  <div id="booksLanding" class="screen" style="display: none;">
+    <div class="resource-landing-wrapper">
+      <div class="resource-breadcrumb">
+        <a onclick="showLandingPage()">Home</a>
+        <span>→</span>
+        <span>Books</span>
+      </div>
+      <div class="resource-header">
+        <h1 class="resource-main-title">Books</h1>
+        <p class="resource-subtitle">Browse textbooks by subject</p>
+      </div>
+      <div class="resource-subjects-grid" id="booksSubjectsGrid">
+        <!-- Subjects will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Books List (for a specific subject) -->
+  <div id="booksListScreen" class="screen" style="display: none;">
+    <div class="resource-landing-wrapper">
+      <div class="resource-breadcrumb">
+        <a onclick="showLandingPage()">Home</a>
+        <span>→</span>
+        <a onclick="showBooksLanding()">Books</a>
+        <span>→</span>
+        <span id="booksSubjectBreadcrumb">Subject</span>
+      </div>
+      <div class="resource-header">
+        <h1 class="resource-main-title" id="booksListTitle">Books</h1>
+        <p class="resource-subtitle">Available textbooks for this subject</p>
+      </div>
+      <div class="resource-items-grid" id="booksListGrid">
+        <!-- Books will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Quizzes Landing (Subjects List) -->
+  <div id="quizzesLanding" class="screen" style="display: none;">
+    <div class="resource-landing-wrapper">
+      <div class="resource-breadcrumb">
+        <a onclick="showLandingPage()">Home</a>
+        <span>→</span>
+        <span>Quizzes</span>
+      </div>
+      <div class="resource-header">
+        <h1 class="resource-main-title">Quizzes</h1>
+        <p class="resource-subtitle">Test your knowledge by subject</p>
+      </div>
+      <div class="resource-subjects-grid" id="quizzesSubjectsGrid">
+        <!-- Subjects will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Quizzes List (for a specific subject) -->
+  <div id="quizzesListScreen" class="screen" style="display: none;">
+    <div class="resource-landing-wrapper">
+      <div class="resource-breadcrumb">
+        <a onclick="showLandingPage()">Home</a>
+        <span>→</span>
+        <a onclick="showQuizzesLanding()">Quizzes</a>
+        <span>→</span>
+        <span id="quizzesSubjectBreadcrumb">Subject</span>
+      </div>
+      <div class="resource-header">
+        <h1 class="resource-main-title" id="quizzesListTitle">Quizzes</h1>
+        <p class="resource-subtitle">Available quizzes for this subject</p>
+      </div>
+      <div class="resource-items-grid" id="quizzesListGrid">
+        <!-- Quizzes will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Practice Papers Landing (Subjects List) -->
+  <div id="practicePapersLanding" class="screen" style="display: none;">
+    <div class="resource-landing-wrapper">
+      <div class="resource-breadcrumb">
+        <a onclick="showLandingPage()">Home</a>
+        <span>→</span>
+        <span>Practice Papers</span>
+      </div>
+      <div class="resource-header">
+        <h1 class="resource-main-title">Practice Papers</h1>
+        <p class="resource-subtitle">Past papers and mock exams</p>
+      </div>
+      <div class="resource-subjects-grid" id="practicePapersSubjectsGrid">
+        <!-- Subjects will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Practice Papers List (for a specific subject) -->
+  <div id="practicePapersListScreen" class="screen" style="display: none;">
+    <div class="resource-landing-wrapper">
+      <div class="resource-breadcrumb">
+        <a onclick="showLandingPage()">Home</a>
+        <span>→</span>
+        <a onclick="showPracticePapersLanding()">Practice Papers</a>
+        <span>→</span>
+        <span id="practicePapersSubjectBreadcrumb">Subject</span>
+      </div>
+      <div class="resource-header">
+        <h1 class="resource-main-title" id="practicePapersListTitle">Practice Papers</h1>
+        <p class="resource-subtitle">Available past papers for this subject</p>
+      </div>
+      <div class="resource-items-grid" id="practicePapersListGrid">
+        <!-- Practice papers will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
   <!-- Authentication Modal -->
   <div id="auth-modal" class="hidden"></div>
 
@@ -764,6 +2878,6 @@
   <script type="module" src="services/authService.js"></script>
   <script type="module" src="components/auth.js"></script>
   <script src="answerChecker.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=4.6"></script>
 </body>
 </html>

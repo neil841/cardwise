@@ -6,6 +6,9 @@ let currentUser = null;
 // Make currentUser accessible globally for auth component
 window.currentUser = currentUser;
 
+// Flag to track if app has initialized and shown a screen
+let hasNavigated = false;
+
 // Screen navigation
 let currentSubject = '';
 let currentSubjectName = '';
@@ -25,7 +28,10 @@ let quizAnswers = []; // Store all quiz answers for saving to Firestore
 function showScreenWithTransition(targetScreenId) {
   const currentScreen = document.querySelector('.screen:not([style*="display: none"])');
   const targetScreen = document.getElementById(targetScreenId);
-  
+
+  // Mark that navigation has occurred
+  hasNavigated = true;
+
   if (currentScreen) {
     currentScreen.classList.add('fade-out');
     setTimeout(() => {
@@ -44,6 +50,7 @@ function showScreenWithTransition(targetScreenId) {
 }
 
 function showLandingPage() {
+  console.log('showLandingPage() called from:', new Error().stack);
   showScreenWithTransition('landingPage');
 }
 
@@ -108,9 +115,9 @@ function loadSubjectUnits(subjectKey) {
     const unitCard = document.createElement('div');
     unitCard.className = `chapter-card subject-${subjectKey.replace(/\s+/g, '-').toLowerCase()}`;
     unitCard.setAttribute('data-subject', subjectKey);
-    // Force slate gray background for unit cards
-    unitCard.style.setProperty('background-color', '#2D3748', 'important');
-    unitCard.style.setProperty('background', '#2D3748', 'important');
+    // Force white background for unit cards (light theme)
+    unitCard.style.setProperty('background-color', '#FFFFFF', 'important');
+    unitCard.style.setProperty('background', '#FFFFFF', 'important');
     unitCard.onclick = () => {
       showUnitChaptersScreen(index, unit.name);
     };
@@ -142,9 +149,9 @@ function loadUnitChapters(subjectKey, unitIndex) {
     const chapterCard = document.createElement('div');
     chapterCard.className = `chapter-card subject-${subjectKey.replace(/\s+/g, '-').toLowerCase()}`;
     chapterCard.setAttribute('data-subject', subjectKey);
-    // Force slate gray background for chapter cards
-    chapterCard.style.setProperty('background-color', '#2D3748', 'important');
-    chapterCard.style.setProperty('background', '#2D3748', 'important');
+    // Force white background for chapter cards (light theme)
+    chapterCard.style.setProperty('background-color', '#FFFFFF', 'important');
+    chapterCard.style.setProperty('background', '#FFFFFF', 'important');
     chapterCard.onclick = () => {
       showChapterFlashcards(subjectKey, unitIndex, index, chapter.title);
     };
@@ -213,17 +220,17 @@ function loadChapterFlashcards(subjectKey, unitIndex, chapterIndex) {
     
     // Add staggered animation delay
     flashcardDiv.style.animationDelay = `${index * 0.1}s`;
-    
-    // Force slate gray background for flashcard elements
+
+    // Force white background for flashcard elements (light theme)
     const flashcardFront = flashcardDiv.querySelector('.flashcard-front');
     const flashcardBack = flashcardDiv.querySelector('.flashcard-back');
     if (flashcardFront) {
-      flashcardFront.style.setProperty('background-color', '#2D3748', 'important');
-      flashcardFront.style.setProperty('background', '#2D3748', 'important');
+      flashcardFront.style.setProperty('background-color', '#FFFFFF', 'important');
+      flashcardFront.style.setProperty('background', '#FFFFFF', 'important');
     }
     if (flashcardBack) {
-      flashcardBack.style.setProperty('background-color', '#4A5568', 'important');
-      flashcardBack.style.setProperty('background', '#4A5568', 'important');
+      flashcardBack.style.setProperty('background-color', '#FFFFFF', 'important');
+      flashcardBack.style.setProperty('background', '#FFFFFF', 'important');
     }
     
     flashcardsGrid.appendChild(flashcardDiv);
@@ -370,9 +377,9 @@ function createSubjectIcons() {
     const subjectButton = document.createElement('div');
     subjectButton.className = `subject-button subject-${subjectKey.replace(/\s+/g, '-').toLowerCase()}`;
     subjectButton.setAttribute('data-subject', subjectKey);
-    // Force slate gray background for subject cards
-    subjectButton.style.setProperty('background-color', '#2D3748', 'important');
-    subjectButton.style.setProperty('background', '#2D3748', 'important');
+    // Force white background for subject cards (light theme)
+    subjectButton.style.setProperty('background-color', '#FFFFFF', 'important');
+    subjectButton.style.setProperty('background', '#FFFFFF', 'important');
     subjectButton.onclick = () => {
       // Add click animation
       subjectButton.classList.add('clicking');
@@ -682,17 +689,17 @@ function displaySearchResults(results, searchTerm, selectedSubject, selectedUnit
         e.stopPropagation();
         flashcardDiv.classList.toggle('flipped');
       });
-      
-      // Force slate gray background for search result flashcards
+
+      // Force white background for search result flashcards (light theme)
       const flashcardFront = flashcardDiv.querySelector('.flashcard-front');
       const flashcardBack = flashcardDiv.querySelector('.flashcard-back');
       if (flashcardFront) {
-        flashcardFront.style.setProperty('background-color', '#2D3748', 'important');
-        flashcardFront.style.setProperty('background', '#2D3748', 'important');
+        flashcardFront.style.setProperty('background-color', '#FFFFFF', 'important');
+        flashcardFront.style.setProperty('background', '#FFFFFF', 'important');
       }
       if (flashcardBack) {
-        flashcardBack.style.setProperty('background-color', '#4A5568', 'important');
-        flashcardBack.style.setProperty('background', '#4A5568', 'important');
+        flashcardBack.style.setProperty('background-color', '#FFFFFF', 'important');
+        flashcardBack.style.setProperty('background', '#FFFFFF', 'important');
       }
       
       searchResultsGrid.appendChild(flashcardDiv);
@@ -1110,28 +1117,142 @@ function backToChapter() {
 // Initialize the app
 window.addEventListener('DOMContentLoaded', async () => {
   console.log('DOM Content Loaded - Starting initialization');
-  
+
   await loadChapterFlashcardsFromFirestore();
   await loadTextbookQuizFromFirestore();
   await loadSubjectsFromFirestore();
   console.log('About to create subject icons');
   createSubjectIcons();
-  console.log('About to show landing page');
-  showLandingPage();
-  
+
+  // Only show landing page on first load if no screen is currently visible
+  // This prevents auto-redirecting to landing page when navigating
+  // Delay this check to allow any pending navigation to complete
+  setTimeout(() => {
+    const screens = document.querySelectorAll('.screen');
+    let currentlyVisibleScreen = null;
+    screens.forEach(screen => {
+      const displayValue = screen.style.display;
+      // A screen is visible if it has display: flex or display: block (not 'none' and not empty)
+      const isVisible = displayValue === 'flex' || displayValue === 'block';
+      console.log('Screen:', screen.id, 'display:', `"${displayValue}"`, 'isVisible:', isVisible);
+      if (isVisible) {
+        currentlyVisibleScreen = screen;
+      }
+    });
+    console.log('About to show landing page, hasNavigated:', hasNavigated, 'currentlyVisibleScreen:', currentlyVisibleScreen);
+
+    if (!hasNavigated && !currentlyVisibleScreen && (!window.location.hash || window.location.hash === '#' || window.location.hash === '#home')) {
+      showLandingPage();
+    }
+  }, 100); // Small delay to let any pending navigation complete
+
   // Initialize search and filter functionality
   initializeSearchAndFilter();
-  
+
   // Initialize quiz functionality
   initializeQuizFunctionality();
-  
+
+  // Initialize FAQ accordion
+  initializeFAQ();
+
+  // Initialize testimonials carousel
+  // initializeTestimonialsCarousel(); // Disabled - showing all testimonials in grid
+
   console.log('Initialization complete');
-  
+
   // Initialize authentication
   if (typeof AuthModal !== 'undefined') {
     authModal = new AuthModal();
   }
 });
+
+// FAQ Accordion Functionality
+function initializeFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+
+    question.addEventListener('click', () => {
+      // Toggle current item
+      item.classList.toggle('active');
+
+      // Optional: Close other items (uncomment to enable)
+      // faqItems.forEach(otherItem => {
+      //   if (otherItem !== item) {
+      //     otherItem.classList.remove('active');
+      //   }
+      // });
+    });
+  });
+}
+
+// Testimonials Carousel Functionality
+function initializeTestimonialsCarousel() {
+  let currentPage = 1;
+  const totalPages = 3;
+
+  const prevButton = document.querySelector('.testimonials-prev');
+  const nextButton = document.querySelector('.testimonials-next');
+  const paginationDots = document.querySelectorAll('.testimonials-pagination .pagination-dot');
+
+  function showPage(pageNumber) {
+    // Hide all testimonial cards
+    const allCards = document.querySelectorAll('.testimonial-card');
+    allCards.forEach(card => {
+      card.style.display = 'none';
+    });
+
+    // Show cards for current page
+    const currentCards = document.querySelectorAll(`.testimonial-card[data-page="${pageNumber}"]`);
+    currentCards.forEach(card => {
+      card.style.display = 'block';
+    });
+
+    // Update pagination dots
+    paginationDots.forEach((dot, index) => {
+      if (index + 1 === pageNumber) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+
+    // Update button states
+    if (prevButton) prevButton.disabled = (pageNumber === 1);
+    if (nextButton) nextButton.disabled = (pageNumber === totalPages);
+
+    currentPage = pageNumber;
+  }
+
+  // Previous button click handler
+  if (prevButton) {
+    prevButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        showPage(currentPage - 1);
+      }
+    });
+  }
+
+  // Next button click handler
+  if (nextButton) {
+    nextButton.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        showPage(currentPage + 1);
+      }
+    });
+  }
+
+  // Pagination dot click handlers
+  paginationDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showPage(index + 1);
+    });
+  });
+
+  // Initialize with page 1
+  showPage(1);
+}
 
 function initializeQuizFunctionality() {
   // Add event listener for start quiz button
@@ -1139,7 +1260,7 @@ function initializeQuizFunctionality() {
   if (startQuizButton) {
     startQuizButton.addEventListener('click', startQuiz);
   }
-  
+
   // Add event listeners for quiz buttons
   const submitAnswerButton = document.getElementById('submitAnswerButton');
   const showAnswerButton = document.getElementById('showAnswerButton');
@@ -1147,31 +1268,31 @@ function initializeQuizFunctionality() {
   const finishQuizButton = document.getElementById('finishQuizButton');
   const previousQuestionButton = document.getElementById('previousQuestionButton');
   const nextQuestionNavButton = document.getElementById('nextQuestionNavButton');
-  
+
   if (submitAnswerButton) {
     submitAnswerButton.addEventListener('click', submitAnswer);
   }
-  
+
   if (showAnswerButton) {
     showAnswerButton.addEventListener('click', showAnswer);
   }
-  
+
   if (nextQuestionButton) {
     nextQuestionButton.addEventListener('click', nextQuestion);
   }
-  
+
   if (finishQuizButton) {
     finishQuizButton.addEventListener('click', finishQuiz);
   }
-  
+
   if (previousQuestionButton) {
     previousQuestionButton.addEventListener('click', previousQuestion);
   }
-  
+
   if (nextQuestionNavButton) {
     nextQuestionNavButton.addEventListener('click', nextQuestionNav);
   }
-  
+
   // Allow submitting answer with Enter key
   const quizAnswerInput = document.getElementById('quizAnswerInput');
   if (quizAnswerInput) {
@@ -1181,5 +1302,407 @@ function initializeQuizFunctionality() {
       }
     });
   }
+}
+
+// ========== NEW RESOURCE NAVIGATION FUNCTIONS ==========
+
+// Flashcards Landing (shows available subjects)
+function showFlashcardsLanding() {
+  loadFlashcardsSubjects();
+  showScreenWithTransition('flashcardsLanding');
+}
+
+async function loadFlashcardsSubjects() {
+  const grid = document.getElementById('flashcardsSubjectsGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">Loading flashcards...</div>';
+
+  try {
+    const { db } = await import('./firebase/config.js');
+    const { collection, getDocs, query } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+
+    const flashcardsSnapshot = await getDocs(collection(db, 'flashcards'));
+    const subjectsWithFlashcards = new Set();
+
+    flashcardsSnapshot.forEach(doc => {
+      const flashcard = doc.data();
+      if (flashcard.subjectKey) {
+        subjectsWithFlashcards.add(flashcard.subjectKey);
+      }
+    });
+
+    grid.innerHTML = '';
+
+    subjectsWithFlashcards.forEach(subjectKey => {
+      const subject = subjectData[subjectKey];
+      const subjectName = subject ? subject.name : subjectKey.charAt(0).toUpperCase() + subjectKey.slice(1);
+      const subjectIcon = subject ? subject.icon : '📝';
+      const subjectDesc = subject ? subject.description : 'View available flashcards';
+
+      const subjectButton = document.createElement('div');
+      subjectButton.className = 'resource-subject-card';
+      subjectButton.onclick = () => {
+        showSubjectUnitsScreen(subjectKey, subjectName, subjectDesc);
+      };
+
+      subjectButton.innerHTML = `
+        <div class="resource-card-icon">${subjectIcon}</div>
+        <h3 class="resource-card-title">${subjectName}</h3>
+        <p class="resource-card-description">${subjectDesc}</p>
+      `;
+
+      grid.appendChild(subjectButton);
+    });
+
+  } catch (error) {
+    console.error('Error loading flashcards subjects:', error);
+    grid.innerHTML = '<div style="text-align: center; color: #ef4444;">Error loading flashcards.</div>';
+  }
+}
+
+// Books Landing (shows available subjects with books)
+function showBooksLanding() {
+  loadBooksSubjects();
+  showScreenWithTransition('booksLanding');
+}
+
+async function loadBooksSubjects() {
+  const grid = document.getElementById('booksSubjectsGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">Loading books...</div>';
+
+  try {
+    const { db } = await import('./firebase/config.js');
+    const { collection, getDocs, query } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+
+    const booksSnapshot = await getDocs(collection(db, 'books'));
+    const subjectsWithBooks = new Set();
+
+    booksSnapshot.forEach(doc => {
+      const book = doc.data();
+      if (book.subject) {
+        subjectsWithBooks.add(book.subject);
+      }
+    });
+
+    grid.innerHTML = '';
+
+    subjectsWithBooks.forEach(subjectKey => {
+      const subject = subjectData[subjectKey];
+      const subjectName = subject ? subject.name : subjectKey.charAt(0).toUpperCase() + subjectKey.slice(1);
+      const subjectIcon = subject ? subject.icon : '📚';
+      const subjectDesc = subject ? subject.description : 'View available books';
+
+      const subjectButton = document.createElement('div');
+      subjectButton.className = 'resource-subject-card';
+      subjectButton.onclick = () => {
+        showBooksList(subjectKey, subjectName);
+      };
+
+      subjectButton.innerHTML = `
+        <div class="resource-card-icon">${subjectIcon}</div>
+        <h3 class="resource-card-title">${subjectName}</h3>
+        <p class="resource-card-description">${subjectDesc}</p>
+      `;
+
+      grid.appendChild(subjectButton);
+    });
+
+    if (subjectsWithBooks.size === 0) {
+      grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">No books available yet.</div>';
+    }
+  } catch (error) {
+    console.error('Error loading books subjects:', error);
+    grid.innerHTML = '<div style="text-align: center; color: #ef4444;">Error loading books.</div>';
+  }
+}
+
+// Show books list for a specific subject
+async function showBooksList(subjectKey, subjectName) {
+  document.getElementById('booksSubjectBreadcrumb').textContent = subjectName;
+  document.getElementById('booksListTitle').textContent = `${subjectName} - Books`;
+
+  const grid = document.getElementById('booksListGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">Loading books...</div>';
+
+  try {
+    const { db } = await import('./firebase/config.js');
+    const { collection, getDocs, query, where } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+
+    const booksQuery = query(collection(db, 'books'), where('subject', '==', subjectKey));
+    const booksSnapshot = await getDocs(booksQuery);
+
+    grid.innerHTML = '';
+
+    booksSnapshot.forEach((doc, index) => {
+      const book = doc.data();
+
+      const bookCard = document.createElement('div');
+      bookCard.className = 'resource-item-card';
+      bookCard.onclick = () => {
+        window.open(book.downloadUrl, '_blank');
+      };
+
+      bookCard.innerHTML = `
+        <div class="resource-item-icon">📖</div>
+        <h4 class="resource-item-title">${book.title}</h4>
+        <p class="resource-item-meta">${book.fileType ? book.fileType.toUpperCase() : 'PDF'}</p>
+      `;
+
+      grid.appendChild(bookCard);
+    });
+
+    if (booksSnapshot.empty) {
+      grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">No books found for this subject.</div>';
+    }
+  } catch (error) {
+    console.error('Error loading books:', error);
+    grid.innerHTML = '<div style="text-align: center; color: #ef4444;">Error loading books.</div>';
+  }
+
+  showScreenWithTransition('booksListScreen');
+}
+
+// Quizzes Landing (shows available subjects with quizzes)
+function showQuizzesLanding() {
+  loadQuizzesSubjects();
+  showScreenWithTransition('quizzesLanding');
+}
+
+async function loadQuizzesSubjects() {
+  const grid = document.getElementById('quizzesSubjectsGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">Loading quizzes...</div>';
+
+  try {
+    const { db } = await import('./firebase/config.js');
+    const { collection, getDocs, query } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+
+    const quizzesSnapshot = await getDocs(collection(db, 'quizzes'));
+    const subjectsWithQuizzes = new Set();
+
+    quizzesSnapshot.forEach(doc => {
+      const quiz = doc.data();
+      if (quiz.subjectKey) {
+        subjectsWithQuizzes.add(quiz.subjectKey);
+      }
+    });
+
+    grid.innerHTML = '';
+
+    if (subjectsWithQuizzes.size === 0) {
+      grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">No quizzes available yet.</div>';
+      return;
+    }
+
+    subjectsWithQuizzes.forEach(subjectKey => {
+      const subject = subjectData[subjectKey];
+      const subjectName = subject ? subject.name : subjectKey.charAt(0).toUpperCase() + subjectKey.slice(1);
+      const subjectIcon = subject ? subject.icon : '📝';
+      const subjectDesc = subject ? subject.description : 'View available quizzes';
+
+      const subjectButton = document.createElement('div');
+      subjectButton.className = 'resource-subject-card';
+      subjectButton.onclick = () => {
+        showQuizzesList(subjectKey, subjectName);
+      };
+
+      subjectButton.innerHTML = `
+        <div class="resource-card-icon">${subjectIcon}</div>
+        <h3 class="resource-card-title">${subjectName}</h3>
+        <p class="resource-card-description">${subjectDesc}</p>
+      `;
+
+      grid.appendChild(subjectButton);
+    });
+
+  } catch (error) {
+    console.error('Error loading quizzes subjects:', error);
+    grid.innerHTML = '<div style="text-align: center; color: #ef4444;">Error loading quizzes.</div>';
+  }
+}
+
+// Show quizzes list for a specific subject
+function showQuizzesList(subjectKey, subjectName) {
+  document.getElementById('quizzesSubjectBreadcrumb').textContent = subjectName;
+  document.getElementById('quizzesListTitle').textContent = `${subjectName} - Quizzes`;
+
+  const grid = document.getElementById('quizzesListGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '';
+
+  const subjectQuizzes = textbookQuizData[subjectKey] || {};
+  const quizChapters = [];
+
+  // Gather all chapters with quizzes
+  Object.keys(subjectQuizzes).forEach(unitKey => {
+    const unit = subjectQuizzes[unitKey];
+    Object.keys(unit).forEach(chapterKey => {
+      const chapter = unit[chapterKey];
+      if (chapter && chapter.textbook_questions && chapter.textbook_questions.length > 0) {
+        const unitInfo = subjectData[subjectKey]?.units?.[unitKey];
+        const chapterInfo = unitInfo?.chapters?.[chapterKey];
+
+        quizChapters.push({
+          unitKey,
+          chapterKey,
+          unitName: unitInfo?.name || `Unit ${parseInt(unitKey) + 1}`,
+          chapterTitle: chapterInfo?.title || `Chapter ${parseInt(chapterKey) + 1}`,
+          questionCount: chapter.textbook_questions.length
+        });
+      }
+    });
+  });
+
+  quizChapters.forEach((quiz, index) => {
+    const quizCard = document.createElement('div');
+    quizCard.className = 'resource-item-card';
+    quizCard.onclick = () => {
+      // Set navigation state and start quiz
+      currentSubject = subjectKey;
+      currentSubjectName = subjectName;
+      currentUnit = parseInt(quiz.unitKey);
+      currentUnitName = quiz.unitName;
+      currentChapter = parseInt(quiz.chapterKey);
+      currentChapterTitle = quiz.chapterTitle;
+      startQuiz();
+    };
+
+    quizCard.innerHTML = `
+      <div class="resource-item-icon">📝</div>
+      <h4 class="resource-item-title">${quiz.chapterTitle}</h4>
+      <p class="resource-item-meta">${quiz.unitName} • ${quiz.questionCount} questions</p>
+    `;
+
+    grid.appendChild(quizCard);
+  });
+
+  if (quizChapters.length === 0) {
+    grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">No quizzes found for this subject.</div>';
+  }
+
+  showScreenWithTransition('quizzesListScreen');
+}
+
+// Practice Papers Landing (shows available subjects with papers)
+function showPracticePapersLanding() {
+  loadPracticePapersSubjects();
+  showScreenWithTransition('practicePapersLanding');
+}
+
+async function loadPracticePapersSubjects() {
+  const grid = document.getElementById('practicePapersSubjectsGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">Loading practice papers...</div>';
+
+  try {
+    const { db } = await import('./firebase/config.js');
+    const { collection, getDocs } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+
+    const papersSnapshot = await getDocs(collection(db, 'practice_papers'));
+    const subjectsWithPapers = new Set();
+
+    papersSnapshot.forEach(doc => {
+      const paper = doc.data();
+      if (paper.subject) {
+        subjectsWithPapers.add(paper.subject);
+      }
+    });
+
+    grid.innerHTML = '';
+
+    subjectsWithPapers.forEach(subjectKey => {
+      const subject = subjectData[subjectKey];
+      const subjectName = subject ? subject.name : subjectKey.charAt(0).toUpperCase() + subjectKey.slice(1);
+      const subjectIcon = subject ? subject.icon : '📄';
+      const subjectDesc = subject ? subject.description : 'View past papers';
+
+      const subjectButton = document.createElement('div');
+      subjectButton.className = 'resource-subject-card';
+      subjectButton.onclick = () => {
+        showPracticePapersList(subjectKey, subjectName);
+      };
+
+      subjectButton.innerHTML = `
+        <div class="resource-card-icon">${subjectIcon}</div>
+        <h3 class="resource-card-title">${subjectName}</h3>
+        <p class="resource-card-description">${subjectDesc}</p>
+      `;
+
+      grid.appendChild(subjectButton);
+    });
+
+    if (subjectsWithPapers.size === 0) {
+      grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">No practice papers available yet.</div>';
+    }
+  } catch (error) {
+    console.error('Error loading practice papers subjects:', error);
+    grid.innerHTML = '<div style="text-align: center; color: #ef4444;">Error loading practice papers.</div>';
+  }
+}
+
+// Show practice papers list for a specific subject
+async function showPracticePapersList(subjectKey, subjectName) {
+  document.getElementById('practicePapersSubjectBreadcrumb').textContent = subjectName;
+  document.getElementById('practicePapersListTitle').textContent = `${subjectName} - Practice Papers`;
+
+  const grid = document.getElementById('practicePapersListGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">Loading practice papers...</div>';
+
+  try {
+    const { db } = await import('./firebase/config.js');
+    const { collection, getDocs, query, where, orderBy } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+
+    const papersQuery = query(
+      collection(db, 'practice_papers'),
+      where('subject', '==', subjectKey)
+    );
+    const papersSnapshot = await getDocs(papersQuery);
+
+    grid.innerHTML = '';
+
+    papersSnapshot.forEach((doc, index) => {
+      const paper = doc.data();
+
+      const paperCard = document.createElement('div');
+      paperCard.className = 'resource-item-card';
+      paperCard.onclick = () => {
+        window.open(paper.downloadUrl, '_blank');
+      };
+
+      const metadata = [];
+      if (paper.level) metadata.push(paper.level);
+      if (paper.year) metadata.push(paper.year);
+      if (paper.session) metadata.push(paper.session);
+      if (paper.paperNumber) metadata.push(`Paper ${paper.paperNumber}`);
+      if (paper.isMarkscheme) metadata.push('Markscheme');
+
+      paperCard.innerHTML = `
+        <div class="resource-item-icon">📄</div>
+        <h4 class="resource-item-title">${paper.title}</h4>
+        <p class="resource-item-meta">${metadata.join(' • ')}</p>
+      `;
+
+      grid.appendChild(paperCard);
+    });
+
+    if (papersSnapshot.empty) {
+      grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">No practice papers found for this subject.</div>';
+    }
+  } catch (error) {
+    console.error('Error loading practice papers:', error);
+    grid.innerHTML = '<div style="text-align: center; color: #ef4444;">Error loading practice papers.</div>';
+  }
+
+  showScreenWithTransition('practicePapersListScreen');
 }
 

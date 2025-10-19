@@ -64,9 +64,17 @@ node_modules/
 
 # dotenv environment variables file
 .env
+.env.*
+*.env
 
 # dataconnect generated files
 .dataconnect
+
+# Sensitive credential files
+**/serviceAccountKey*.json
+**/*credentials*.json
+**/*secret*.json
+*key*.json
 
 # OS generated files
 .DS_Store
@@ -86,5 +94,11 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+
+# Excluded directories
+.playwright-mcp/
+3d-objects-png/
+
+# Sensitive files (NEVER COMMIT)
 scripts/serviceAccountKey.json
 public/firebase/config.js
