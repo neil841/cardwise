@@ -1124,33 +1124,40 @@ window.addEventListener('DOMContentLoaded', async () => {
   console.log('About to create subject icons');
   createSubjectIcons();
 
-  // Only show landing page on first load if no screen is currently visible
-  // This prevents auto-redirecting to landing page when navigating
-  // Delay this check to allow any pending navigation to complete
-  setTimeout(() => {
-    const screens = document.querySelectorAll('.screen');
-    let currentlyVisibleScreen = null;
-    screens.forEach(screen => {
-      const displayValue = screen.style.display;
-      // A screen is visible if it has display: flex or display: block (not 'none' and not empty)
-      const isVisible = displayValue === 'flex' || displayValue === 'block';
-      console.log('Screen:', screen.id, 'display:', `"${displayValue}"`, 'isVisible:', isVisible);
-      if (isVisible) {
-        currentlyVisibleScreen = screen;
-      }
-    });
-    console.log('About to show landing page, hasNavigated:', hasNavigated, 'currentlyVisibleScreen:', currentlyVisibleScreen);
-
-    if (!hasNavigated && !currentlyVisibleScreen && (!window.location.hash || window.location.hash === '#' || window.location.hash === '#home')) {
-      showLandingPage();
+  // Only show landing page on INITIAL load if no screen is currently visible
+  // Check if user has actually interacted with the page
+  const screens = document.querySelectorAll('.screen');
+  let currentlyVisibleScreen = null;
+  screens.forEach(screen => {
+    const displayValue = screen.style.display;
+    // A screen is visible if it has display: flex or display: block (not 'none' and not empty)
+    const isVisible = displayValue === 'flex' || displayValue === 'block';
+    console.log('Screen:', screen.id, 'display:', `"${displayValue}"`, 'isVisible:', isVisible);
+    if (isVisible) {
+      currentlyVisibleScreen = screen;
     }
-  }, 100); // Small delay to let any pending navigation complete
+  });
+  console.log('Initial load check - hasNavigated:', hasNavigated, 'currentlyVisibleScreen:', currentlyVisibleScreen);
+
+  // Only show landing page if this is the very first load and no screen is visible
+  if (!hasNavigated && !currentlyVisibleScreen && (!window.location.hash || window.location.hash === '#' || window.location.hash === '#home')) {
+    showLandingPage();
+  }
 
   // Initialize search and filter functionality
   initializeSearchAndFilter();
 
   // Initialize quiz functionality
   initializeQuizFunctionality();
+
+  // Initialize authentication FIRST (before other UI components)
+  // This ensures the login button event listeners are set up early
+  if (typeof AuthModal !== 'undefined') {
+    authModal = new AuthModal();
+    console.log('AuthModal initialized');
+  } else {
+    console.error('AuthModal class not found - check if auth.js is loaded');
+  }
 
   // Initialize FAQ accordion
   initializeFAQ();
@@ -1159,11 +1166,6 @@ window.addEventListener('DOMContentLoaded', async () => {
   // initializeTestimonialsCarousel(); // Disabled - showing all testimonials in grid
 
   console.log('Initialization complete');
-
-  // Initialize authentication
-  if (typeof AuthModal !== 'undefined') {
-    authModal = new AuthModal();
-  }
 });
 
 // FAQ Accordion Functionality
@@ -1604,9 +1606,12 @@ async function loadPracticePapersSubjects() {
 
   try {
     const { db } = await import('./firebase/config.js');
-    const { collection, getDocs } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+    const { collection, query, getDocs, limit, orderBy } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
 
-    const papersSnapshot = await getDocs(collection(db, 'practice_papers'));
+    // Instead of fetching all documents, we'll use aggregation
+    // Fetch a limited sample to get unique subjects
+    const papersQuery = query(collection(db, 'practice_papers'), limit(1000));
+    const papersSnapshot = await getDocs(papersQuery);
     const subjectsWithPapers = new Set();
 
     papersSnapshot.forEach(doc => {
@@ -1618,7 +1623,10 @@ async function loadPracticePapersSubjects() {
 
     grid.innerHTML = '';
 
-    subjectsWithPapers.forEach(subjectKey => {
+    // Sort subjects alphabetically
+    const sortedSubjects = Array.from(subjectsWithPapers).sort();
+
+    sortedSubjects.forEach(subjectKey => {
       const subject = subjectData[subjectKey];
       const subjectName = subject ? subject.name : subjectKey.charAt(0).toUpperCase() + subjectKey.slice(1);
       const subjectIcon = subject ? subject.icon : '📄';
@@ -1660,43 +1668,53 @@ async function showPracticePapersList(subjectKey, subjectName) {
 
   try {
     const { db } = await import('./firebase/config.js');
-    const { collection, getDocs, query, where, orderBy } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
+    const { collection, getDocs, query, where, orderBy, limit } = await import('https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js');
 
+    // Limit to 100 papers per subject to avoid performance issues
     const papersQuery = query(
       collection(db, 'practice_papers'),
-      where('subject', '==', subjectKey)
+      where('subject', '==', subjectKey),
+      limit(100)
     );
     const papersSnapshot = await getDocs(papersQuery);
 
     grid.innerHTML = '';
 
-    papersSnapshot.forEach((doc, index) => {
-      const paper = doc.data();
-
-      const paperCard = document.createElement('div');
-      paperCard.className = 'resource-item-card';
-      paperCard.onclick = () => {
-        window.open(paper.downloadUrl, '_blank');
-      };
-
-      const metadata = [];
-      if (paper.level) metadata.push(paper.level);
-      if (paper.year) metadata.push(paper.year);
-      if (paper.session) metadata.push(paper.session);
-      if (paper.paperNumber) metadata.push(`Paper ${paper.paperNumber}`);
-      if (paper.isMarkscheme) metadata.push('Markscheme');
-
-      paperCard.innerHTML = `
-        <div class="resource-item-icon">📄</div>
-        <h4 class="resource-item-title">${paper.title}</h4>
-        <p class="resource-item-meta">${metadata.join(' • ')}</p>
-      `;
-
-      grid.appendChild(paperCard);
-    });
-
     if (papersSnapshot.empty) {
       grid.innerHTML = '<div style="text-align: center; color: #CBD5E0;">No practice papers found for this subject.</div>';
+    } else {
+      papersSnapshot.forEach((doc, index) => {
+        const paper = doc.data();
+
+        const paperCard = document.createElement('div');
+        paperCard.className = 'resource-item-card';
+        paperCard.onclick = () => {
+          window.open(paper.downloadUrl, '_blank');
+        };
+
+        const metadata = [];
+        if (paper.level) metadata.push(paper.level);
+        if (paper.year) metadata.push(paper.year);
+        if (paper.session) metadata.push(paper.session);
+        if (paper.paperNumber) metadata.push(`Paper ${paper.paperNumber}`);
+        if (paper.isMarkscheme) metadata.push('Markscheme');
+
+        paperCard.innerHTML = `
+          <div class="resource-item-icon">📄</div>
+          <h4 class="resource-item-title">${paper.title}</h4>
+          <p class="resource-item-meta">${metadata.join(' • ')}</p>
+        `;
+
+        grid.appendChild(paperCard);
+      });
+
+      // Show count message if we hit the limit
+      if (papersSnapshot.size === 100) {
+        const moreMessage = document.createElement('div');
+        moreMessage.style.cssText = 'text-align: center; color: #CBD5E0; padding: 20px; grid-column: 1 / -1;';
+        moreMessage.textContent = 'Showing first 100 papers. More papers may be available.';
+        grid.appendChild(moreMessage);
+      }
     }
   } catch (error) {
     console.error('Error loading practice papers:', error);
