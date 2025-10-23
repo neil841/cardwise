@@ -249,7 +249,14 @@ class AuthModal {
   setupEventListeners() {
     const headerSignInBtn = document.getElementById('header-signin-btn');
     if (headerSignInBtn) {
-      headerSignInBtn.addEventListener('click', () => this.showModal());
+      console.log('Setting up click listener for header-signin-btn');
+      headerSignInBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('Sign In button clicked');
+        this.showModal();
+      });
+    } else {
+      console.error('header-signin-btn not found - login button will not work');
     }
 
     // Close modal when clicking overlay
@@ -282,10 +289,14 @@ class AuthModal {
   }
 
   showModal() {
+    console.log('showModal() called, modal exists:', !!this.modal);
     if (this.modal) {
       this.renderStep('welcome'); // Always start at welcome
       this.modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
+      console.log('Modal shown successfully');
+    } else {
+      console.error('Modal element not found - cannot show auth modal');
     }
   }
 

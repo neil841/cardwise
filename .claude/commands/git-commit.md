@@ -6,37 +6,25 @@ Create a well-structured git commit and push to the remote repository.
 
 When the user invokes `/git-commit [message]`, follow these steps:
 
-### 1. Check Git Status
-First, check what files are modified and untracked:
+### 1. Auto-Stage Important Files
+Automatically stage common project files that should be tracked:
+```bash
+# Stage .claude directory (agents, commands, settings)
+git add .claude/
+
+# Stage other modified/new files in key directories
+git add public/ scripts/ *.json *.md *.html *.js *.css 2>/dev/null || true
+```
+
+### 2. Check Git Status
+Check what files are staged for commit:
 ```bash
 git status
 ```
 
-### 2. Auto-Stage Safe Files
-Automatically stage all modified and untracked files, EXCEPT:
-- Sensitive files (see "CRITICAL: Blocked Files" section below)
-- `.playwright-mcp/` directory
-- `3d-objects-png/` directory
-- Any files matching patterns in .gitignore
-
-**Validation Process:**
-1. Get list of all modified and untracked files
-2. Filter out sensitive file patterns (serviceAccountKey.json, config.js, .env, *key*.json, *secret*.json, *credentials*.json)
-3. Filter out excluded directories (.playwright-mcp/, 3d-objects-png/)
-4. Stage remaining safe files with `git add`
-
-**Command sequence:**
-```bash
-# Add all files except sensitive and excluded ones
-git add .
-# Remove sensitive files if accidentally staged
-git reset HEAD scripts/serviceAccountKey.json public/firebase/config.js 2>/dev/null || true
-git reset HEAD .env *.env 2>/dev/null || true
-git reset HEAD .playwright-mcp/ 3d-objects-png/ 2>/dev/null || true
-```
-
-### 3. Show What Will Be Committed
-Display the list of staged files to the user for transparency
+### 3. Validate Staged Changes
+- If no files are staged, inform the user and stop
+- Show the user what files will be committed
 
 ### 4. Process Commit Message
 - If a message was provided as an argument, use it
@@ -51,11 +39,7 @@ Display the list of staged files to the user for transparency
 ### 5. Create the Commit
 Execute the git commit with the provided message:
 ```bash
-git commit -m "MESSAGE_HERE
-
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>"
+git commit -m "MESSAGE_HERE"
 ```
 
 ### 6. Push to Remote
